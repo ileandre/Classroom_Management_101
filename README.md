@@ -1,4 +1,4 @@
-# School_Management_101
+# Classroom_Management_101
 
 ## Title: A working title for your app.
 
