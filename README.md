@@ -38,7 +38,7 @@ _The **Classroom Management 101** MVPs are as follows ...
     2) Three resource tables with association table(s)
     3) Full CRUD functionality (index, show, create, update, delete) 
 
-    #### Frontend
+   #### Frontend
     1) Interactive React app
     2) 8+ rendered functional React components it states and props
     3) DOM Manipulation using React
@@ -46,14 +46,14 @@ _The **Classroom Management 101** MVPs are as follows ...
     5) Utilized React Router for client-side routing
     6) Full CRUD functionality (get, post, put, delete) 
 
-    ####Styling
+   #### Styling
     1) Utilized CSS, Flexbox, Grid and Media queries (mobile, tablet, desktop)
   
-    ####Deployment
+   #### Deployment
     1) Deployed the front-end through Netify
     2) Deployed the back-end vis Heroku
 
-    ????####Personal
+   #### Personal ???
     1) Buttons for filtering by grade (top 5, A, B, C, D, F)
     2) Buttons for filtering by class (per 1, per 2, per 3, per 4, per 5 and All)
     3) 
@@ -61,7 +61,7 @@ _The **Classroom Management 101** MVPs are as follows ...
 
 <br>
 
-???### Goals
+### Goals ???
 
 - _Lorem ipsum, dolor sit amet,_
 - _consectetur adipiscing elit._
@@ -71,7 +71,7 @@ _The **Classroom Management 101** MVPs are as follows ...
 
 <br>
 
-### Libraries and Dependencies
+### Libraries and Dependencies ????
 
 > Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
 
@@ -116,6 +116,7 @@ _The **Classroom Management 101** MVPs are as follows ...
 
 > Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between your components. In other words, show which components are rendering the other components. Include a link to your component tree
 
+https://whimsical.com/classroom-management-101-QDVfdAbYAmq29cSqq7HvX3
 ![Component Tree](https://user-images.githubusercontent.com/65198477/116004481-cf062880-a5d0-11eb-9492-378374ab39cb.png)
 
 #### Component Architecture
@@ -176,6 +177,7 @@ src
 
 > Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
 
+https://lucid.app/lucidchart/invitations/accept/inv_c686f332-4e65-4fb4-854d-c70a5318ff2c?viewport_loc=241%2C171%2C1264%2C817%2C0_0
 ![ERD Model](https://user-images.githubusercontent.com/65198477/116008309-db46b180-a5e1-11eb-9a2b-a9c5009c20c0.png)
 <br>
 
