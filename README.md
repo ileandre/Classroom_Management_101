@@ -155,7 +155,7 @@ _The **Classroom Management 101** MVPs are as follows ...
 
 > Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. Include a link to your component tree
 
-![component tree](https://user-images.githubusercontent.com/65198477/116004481-cf062880-a5d0-11eb-9492-378374ab39cb.png)
+![Component Tree](https://user-images.githubusercontent.com/65198477/116004481-cf062880-a5d0-11eb-9492-378374ab39cb.png)
 
 #### Component Architecture
 
@@ -215,7 +215,7 @@ src
 
 > Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
 
-[ERD Sample](![image](https://user-images.githubusercontent.com/65198477/116008309-db46b180-a5e1-11eb-9a2b-a9c5009c20c0.png))
+![ERD Model](https://user-images.githubusercontent.com/65198477/116008309-db46b180-a5e1-11eb-9a2b-a9c5009c20c0.png)
 <br>
 
 ***
