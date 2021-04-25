@@ -1,43 +1,4 @@
-# Classroom_Management_101
-
-## Title: A working title for your app.
-
-
-
-## Overview: A brief explanation in non-technical terms, summarizing the app.
-  ### Features: A full feature list for your MVP app.
-
-    #### Backend
-    1) Built on a Ruby on Rails server with RESTful JSON endpoints
-    2) Three resource tables with association table(s)
-    3) Full CRUD functionality (index, show, create, update, delete) 
-
-    #### Frontend
-    1) Interactive React app
-    2) 8+ rendered functional React components it states and props
-    3) DOM Manipulation using React
-    4) Rendered data consumed from my Ruby on Rails API in my components
-    5) Utilized React Router for client-side routing
-    6) Full CRUD functionality (index, show, create, update, delete) 
-
-    ####Styling
-    1) Utilized CSS, FLexbox, Grid and Media queries (mobile, tablet, desktop)
-  
-    ####Deployment
-    1) Deployed the front-end through Netify
-    2) Deployed the back-end vis Heroku
-    
-  ### ????Goals: The overarching goals for your project.
-    *Create a classroom management website for teachers and principals
-    *The app will have the ability to create groups and filter by student grades
-    
-  ### !!!Challenges: An explanation of the challenges you expect to face with this project.
-  
-  
-  
-  
-  
-  # PROJECT 4 README <!-- omit in toc -->
+# PROJECT 4 README <!-- omit in toc -->
 
 > The Project Planning section **should be completed** for your project pitch with instructors.
 >
@@ -153,7 +114,7 @@ _The **Classroom Management 101** MVPs are as follows ...
 
 #### Component Tree
 
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. Include a link to your component tree
+> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between your components. In other words, show which components are rendering the other components. Include a link to your component tree
 
 ![Component Tree](https://user-images.githubusercontent.com/65198477/116004481-cf062880-a5d0-11eb-9492-378374ab39cb.png)
 
