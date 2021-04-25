@@ -47,7 +47,7 @@ The **Classroom Management 101** MVPs are as follows ...
     1) Deployed the front-end through Netify
     2) Deployed the back-end vis Heroku
 
-   #### Personal ???
+   #### More
     1) Buttons for filtering by grade (top 5, A, B, C, D, F)
     2) Buttons for filtering by class (per 1, per 2, per 3, per 4, per 5 and All)
     3) Form to add and edit student information
@@ -57,13 +57,11 @@ The **Classroom Management 101** MVPs are as follows ...
 
 <br>
 
-### Goals ???
+### Goals
 
-- _Create a RESTful JSON API _
-- _Utilize ._
-- _Phasellus dapibus fermentum risus vitae bibendum._
-- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
-- _etc._
+- Create an interactive app that helps educators manage their classrooms.
+- Solidify my understanding of how to connect the frontend to the backend.
+- Gain more experience working with Ruby on rails.
 
 <br>
 
@@ -71,10 +69,10 @@ The **Classroom Management 101** MVPs are as follows ...
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | _Used for front-end development._ |
-|   React Router   | _Used for link and routing._ |
-|  Faker   | _Used to generate fake student names._ |
-|  Axios   | _Used to access information from an API._ |
+|      React       | Used for front-end development. |
+|   React Router   | Used for link and routing. |
+|  Faker   | Used to generate fake student names. |
+|  Axios   | Used to access information from an API. |
 
 <br>
 
@@ -176,6 +174,7 @@ https://lucid.app/lucidchart/b1522c2b-e8c3-48b2-b784-e145d96d252e/view?page=0_0#
 2) Dragging feature to further manipulate groups
 3) Teacher quotes carousel
 4) Discipline tracker with notes
+5) Points distributor
 
 ***
 
