@@ -1,9 +1,5 @@
 # PROJECT 4 README <!-- omit in toc -->
 
-> The Project Planning section **should be completed** for your project pitch with instructors.
->
-> To ensure correct Markdown, copy and paste the raw template code into your project repo README file. Remove ALL template instructions and replace with your project details.
-
 - [Overview](#overview)
 - [MVP](#mvp)
   - [Goals](#goals)
@@ -30,8 +26,6 @@ _**Classroom Management 101** is a tool for teachers to manage their classrooms.
 
 ## MVP
 
-> The Minimum Viable Product should be a well-planned, easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
-
 _The **Classroom Management 101** MVPs are as follows ...
   #### Backend
     1) Built on a Ruby on Rails server with RESTful JSON endpoints
@@ -56,30 +50,31 @@ _The **Classroom Management 101** MVPs are as follows ...
    #### Personal ???
     1) Buttons for filtering by grade (top 5, A, B, C, D, F)
     2) Buttons for filtering by class (per 1, per 2, per 3, per 4, per 5 and All)
-    3) 
-._
+    3) Form to add and edit student information
+    4) A show page that rendered all the students in a teachers classroom.
+    5) A details page that renders all the information of one student
+_
 
 <br>
 
 ### Goals ???
 
-- _Lorem ipsum, dolor sit amet,_
-- _consectetur adipiscing elit._
+- _Create a RESTful JSON API _
+- _Utilize ._
 - _Phasellus dapibus fermentum risus vitae bibendum._
 - _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
 - _etc._
 
 <br>
 
-### Libraries and Dependencies ????
-
-> Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
+### Libraries and Dependencies
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
 |      React       | _Used for front-end development._ |
 |   React Router   | _Used for link and routing._ |
 |  Faker   | _Used to generate fake student names._ |
+|  Axios   | _Used to access information from an API._ |
 
 <br>
 
@@ -115,14 +110,10 @@ _The **Classroom Management 101** MVPs are as follows ...
 
 #### Component Tree
 
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between your components. In other words, show which components are rendering the other components. Include a link to your component tree
-
 https://whimsical.com/classroom-management-101-QDVfdAbYAmq29cSqq7HvX3
 ![Component Tree](https://user-images.githubusercontent.com/65198477/116004481-cf062880-a5d0-11eb-9492-378374ab39cb.png)
 
 #### Component Architecture
-
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
 
 ``` structure
 
@@ -151,21 +142,19 @@ src
 
 #### Time Estimates
 
-> Use this section to estimate the time necessary to build out each of the components you've described above.
-
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
 | Get full backend CRUD |    H     |     5 hrs      |          |        |
 | Get full frontend CRUD |    H     |     3 hrs      |          |        |
-| Teacher and student services files |    H     |     1.5 hrs      |          |        |
-| Homepage funtionality |    H     |     1.5 hrs      |          |        |
+| Teacher and student services files |    H     |     2 hrs      |          |        |
+| Homepage funtionality |    H     |     2 hrs      |          |        |
 | Landing page functionality    |    H     |     3 hrs      |          |        |
 | Show students page |    H     |     6 hrs      |          |        |
 | Show student details |    H     |     2 hrs      |          |        |
 | New student page functionality |    H     |     2 hrs      |          |        |
 | Full CSS styling |    H     |     12 hrs      |          |        |
-| Carousel for teacher quotes (Post MVP) |    L     |     1.5 hrs      |          |        |
-| TOTAL               |          |     35.5hrs      |          |        |
+| Carousel for teacher quotes (Post MVP) |    L     |     2.5 hrs      |          |        |
+| TOTAL               |          |     39.5hrs      |          |        |
 
 > _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
 
@@ -175,8 +164,6 @@ src
 
 #### ERD Model
 
-> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
-
 https://lucid.app/lucidchart/b1522c2b-e8c3-48b2-b784-e145d96d252e/view?page=0_0#
 ![ERD Model](https://user-images.githubusercontent.com/65198477/116008309-db46b180-a5e1-11eb-9a2b-a9c5009c20c0.png)
 <br>
@@ -185,8 +172,6 @@ https://lucid.app/lucidchart/b1522c2b-e8c3-48b2-b784-e145d96d252e/view?page=0_0#
 
 ## Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
-> 
 1) Student groups buttons to group students into randomly into groups of 2, 3 4 etc.
 2) Dragging feature to further manipulate groups
 3) Teacher quotes carousel
@@ -201,31 +186,3 @@ https://lucid.app/lucidchart/b1522c2b-e8c3-48b2-b784-e145d96d252e/view?page=0_0#
 ## Code Issues & Resolutions
 
 > Use this section to list of all major issues encountered and their resolution.
-
-
-## MVP: An overview of your MVP, including the minimum, need-to-have features of the app.
-  ### Client: Wire-frames, component hierarchy, component breakdown, and time-frame estimates.
-    #### Libraries and Dependencies
-        |     Library      | Description                                |
-        | :--------------: | :----------------------------------------- |
-        |      React       | _Lorem ipsum dolor sit amet, consectetur._ |
-        |   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-        | React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
-        |     Express      | _Lorem ipsum dolor sit amet, consectetur._ |
-        |  Express Router  | _Lorem ipsum dolor sit amet, consectetur._ |
-    
-    ####Wire-frames
-    
-    ####Component Hierarchy
-    
-    ####Component Breakdown
-    
-    ####Time-frame Estimates
-    
-  ### Server: Data architecture, ERD model, and API endpoint documentation.
-
-  ### Dependencies: A full list of all libraries, frameworks, etc.
-
-
-
-## Post-MVP: Your goals for post-MVP, including features that you would like to implement once your MVP is complete.
