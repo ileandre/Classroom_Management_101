@@ -79,6 +79,7 @@ _The **Classroom Management 101** MVPs are as follows ...
 | :--------------: | :----------------------------------------- |
 |      React       | _Used for front-end development._ |
 |   React Router   | _Used for link and routing._ |
+|  Faker   | _Used to generate fake student names._ |
 
 <br>
 
@@ -163,9 +164,8 @@ src
 | Show student details |    H     |     2 hrs      |          |        |
 | New student page functionality |    H     |     2 hrs      |          |        |
 | Full CSS styling |    H     |     12 hrs      |          |        |
-| Add Male/female filters (Post MVP)|    L     |     1.5 hrs      |          |        |
 | Carousel for teacher quotes (Post MVP) |    L     |     1.5 hrs      |          |        |
-| TOTAL               |          |     37hrs      |          |        |
+| TOTAL               |          |     35.5hrs      |          |        |
 
 > _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
 
@@ -177,7 +177,7 @@ src
 
 > Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
 
-https://lucid.app/lucidchart/invitations/accept/inv_c067a7f8-a087-48f3-996b-48fcd3f00b80
+https://lucid.app/lucidchart/b1522c2b-e8c3-48b2-b784-e145d96d252e/view?page=0_0#
 ![ERD Model](https://user-images.githubusercontent.com/65198477/116008309-db46b180-a5e1-11eb-9a2b-a9c5009c20c0.png)
 <br>
 
@@ -186,6 +186,11 @@ https://lucid.app/lucidchart/invitations/accept/inv_c067a7f8-a087-48f3-996b-48fc
 ## Post-MVP
 
 > Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+> 
+1) Student groups buttons to group students into randomly into groups of 2, 3 4 etc.
+2) Dragging feature to further manipulate groups
+3) Teacher quotes carousel
+4) Discipline tracker with notes
 
 ***
 
