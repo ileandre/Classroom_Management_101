@@ -177,7 +177,7 @@ src
 
 > Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
 
-https://lucid.app/lucidchart/invitations/accept/inv_c686f332-4e65-4fb4-854d-c70a5318ff2c?viewport_loc=241%2C171%2C1264%2C817%2C0_0
+https://lucid.app/lucidchart/invitations/accept/inv_c067a7f8-a087-48f3-996b-48fcd3f00b80
 ![ERD Model](https://user-images.githubusercontent.com/65198477/116008309-db46b180-a5e1-11eb-9a2b-a9c5009c20c0.png)
 <br>
 
