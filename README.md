@@ -26,7 +26,7 @@ _**Classroom Management 101** is a tool for teachers to manage their classrooms.
 
 ## MVP
 
-_The **Classroom Management 101** MVPs are as follows ...
+The **Classroom Management 101** MVPs are as follows ...
   #### Backend
     1) Built on a Ruby on Rails server with RESTful JSON endpoints
     2) Three resource tables with association table(s)
@@ -53,7 +53,7 @@ _The **Classroom Management 101** MVPs are as follows ...
     3) Form to add and edit student information
     4) A show page that rendered all the students in a teachers classroom.
     5) A details page that renders all the information of one student
-_
+
 
 <br>
 
