@@ -96,7 +96,7 @@ The **Classroom Management 101** MVPs are as follows ...
 ![Mobile and Tablet Register Page](https://user-images.githubusercontent.com/65198477/116018794-cd5c5500-a610-11eb-966e-891fd580d322.png)
 
 **Home Page**
-![Mobile and Tablet Home Page](https://user-images.githubusercontent.com/65198477/116018491-1cee5100-a610-11eb-9d02-5a8fb94749ca.png)
+![Mobile and Tablet Home Page](https://user-images.githubusercontent.com/65198477/116019074-64291180-a611-11eb-8e9b-6be6b8b38594.png)
 
 **Index Page**
 ![Mobile and Tablet Index Page](https://user-images.githubusercontent.com/65198477/116018520-32637b00-a610-11eb-8a3c-e75c86e5d8fe.png)
@@ -110,7 +110,7 @@ The **Classroom Management 101** MVPs are as follows ...
 ##### DESKTOP
 
 **Landing Page**
-![Desktop Landing Page](https://user-images.githubusercontent.com/65198477/116017566-f7604800-a60d-11eb-893c-d41e3d0c23e7.png)
+![Desktop Landing Page](https://user-images.githubusercontent.com/65198477/116019138-891d8480-a611-11eb-9526-48d0eddd5e2b.png)
 
 **Login Page**
 ![Desktop Login Page](https://user-images.githubusercontent.com/65198477/116018127-5a9eaa00-a60f-11eb-917f-866d6cb4cd68.png)
