@@ -84,29 +84,51 @@ The **Classroom Management 101** MVPs are as follows ...
 
 > Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
 
-![Dummy Link](url)
+##### Mobile/Tablet
 
-- Desktop Landing
+**Landing Page**
+![Mobile and Tablet Landing Page](https://user-images.githubusercontent.com/65198477/116017566-f7604800-a60d-11eb-893c-d41e3d0c23e7.png)
 
-![Dummy Link](url)
+**Login Page**
+![Mobile and Tablet Login Page](https://user-images.githubusercontent.com/65198477/116018468-11028f00-a610-11eb-8533-827a17941f4b.png)
 
-- Desktop Hero
+**Register Page**
+![Mobile and Tablet Register Page](https://user-images.githubusercontent.com/65198477/116018473-1364e900-a610-11eb-8941-c5bdcbba6339.png)
 
-![Dummy Link](url)
+**Home Page**
+![Mobile and Tablet Home Page](https://user-images.githubusercontent.com/65198477/116018491-1cee5100-a610-11eb-9d02-5a8fb94749ca.png)
 
-- Resource Index
+**Index Page**
+![Mobile and Tablet Index Page](https://user-images.githubusercontent.com/65198477/116018520-32637b00-a610-11eb-8a3c-e75c86e5d8fe.png)
 
-![Dummy Link](url)
+**Show Page**
+![Mobile and Tablet Show Page](https://user-images.githubusercontent.com/65198477/116018551-40b19700-a610-11eb-9141-55aaef0e0f98.png)
 
-- Resource Show
+**Create/Update Page**
+![Mobile and Tablet Creaste and Update Page](https://user-images.githubusercontent.com/65198477/116018560-4a3aff00-a610-11eb-899b-4ae83c541bd7.png)
 
-![Dummy Link](url)
+##### DESKTOP
 
-- Tablet Resource Index
+**Landing Page**
+![Desktop Landing Page](https://user-images.githubusercontent.com/65198477/116017566-f7604800-a60d-11eb-893c-d41e3d0c23e7.png)
 
-![Dummy Link](url)
+**Login Page**
+![Desktop Login Page](https://user-images.githubusercontent.com/65198477/116018127-5a9eaa00-a60f-11eb-917f-866d6cb4cd68.png)
 
-- Mobile Resource Index
+**Register Page**
+![Desktop Register Page]((https://user-images.githubusercontent.com/65198477/116018143-6be7b680-a60f-11eb-9f6b-7d33dc957c63.png)
+
+**Home Page**
+![Desktop Home Page](https://user-images.githubusercontent.com/65198477/116018174-7efa8680-a60f-11eb-9bcf-0c447ec6cd2c.png)
+
+**Index Page**
+![Desktop Index Page](https://user-images.githubusercontent.com/65198477/116018199-8d48a280-a60f-11eb-8204-8b0dfc8f4e23.png)
+
+**Show Page**
+![Desktop Show Page](https://user-images.githubusercontent.com/65198477/116018230-99346480-a60f-11eb-861d-31c39e87e8b9.png)
+
+**Create/Update Page**
+![Desktop Creaste and Update Page](https://user-images.githubusercontent.com/65198477/116018250-a5202680-a60f-11eb-8532-d9de37c4ccc1.png)
 
 #### Component Tree
 
@@ -165,7 +187,6 @@ src
 #### ERD Model
 
 https://lucid.app/lucidchart/b1522c2b-e8c3-48b2-b784-e145d96d252e/view?page=0_0#
-![ERD Model](https://user-images.githubusercontent.com/65198477/116008309-db46b180-a5e1-11eb-9a2b-a9c5009c20c0.png)
 ![ERD Model](https://user-images.githubusercontent.com/65198477/116014501-992e6780-a603-11eb-8b03-89e2a69fd4cb.png)
 
 
