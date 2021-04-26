@@ -187,7 +187,7 @@ src
 #### ERD Model
 
 https://lucid.app/lucidchart/b1522c2b-e8c3-48b2-b784-e145d96d252e/view?page=0_0#
-![ERD Model](https://user-images.githubusercontent.com/65198477/116021145-9ccaea00-a615-11eb-80c5-18dbcc6dda5b.png)
+![ERD Model](https://user-images.githubusercontent.com/65198477/116021232-cab02e80-a615-11eb-9b2d-62ded41413f9.png)
 
 <br>
 
