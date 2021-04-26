@@ -35,10 +35,9 @@ The **Classroom Management 101** MVPs are as follows ...
    #### Frontend
     1) Interactive React app
     2) 8+ rendered functional React components it states and props
-    3) DOM Manipulation using React
-    4) Rendered data consumed from my Ruby on Rails API in my components
-    5) Utilized React Router for client-side routing
-    6) Full CRUD functionality (get, post, put, delete) 
+    3) Rendered data consumed from my Ruby on Rails API in my components
+    4) Utilized React Router for client-side routing
+    5) Full CRUD functionality (get, post, put, delete) 
 
    #### Styling
     1) Utilized CSS, Flexbox, Grid and Media queries (mobile, tablet, desktop)
