@@ -166,7 +166,7 @@ src
 
 https://lucid.app/lucidchart/b1522c2b-e8c3-48b2-b784-e145d96d252e/view?page=0_0#
 ![ERD Model](https://user-images.githubusercontent.com/65198477/116008309-db46b180-a5e1-11eb-9a2b-a9c5009c20c0.png)
-![ERD Model](![image](https://user-images.githubusercontent.com/65198477/116014501-992e6780-a603-11eb-8b03-89e2a69fd4cb.png))
+![ERD Model](https://user-images.githubusercontent.com/65198477/116014501-992e6780-a603-11eb-8b03-89e2a69fd4cb.png)
 
 
 <br>
