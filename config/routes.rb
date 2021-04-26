@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get '/auth/verify', to 'authentication#verify'
+  post '/auth/login', to 'authentication#login'
+  
   resources :comments
   resources :students
   resources :teachers

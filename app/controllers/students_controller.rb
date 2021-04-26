@@ -1,4 +1,5 @@
 class StudentsController < ApplicationController
+  before_action :authorize_request
   before_action :set_student, only: [:show, :update, :destroy]
 
   # GET /students
@@ -16,6 +17,7 @@ class StudentsController < ApplicationController
   # POST /students
   def create
     @student = Student.new(student_params)
+    @student.teacher = @current_teacher    #saves the teacher as the students teacher
 
     if @student.save
       render json: @student, status: :created, location: @student

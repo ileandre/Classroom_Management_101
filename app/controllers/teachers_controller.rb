@@ -20,7 +20,7 @@ class TeachersController < ApplicationController
     if @teacher.save
       @token = encode({id: @teacher.id})  #encode the teachers id
       render json: {    #we want to sent the teacher and their token back
-        teacher: @teacher.attributes.except('password_digest')   #this returns the attributes of the teacher except the password_digest
+        teacher: @teacher.attributes.except('password_digest', 'created_at', 'updated_at'),   #this returns the attributes of the teacher except the password_digest
         token: @token
       },  status: :created
     else
@@ -50,6 +50,6 @@ class TeachersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def teacher_params
-      params.require(:teacher).permit(:first_name, :last_name, :useername, :email, :password, :quote)
+      params.require(:teacher).permit(:first_name, :last_name, :username, :email, :password, :quote)
     end
 end
