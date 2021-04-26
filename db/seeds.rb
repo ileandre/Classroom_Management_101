@@ -13,7 +13,7 @@ Comment.destroy_all
 Student.destroy_all
 Teacher.destroy_all
 
-@leandre = Teacher.create(first_name: 'Irma', last_name: 'Leandre', quote: 'Do not let others define your success.')
+@leandre = Teacher.create(first_name: 'Irma', last_name: 'Leandre', username: 'ileandre', email: 'irmz@gmail.com', password: 'password123', quote: 'Do not let others define your success.')
 
 puts "#{Teacher.count} teachers created!"
 

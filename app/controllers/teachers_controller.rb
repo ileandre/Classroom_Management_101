@@ -18,7 +18,11 @@ class TeachersController < ApplicationController
     @teacher = Teacher.new(teacher_params)
 
     if @teacher.save
-      render json: @teacher, status: :created
+      @token = encode({id: @teacher.id})  #encode the teachers id
+      render json: {    #we want to sent the teacher and their token back
+        teacher: @teacher.attributes.except('password_digest')   #this returns the attributes of the teacher except the password_digest
+        token: @token
+      },  status: :created
     else
       render json: @teacher.errors, status: :unprocessable_entity
     end
