@@ -4,22 +4,22 @@ class StudentsController < ApplicationController
 
   # GET /students
   def index
-    @teacher = Teacher.find(params[:teacher_id])
-    @students = Student.where(teacher_id: @teacher.id)
+    @user = User.find(params[:user_id])
+    @students = Student.where(user_id: @user.id)
     render json: @students
   end
 
   # GET /students/1
   def show
-    render json: @student
+    render json: @student, include: :comments, status: :ok
   end
 
   # POST /students
   def create
     @student = Student.new(student_params)
-    @student.teacher_id = params[:teacher_id]
-    # @student.teacher_id = @current_teacher.id   #saves the teacher as the students teacher
-    # @student.teacher_id = @current_teacher    #saves the teacher as the students teacher
+    @student.user_id = params[:user_id]
+    # @student.user_id = @current_user.id   #saves the user as the students user
+    # @student.user_id = @current_user    #saves the user as the students user
 
     if @student.save
       render json: @student, status: :created
@@ -27,6 +27,12 @@ class StudentsController < ApplicationController
       render json: @student.errors, status: :unprocessable_entity
     end
   end
+
+  # #POST comment /students/:id
+  # def add_comment
+  #   @student = Student.find(parama[:id])
+  #   @comments = 
+  # end
 
   # PATCH/PUT /students/1
   def update
@@ -45,14 +51,14 @@ class StudentsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_student
-      @teacher = Teacher.find(params[:teacher_id])
-      @students = Student.where(teacher_id: @teacher.id)
-      # @students = Student.where(teacher_id: current_teacher.id)
+      @user = User.find(params[:user_id])
+      @students = Student.where(user_id: @user.id)
+      # @students = Student.where(user_id: current_user.id)
       @student = @students.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
     def student_params
-      params.require(:student).permit(:teacher_id, :first_name, :last_name, :grade, :period)
+      params.require(:student).permit(:user_id, :first_name, :last_name, :grade, :period)
     end
 end

@@ -1,4 +1,4 @@
-class Teacher < ApplicationRecord
+class User < ApplicationRecord
     has_secure_password
     has_many :students, dependent: :destroy
     has_many :comments, through: :students

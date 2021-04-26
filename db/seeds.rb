@@ -11,16 +11,16 @@ require 'faker'
 
 Comment.destroy_all
 Student.destroy_all
-Teacher.destroy_all
+User.destroy_all
 
-@leandre = Teacher.create(first_name: 'Irma', last_name: 'Leandre', username: 'ileandre', email: 'irmz@gmail.com', password: 'password123', quote: 'Do not let others define your success.')
+@leandre = User.create(first_name: 'Irma', last_name: 'Leandre', username: 'ileandre', email: 'irmz@gmail.com', password: 'password123', quote: 'Do not let others define your success.')
 
-puts "#{Teacher.count} teachers created!"
+puts "#{User.count} users created!"
 
 
-Teacher.all.find_each do |teacher|
+User.all.find_each do |user|
     50.times do 
-        Student.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, grade: 50 + rand(50), period: rand(1...6), teacher: @leandre)
+        Student.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, grade: 50 + rand(50), period: rand(1...6), user: @leandre)
     end
 end
 

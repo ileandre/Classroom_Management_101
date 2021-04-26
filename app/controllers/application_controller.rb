@@ -17,7 +17,7 @@ def authorize_request
     #we begin ruby's version of a try-catch
         begin       #try
         @decoded = decode(header)
-        @current_teacher = Teacher.find(@decoded[:id])
+        @current_user = User.find(@decoded[:id])
         #rescue = catch <-- if you do not provide an error, then by default, the StandardError will appear
         rescue ActiveRecord::RecordNotFound => e        #e for exception
             render json: {errors: e.message}, status: :unauthorized         #if you're not found inth data base

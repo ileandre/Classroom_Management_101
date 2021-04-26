@@ -3,11 +3,11 @@ class CommentsController < ApplicationController
 
   # GET /comments
   def index
-    @teacher = Teacher.find(params[:teacher_id])
-     # @students = Student.find(teacher_id: current_teacher.id)
-     @students = Student.where(teacher_id: @teacher.id)
+    @user = User.find(params[:user_id])
+     # @students = Student.find(user_id: current_user.id)
+     @students = Student.where(user_id: @user.id)
 
-     # @students = current_teacher.students
+     # @students = current_user.students
      @student = @students.find(params[:student_id])
      @comments = Comment.where(student_id: @student.id)
      # #OR
@@ -49,11 +49,11 @@ class CommentsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_comment
-      @teacher = Teacher.find(params[:teacher_id])
-      # @students = Student.find(teacher_id: current_teacher.id)
-      @students = Student.where(teacher_id: @teacher.id)
+      @user = User.find(params[:user_id])
+      # @students = Student.find(user_id: current_user.id)
+      @students = Student.where(user_id: @user.id)
 
-      # @students = current_teacher.students
+      # @students = current_user.students
       @student = @students.find(params[:student_id])
       @comments = Comment.where(student_id: @student.id)
       # #OR

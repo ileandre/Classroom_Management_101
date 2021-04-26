@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   get '/auth/verify', to: 'authentication#verify'
   post '/auth/login', to: 'authentication#login'
+  # get '/students/:student_id', to: 'students#add_comment'
   
-  resources :teachers do
+  resources :users do
     resources :students do 
       resources :comments
     end
