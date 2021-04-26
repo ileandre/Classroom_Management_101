@@ -1,10 +1,10 @@
 class TeachersController < ApplicationController
+  # before_action :set_teacher, only: [:destroy]
   before_action :set_teacher, only: [:show, :update, :destroy]
 
   # GET /teachers
   def index
     @teachers = Teacher.all
-
     render json: @teachers
   end
 

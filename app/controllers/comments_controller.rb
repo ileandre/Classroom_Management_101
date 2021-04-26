@@ -3,8 +3,15 @@ class CommentsController < ApplicationController
 
   # GET /comments
   def index
-    @comments = Comment.all
+    @teacher = Teacher.find(params[:teacher_id])
+     # @students = Student.find(teacher_id: current_teacher.id)
+     @students = Student.where(teacher_id: @teacher.id)
 
+     # @students = current_teacher.students
+     @student = @students.find(params[:student_id])
+     @comments = Comment.where(student_id: @student.id)
+     # #OR
+     # @comments = @student.comments
     render json: @comments
   end
 
@@ -16,9 +23,10 @@ class CommentsController < ApplicationController
   # POST /comments
   def create
     @comment = Comment.new(comment_params)
+    @comment.student_id = params[:student_id]
 
     if @comment.save
-      render json: @comment, status: :created, location: @comment
+      render json: @comment, status: :created
     else
       render json: @comment.errors, status: :unprocessable_entity
     end
@@ -41,7 +49,16 @@ class CommentsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_comment
-      @comment = Comment.find(params[:id])
+      @teacher = Teacher.find(params[:teacher_id])
+      # @students = Student.find(teacher_id: current_teacher.id)
+      @students = Student.where(teacher_id: @teacher.id)
+
+      # @students = current_teacher.students
+      @student = @students.find(params[:student_id])
+      @comments = Comment.where(student_id: @student.id)
+      # #OR
+      # @comments = @student.comments
+      @comment = @comments.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
