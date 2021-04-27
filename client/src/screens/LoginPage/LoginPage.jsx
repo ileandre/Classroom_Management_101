@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import Layout from '../../components/shared/Layout/Layout'
 
 function LoginPage({ handleLogin }) {
     const [formData, setFormData] = useState({
@@ -17,7 +16,6 @@ function LoginPage({ handleLogin }) {
         }))
     }
     return (
-        <Layout>
             <form onSubmit={(e) => {
                 e.preventDefault()
                 handleLogin(formData)
@@ -44,7 +42,6 @@ function LoginPage({ handleLogin }) {
                 <Link to='/register'> Register</Link>
                 <button>Login</button>
             </form>
-        </Layout>
     )
 }
 

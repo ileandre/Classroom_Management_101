@@ -13,14 +13,14 @@ Comment.destroy_all
 Student.destroy_all
 User.destroy_all
 
-@leandre = User.create(first_name: 'Irma', last_name: 'Leandre', username: 'ileandre', email: 'irmz@gmail.com', password: 'password123', password_confirmation: 'password123', quote: 'Do not let others define your success.')
+@leandre = User.create(firstName: 'Irma', lastName: 'Leandre', username: 'ileandre', email: 'irmz@gmail.com', password: 'password123', quote: 'Do not let others define your success.')
 
 puts "#{User.count} users created!"
 
 
 User.all.find_each do |user|
     50.times do 
-        Student.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, grade: 50 + rand(50), period: rand(1...6), user: @leandre)
+        Student.create!(firstName: Faker::Name.first_name, lastName: Faker::Name.last_name, grade: 50 + rand(50), period: rand(1...6), user: @leandre)
     end
 end
 

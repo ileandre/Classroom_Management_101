@@ -1,12 +1,11 @@
-import Layout from '../../components/shared/Layout/Layout'
+import './HomePage.css'
 
 function HomePage(props) {
     return (
-        <Layout>
-            <div>
-                Homepage
+            <div className="homepage">
+                <p>Teacher Quote(s)</p>
+                <p></p>
             </div>
-        </Layout>
     )
 }
 

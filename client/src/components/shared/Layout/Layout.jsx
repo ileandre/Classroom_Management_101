@@ -2,12 +2,13 @@ import Nav from '../Nav/Nav'
 import Footer from '../Footer/Footer'
 import "./Layout.css"
 
-function Layout(props) {
+function Layout({currentUser, children}) {
+    // const {currentUser} = props
     return (
         <div className="layout">
-              <Nav user={props.user}/>
+              <Nav currentUser={currentUser}/>
               <div className="layout-children">
-                  {props.children}
+                  {children}
               </div>
               <Footer/>
           </div>

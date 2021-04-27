@@ -1,0 +1,7 @@
+.homepage {
+    background-image: url('https://cdn.pixabay.com/photo/2014/04/02/17/03/blackboard-307799__340.png');
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
