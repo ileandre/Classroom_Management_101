@@ -7,7 +7,7 @@ before_action :authorize_request, only: :verify
         if @user.authenticate(login_params[:password])      #authenticate method provided by Bcrypt and 'has_secure_password'
             token = encode({id: @user.id})
             render json: {
-                user: @user.atrributes.except('password_digest', 'created_at', 'updated_at'),
+                user: @user.atrributes.except('password_digest', 'password_confirmation', 'created_at', 'updated_at'),
                 token: token
             }, status: :ok
         else
@@ -16,7 +16,7 @@ before_action :authorize_request, only: :verify
     end
 
     def verify
-        render json: @current_user,sttribute.except('password_digest', 'created_at', 'updated_at')       #verify is great for page refreshes so you don't always have to log back in
+        render json: @current_user,sttribute.except('password_digest', 'password_confirmation', 'created_at', 'updated_at')       #verify is great for page refreshes so you don't always have to log back in
     end
 
     private

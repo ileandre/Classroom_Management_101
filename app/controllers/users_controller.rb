@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   # GET /users/1
   def show
     render json: @user
+    # .attributes.except('password_digest', 'password_confirmation', 'created_at', 'updated_at')
   end
 
   # POST /users
@@ -20,7 +21,7 @@ class UsersController < ApplicationController
     if @user.save
       @token = encode({id: @user.id})  #encode the users id
       render json: {    #we want to sent the user and their token back
-        user: @user.attributes.except('password_digest', 'created_at', 'updated_at'),   #this returns the attributes of the user except the password_digest
+        user: @user.attributes.except('password_digest', 'password_confirmation', 'created_at', 'updated_at'),   #this returns the attributes of the user except the password_digest
         token: @token
       },  status: :created
     else
@@ -50,6 +51,6 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :username, :email, :password, :quote)
+      params.require(:user).permit(:first_name, :last_name, :username, :email, :password, :password_confirmation, :quote)
     end
 end

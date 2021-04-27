@@ -5,10 +5,10 @@ function Nav(props) {
     return (
         <nav className="nav">
             <div className="auth">
-                <Link>
+                <Link to='/login'>
                     <p>Login</p>
                 </Link>
-                <Link>
+                <Link to='/register'>
                     <p>Register</p>
                 </Link>
             </div>
