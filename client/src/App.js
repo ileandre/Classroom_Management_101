@@ -50,8 +50,8 @@ function App() {
           <Route path='/students' component={ShowStudents} />
           <Route path='/register' render={() => <RegisterPage handleRegister={handleRegister} />} />
           <Route path='/login' render={() => <LoginPage handleLogin={handleLogin} />} />
-          <Route path='/welcome' component={LandingPage} />
-          <Route path='/' component={HomePage} />
+          <Route path='/' component={LandingPage} />
+          <Route path='/welcome' component={HomePage} />
         </Switch>
       </Layout>
     </div>
