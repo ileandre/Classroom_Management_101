@@ -1,8 +1,17 @@
+import './Nav.css'
+import { Link } from 'react-router-dom'
+
 function Nav(props) {
     return (
         <nav className="nav">
-            <p>Login</p>
-            <p>Register</p>
+            <div className="auth">
+                <Link>
+                    <p>Login</p>
+                </Link>
+                <Link>
+                    <p>Register</p>
+                </Link>
+            </div>
         </nav>
     )
 }
