@@ -1,0 +1,24 @@
+
+/* .clipboard{
+    background-image: url(../../assets/clipboard.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 500px;
+    width: 250px;
+} */
+
+.clipboard-border {
+    margin-top: 13%;
+    display: flex;
+    background-color: rgb(114, 56, 9);
+    height: 75vh;
+    width: 75vw;
+}
+
+.clipboard {
+    margin: auto;
+    background-color: white;
+    height: 90%;
+    width: 90%;
+}

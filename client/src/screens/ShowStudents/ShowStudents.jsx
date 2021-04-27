@@ -1,7 +1,13 @@
+import './ShowStudents.css'
+
 function ShowStudents(props) {
     return (
-        <div>
-            Show Students
+        <div className="showStudents">
+            <div className="clipboard-border">
+                <div className="clipboard">
+                    things go here
+                </div>
+            </div>
         </div>
     )
 }

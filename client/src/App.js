@@ -28,7 +28,7 @@ function App() {
   const handleLogin = async (formData) => {
     const userData = await loginUser(formData)
     setCurrentUser(userData)
-    history.push('/')
+    history.push('/welcome')
   }
 
   const handleRegister = async (formData) => {
@@ -37,7 +37,7 @@ function App() {
     debugger
     console.log(userData)
     setCurrentUser(userData)
-    history.push('/')
+    history.push('/welcome')
   }
 
   return (
@@ -50,8 +50,8 @@ function App() {
           <Route path='/students' component={ShowStudents} />
           <Route path='/register' render={() => <RegisterPage handleRegister={handleRegister} />} />
           <Route path='/login' render={() => <LoginPage handleLogin={handleLogin} />} />
-          <Route path='/' component={LandingPage} />
           <Route path='/welcome' component={HomePage} />
+          <Route path='/' component={LandingPage} />
         </Switch>
       </Layout>
     </div>
