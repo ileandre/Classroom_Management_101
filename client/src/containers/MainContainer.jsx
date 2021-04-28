@@ -88,7 +88,7 @@ function MainContainer() {
     const [comments, setComments] = useState([])
     // const [top5, setTop5] = useState([])
     // const [filteredStuds, setFilteredStuds] = useState([])
-    const [period, setPeriod] = useState([])
+    // const [period, setPeriod] = useState([])
 
     useEffect(() => {
         const fetchStudents = async () => {
@@ -130,22 +130,25 @@ function MainContainer() {
 
     const handlePeriod = (period) => {
         let per = []
-        if (period === '1') {
+        if (period.includes('1')) {
             per = students.filter(student => student.period === 1)
-            setPeriod(per)
-        } else if (period === '2') {
+            setQueryStudents(per)
+        } else if (period.includes('2')) {
             per = students.filter(student => student.period === 2)
-            setPeriod(per)
-        } else if (period === '3') {
+            setQueryStudents(per)
+        } else if (period.includes('3')) {
             per = students.filter(student => student.period === 3)
-            setPeriod(per)
-        } else if (period === '4') {
+            setQueryStudents(per)
+        } else if (period.includes('4')) {
             per = students.filter(student => student.period === 4)
-            setPeriod(per)
-        } else if (period === '5') {
+            setQueryStudents(per)
+        } else if (period.includes('5')) {
             per = students.filter(student => student.period === 5)
-            setPeriod(per)
+            setQueryStudents(per)
+        } else {
+            setQueryStudents(students)
         }
+
     }
 
     return (
@@ -159,7 +162,7 @@ function MainContainer() {
                     handleFilter={handleFilter}
                     handlePeriod={handlePeriod}
                     queryStudents={queryStudents}
-                    period={period} />}
+                />}
             />
             <Route path='/welcome' component={HomePage} />
             <Route path='/' component={LandingPage} />
