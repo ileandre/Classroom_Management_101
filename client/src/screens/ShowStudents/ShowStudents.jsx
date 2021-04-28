@@ -13,8 +13,8 @@ function ShowStudents({ students, handleFilter, handlePeriod, queryStudents }) {
     if (!students) {
         return <h1>"Loading ..."</h1>
     }
-    console.log("students:", students)
-    console.log("queryStudents:", queryStudents)
+    // console.log("students:", students)
+    // console.log("queryStudents:", queryStudents)
 
     return (
         <div className="showStudents">

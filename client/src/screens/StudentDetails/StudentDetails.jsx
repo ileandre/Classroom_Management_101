@@ -8,7 +8,7 @@ function StudentDetails({students, queryComments, fetchComments, handleDelete}) 
     const { id } = params
 
     useEffect(() => {
-        console.log(id)
+        // console.log(id)
         const stud = students.find(student => student.id === Number(id))
         setStudent(stud)
         fetchComments(Number(id))

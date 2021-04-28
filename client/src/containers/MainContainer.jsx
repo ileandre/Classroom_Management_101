@@ -6,7 +6,8 @@ import LandingPage from '../screens/LandingPage/LandingPage'
 import HomePage from '../screens/HomePage/HomePage'
 import ShowStudents from '../screens/ShowStudents/ShowStudents'
 import StudentDetails from '../screens/StudentDetails/StudentDetails'
-import StudentForm from '../screens/LandingPage/LandingPage'
+import StudentForm from '../screens/StudentForm/StudentForm'
+import StudentEdit from '../screens/StudentEdit/StudentEdit'
 import UpdateStudent from '../screens/LandingPage/LandingPage'
 
 function MainContainer() {
@@ -265,7 +266,7 @@ function MainContainer() {
 
     const handleFilter = (filter) => {
         students.sort((a, b) => { return b.grade - a.grade })
-        console.log('inside filter')
+        // console.log('inside filter')
         let studs = []
         if (filter === 'Top 5') {
             const five = students.slice(0, 5)
@@ -318,7 +319,7 @@ function MainContainer() {
         history.push('/students')
         await deleteStudent(id)
     }
-    console.log(students)
+    // console.log(students)
 
     const fetchComments = (id) => {
         const comment = comments.filter(comment => comment.student_id === id)
@@ -329,13 +330,15 @@ function MainContainer() {
         <Switch>
             <Route path='/students/:id/update' component={UpdateStudent} />
             <Route path='/students/form' component={StudentForm} />
+            <Route path='/students/:id/edit' component={StudentEdit} />
+
             <Route path='/students/:id'
                 render={() => <StudentDetails
                     students={students}
                     queryComments={queryComments}
                     fetchComments={fetchComments}
                     handleDelete={handleDelete}
-                />}
+                    />}
             />
             <Route path='/students'
                 render={() => <ShowStudents

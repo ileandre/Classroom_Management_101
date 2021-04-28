@@ -27,10 +27,10 @@ function App() {
   }
 
   const handleRegister = async (formData) => {
-    console.log(formData)
+    // console.log(formData)
     const userData = await registerUser(formData)
     // debugger
-    console.log(userData)
+    // console.log(userData)
     setCurrentUser(userData)
     history.push('/welcome')
   }
@@ -45,9 +45,9 @@ function App() {
     <div className="App">
       <Layout currentUser={currentUser} handleLogout={handleLogout}>
         <Switch>
-          <Route path='/register' render={() => <RegisterPage handleRegister={handleRegister} />} />
-          <Route path='/login' render={() => <LoginPage handleLogin={handleLogin} />} />
-          <Route path='/' render={() => <MainContainer/>}/>
+          <Route  path='/register' render={() => <RegisterPage handleRegister={handleRegister} />} />
+          <Route  path='/login' render={() => <LoginPage handleLogin={handleLogin} />} />
+          <Route  path='/' render={() => <MainContainer />}/>
         </Switch>
       </Layout>
     </div>
