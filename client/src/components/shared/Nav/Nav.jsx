@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 function Nav({ currentUser, handleLogout }) {
     return (
         <nav className="nav">
+            <p>Classroom Management 101</p>
             {
                 currentUser ?
                     <div className="auth">
