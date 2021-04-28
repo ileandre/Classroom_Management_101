@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::API
-    SECRET_KEY = Rails.application.secrets.secret_key_base.to_s     
+  SECRET_KEY = Rails.application.secrets.secret_key_base.to_s
 
   def encode(payload, exp = 24.hours.from_now)
     payload[:exp] = exp.to_i
@@ -11,17 +11,16 @@ class ApplicationController < ActionController::API
     HashWithIndifferentAccess.new decoded
   end
 
-def authorize_request
-    header = request.headers['Authorization']       
+  def authorize_request
+    header = request.headers['Authorization']
     header = header.split(' ').last if header
-        begin    
-        @decoded = decode(header)
-        @current_user = User.find(@decoded[:id])
-        rescue ActiveRecord::RecordNotFound => e       
-            render json: {errors: e.message}, status: :unauthorized 
-        rescue JWT::DecodeError => e
-            render json: {errors: e.message}, status: :unauthorized 
+    begin
+      @decoded = decode(header)
+      @current_user = User.find(@decoded[:id])
+    rescue ActiveRecord::RecordNotFound => e
+      render json: { errors: e.message }, status: :unauthorized
+    rescue JWT::DecodeError => e
+      render json: { errors: e.message }, status: :unauthorized
     end
   end
-    
 end

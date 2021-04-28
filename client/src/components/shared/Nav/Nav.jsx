@@ -1,14 +1,14 @@
 import './Nav.css'
 import { Link } from 'react-router-dom'
 
-function Nav({ currentUser }) {
+function Nav({ currentUser, handleLogout }) {
     return (
         <nav className="nav">
             {
                 currentUser ?
                     <div className="auth">
-                        <p> Hi, {currentUser.name}</p>
-                        <button>Logout</button>
+                        <p> Hi, {currentUser.firstName}</p>
+                        <button onClick={handleLogout}>Logout</button>
                     </div>
                     :
                     <div className="auth">

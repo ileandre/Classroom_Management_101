@@ -9,7 +9,7 @@ import StudentForm from './screens/LandingPage/LandingPage'
 import UpdateStudent from './screens/LandingPage/LandingPage'
 import LoginPage from './screens/LoginPage/LoginPage'
 import RegisterPage from './screens/RegisterPage/RegisterPage'
-import { loginUser, registerUser, verifyUser } from './services/auth'
+import { loginUser, registerUser, verifyUser, removeToken } from './services/auth'
 import Layout from './components/shared/Layout/Layout'
 
 function App() {
@@ -40,9 +40,15 @@ function App() {
     history.push('/welcome')
   }
 
+  const handleLogout = () => {
+    setCurrentUser(null)
+    localStorage.removeItem('authToken')
+    removeToken()
+  }
+
   return (
     <div className="App">
-      <Layout currentUser={currentUser}>
+      <Layout currentUser={currentUser} handleLogout={handleLogout}>
         <Switch>
           <Route path='/students/:id/update' component={UpdateStudent} />
           <Route path='/students/form' component={StudentForm} />
