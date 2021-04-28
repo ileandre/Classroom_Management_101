@@ -1,4 +1,5 @@
 import './ShowStudents.css'
+import {Link} from 'react-router-dom'
 import FilterButton from '../../components/FilterButton/FilterButton'
 // import PeriodButton from '../../components/PeriodButton/PeriodButton'
 
@@ -20,21 +21,21 @@ function ShowStudents({ students, handleFilter, handlePeriod, queryStudents }) {
             <div className="clipboard-border">
                 <div className="clipboard">
                     <h3>Roster</h3>
-                    <div className='roster-sections student'>
+                    <div className='column-title student'>
                         <p>First</p>
                         <p>Last</p>
                         <p>Grade</p>
                         <p>Period</p>
                     </div>
                     {queryStudents.map(student => (
-                        <div key={student.id} className='student'>
+                        <Link to={`/students/${student.id}`} key={student.id} className='student'>
                             <>
                             <p>{student.firstName}</p>
                             <p>{student.lastName}</p>
                             <p>{student.grade}</p>
                             <p>{student.period}</p>
                             </>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>

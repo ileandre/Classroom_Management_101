@@ -155,7 +155,12 @@ function MainContainer() {
         <Switch>
             <Route path='/students/:id/update' component={UpdateStudent} />
             <Route path='/students/form' component={StudentForm} />
-            <Route path='/students/:id' component={StudentDetails} />
+            <Route path='/students/:id'
+                render={() => <StudentDetails
+                    students={students}
+                    queryStudents={queryStudents}
+                />}
+            />
             <Route path='/students'
                 render={() => <ShowStudents
                     students={students}
