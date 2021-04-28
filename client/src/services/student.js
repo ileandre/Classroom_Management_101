@@ -1,8 +1,12 @@
-import api from '.api-helper'
+import api from './api-helper'
 
 export const getAllStudents = async () => {
     try {
+        console.log("inside getAllStudents inside services")
+        debugger
         const resp = await api.get('/students')
+        console.log(resp)
+        debugger
         return resp.data
     } catch (error) {
         throw error

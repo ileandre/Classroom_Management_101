@@ -1,16 +1,11 @@
 import './App.css';
 import React, { useState, useEffect } from 'react'
 import { Route, Switch, useHistory } from 'react-router-dom'
-import LandingPage from './screens/LandingPage/LandingPage'
-import HomePage from './screens/HomePage/HomePage'
-import ShowStudents from './screens/ShowStudents/ShowStudents'
-import StudentDetails from './screens/StudentDetails/StudentDetails'
-import StudentForm from './screens/LandingPage/LandingPage'
-import UpdateStudent from './screens/LandingPage/LandingPage'
 import LoginPage from './screens/LoginPage/LoginPage'
 import RegisterPage from './screens/RegisterPage/RegisterPage'
 import { loginUser, registerUser, verifyUser, removeToken } from './services/auth'
 import Layout from './components/shared/Layout/Layout'
+import MainContainer from './containers/MainContainer';
 
 function App() {
   // console.log(React.version)
@@ -50,14 +45,9 @@ function App() {
     <div className="App">
       <Layout currentUser={currentUser} handleLogout={handleLogout}>
         <Switch>
-          <Route path='/students/:id/update' component={UpdateStudent} />
-          <Route path='/students/form' component={StudentForm} />
-          <Route path='/students/:id' component={StudentDetails} />
-          <Route path='/students' component={ShowStudents} />
           <Route path='/register' render={() => <RegisterPage handleRegister={handleRegister} />} />
           <Route path='/login' render={() => <LoginPage handleLogin={handleLogin} />} />
-          <Route path='/welcome' component={HomePage} />
-          <Route path='/' component={LandingPage} />
+          <Route path='/' render={() => <MainContainer/>}/>
         </Switch>
       </Layout>
     </div>

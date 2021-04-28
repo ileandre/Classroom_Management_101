@@ -1,5 +1,11 @@
 class UsersController < ApplicationController
 
+
+  def index
+    @users = User.all
+    render json: @users
+  end
+
   # POST /users
   def create
     print "hello"

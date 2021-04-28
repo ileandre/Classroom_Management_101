@@ -1,4 +1,4 @@
-import api from '.api-helper'
+import api from './api-helper'
 
 export const getAllComments = async () => {
     try {
