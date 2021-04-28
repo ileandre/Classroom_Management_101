@@ -2,7 +2,7 @@ import './ShowStudents.css'
 import FilterButton from '../../components/FilterButton/FilterButton'
 // import PeriodButton from '../../components/PeriodButton/PeriodButton'
 
-function ShowStudents({ students, handleFilter, handlePeriod }) {
+function ShowStudents({ students, handleFilter, handlePeriod, queryStudents }) {
     // console.log(students)
     // debugger
 
@@ -13,13 +13,20 @@ function ShowStudents({ students, handleFilter, handlePeriod }) {
         return <h1>"Loading ..."</h1>
     }
     console.log("students:", students)
+    console.log("queryStudents:", queryStudents)
 
     return (
         <div className="showStudents">
             <div className="clipboard-border">
                 <div className="clipboard">
                     <h3>Roster</h3>
-                    {students.map(student => (
+                    <div className='roster-sections student'>
+                        <p>First</p>
+                        <p>Last</p>
+                        <p>Grade</p>
+                        <p>Period</p>
+                    </div>
+                    {queryStudents.map(student => (
                         <div key={student.id} className='student'>
                             <>
                             <p>{student.firstName}</p>

@@ -84,10 +84,10 @@ function MainContainer() {
             period: 5
         }
     ])
-
+    const [queryStudents, setQueryStudents] = useState(students)
     const [comments, setComments] = useState([])
-    const [top5, setTop5] = useState([])
-    const [filteredStuds, setFilteredStuds] = useState([])
+    // const [top5, setTop5] = useState([])
+    // const [filteredStuds, setFilteredStuds] = useState([])
     const [period, setPeriod] = useState([])
 
     useEffect(() => {
@@ -96,31 +96,35 @@ function MainContainer() {
             // console.log(studentData)
             // debugger
             // setStudents(studentData)
+            // setQueryStudents(studentData)
         }
         fetchStudents()
     }, [])
 
     const handleFilter = (filter) => {
         students.sort((a, b) => { return b.grade - a.grade })
+        console.log('inside filter')
         let studs = []
         if (filter === 'Top 5') {
             const five = students.slice(0, 5)
-            setTop5(five)
+            setQueryStudents(five)
         } else if (filter === 'A-Student') {
             studs = students.filter(student => student.grade >= 90)
-            setFilteredStuds(studs)
+            setQueryStudents(studs)
         } else if (filter === 'B-Student') {
             studs = students.filter(student => student.grade < 90 && student.grade >= 80)
-            setFilteredStuds(studs)
+            setQueryStudents(studs)
         } else if (filter === 'C-Student') {
             studs = students.filter(student => student.grade < 80 && student.grade >= 70)
-            setFilteredStuds(studs)
+            setQueryStudents(studs)
         } else if (filter === 'D-Student') {
             studs = students.filter(student => student.grade < 70 && student.grade >= 60)
-            setFilteredStuds(studs)
+            setQueryStudents(studs)
         } else if (filter === 'F-Student') {
             studs = students.filter(student => student.grade < 60)
-            setFilteredStuds(studs)
+            setQueryStudents(studs)
+        } else {
+            setQueryStudents(students)
         }
     }
 
@@ -154,7 +158,7 @@ function MainContainer() {
                     students={students}
                     handleFilter={handleFilter}
                     handlePeriod={handlePeriod}
-                    filteredStuds={filteredStuds}
+                    queryStudents={queryStudents}
                     period={period} />}
             />
             <Route path='/welcome' component={HomePage} />
