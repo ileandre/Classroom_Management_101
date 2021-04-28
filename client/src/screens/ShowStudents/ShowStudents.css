@@ -9,6 +9,7 @@
 } */
 
 .clipboard-border {
+    margin: 0 auto;
     margin-top: 13%;
     display: flex;
     background-color: rgb(114, 56, 9);
@@ -21,4 +22,11 @@
     background-color: white;
     height: 90%;
     width: 90%;
+    overflow: auto;
+}
+
+.student {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }

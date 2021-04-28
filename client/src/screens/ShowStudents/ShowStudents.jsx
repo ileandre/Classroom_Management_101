@@ -8,35 +8,38 @@ function ShowStudents({ students, handleFilter, handlePeriod }) {
 
     const filterButtons = ['Top 5', 'A-Student', 'B-Student', 'C-Student', 'D-Student', 'F-Student']
     const periodButtons = ['Period 1', 'Period 2', 'Period 3', 'Period 4', 'Period 5', 'All']
+    
+    if (!students) {
+        return <h1>"Loading ..."</h1>
+    }
+    console.log("students:", students)
 
     return (
         <div className="showStudents">
             <div className="clipboard-border">
                 <div className="clipboard">
                     <h3>Roster</h3>
-                    {students.map(student => {
-                        // {
-                        //     console.log(student)
-                        //     debugger
-                        // }
+                    {students.map(student => (
                         <div key={student.id} className='student'>
+                            <>
                             <p>{student.firstName}</p>
                             <p>{student.lastName}</p>
                             <p>{student.grade}</p>
                             <p>{student.period}</p>
+                            </>
                         </div>
-                    })}
+                    ))}
                 </div>
             </div>
             <div className='buttons-container'>
                 {
                     filterButtons.map((filter, index) => (
-                        <button key={index} onClick={handleFilter(filter)}>{filter}</button>
+                        <button key={index} onClick={() => handleFilter(filter)}>{filter}</button>
                     ))
                 }
                 {
                     periodButtons.map((period, index) => (
-                        <button key={index} onClick={handlePeriod(period)}>{period}</button>
+                        <button key={index} onClick={() => handlePeriod(period)}>{period}</button>
                     ))
                 }
             </div>

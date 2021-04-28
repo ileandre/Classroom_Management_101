@@ -9,42 +9,118 @@ import StudentForm from '../screens/LandingPage/LandingPage'
 import UpdateStudent from '../screens/LandingPage/LandingPage'
 
 function MainContainer() {
-    const [students, setStudents] = useState([])
+    const [students, setStudents] = useState([
+        {
+            firstName: "Tina",
+            grade: 80,
+            id: 1,
+            lastName: "Feil",
+            period: 2,
+        },
+        {
+            id: 2,
+            firstName: "Lyndsey",
+            lastName: "Bode",
+            grade: 67,
+            period: 3
+        },
+        {
+            id: 3,
+            firstName: "Kris",
+            lastName: "Davis",
+            grade: 77,
+            period: 2
+        },
+        {
+            id: 4,
+            firstName: "Mozella",
+            lastName: "Ortiz",
+            grade: 50,
+            period: 5
+
+        },
+        {
+            id: 5,
+            firstName: "Foster",
+            lastName: "Metz",
+            grade: 87,
+            period: 4
+        },
+        {
+            id: 6,
+            firstName: "Delaine",
+            lastName: "Stanton",
+            grade: 96,
+            period: 2
+
+        },
+        {
+            id: 7,
+            firstName: "Raymundo",
+            lastName: "Kihn",
+            grade: 92,
+            period: 2
+        },
+        {
+            id: 8,
+            firstName: "Cornell",
+            lastName: "Sauer",
+            grade: 90,
+            period: 3
+        },
+        {
+            id: 9,
+            user_id: 1,
+            firstName: "Darcy",
+            lastName: "Flatley",
+            grade: 78,
+            period: 5
+        },
+        {
+            id: 10,
+            firstName: "Merna",
+            lastName: "Ortiz",
+            grade: 51,
+            period: 5
+        }
+    ])
+
     const [comments, setComments] = useState([])
     const [top5, setTop5] = useState([])
     const [filteredStuds, setFilteredStuds] = useState([])
     const [period, setPeriod] = useState([])
+
     useEffect(() => {
         const fetchStudents = async () => {
             const studentData = await getAllStudents()
             // console.log(studentData)
             // debugger
-            setStudents(...studentData)
+            // setStudents(studentData)
         }
         fetchStudents()
     }, [])
 
     const handleFilter = (filter) => {
-        students.sort((a, b) => {return b.grade - a.grade})
+        students.sort((a, b) => { return b.grade - a.grade })
         let studs = []
         if (filter === 'Top 5') {
             const five = students.slice(0, 5)
-            setTop5(...five)
+            setTop5(five)
         } else if (filter === 'A-Student') {
             studs = students.filter(student => student.grade >= 90)
-            setFilteredStuds(...studs)
+            setFilteredStuds(studs)
         } else if (filter === 'B-Student') {
             studs = students.filter(student => student.grade < 90 && student.grade >= 80)
-            setFilteredStuds(...studs)
+            setFilteredStuds(studs)
         } else if (filter === 'C-Student') {
             studs = students.filter(student => student.grade < 80 && student.grade >= 70)
-            setFilteredStuds(...studs)
+            setFilteredStuds(studs)
         } else if (filter === 'D-Student') {
             studs = students.filter(student => student.grade < 70 && student.grade >= 60)
-            setFilteredStuds(...studs)
+            setFilteredStuds(studs)
         } else if (filter === 'F-Student') {
             studs = students.filter(student => student.grade < 60)
-            setFilteredStuds(...studs)
+            setFilteredStuds(studs)
         }
     }
 
@@ -52,19 +128,19 @@ function MainContainer() {
         let per = []
         if (period === '1') {
             per = students.filter(student => student.period === 1)
-            setPeriod(...per)
+            setPeriod(per)
         } else if (period === '2') {
             per = students.filter(student => student.period === 2)
-            setPeriod(...per)
+            setPeriod(per)
         } else if (period === '3') {
             per = students.filter(student => student.period === 3)
-            setPeriod(...per)
+            setPeriod(per)
         } else if (period === '4') {
             per = students.filter(student => student.period === 4)
-            setPeriod(...per)
+            setPeriod(per)
         } else if (period === '5') {
             per = students.filter(student => student.period === 5)
-            setPeriod(...per)
+            setPeriod(per)
         }
     }
 
@@ -73,13 +149,13 @@ function MainContainer() {
             <Route path='/students/:id/update' component={UpdateStudent} />
             <Route path='/students/form' component={StudentForm} />
             <Route path='/students/:id' component={StudentDetails} />
-            <Route path='/students' 
-            render={() => <ShowStudents 
-                students={students} 
-                handleFilter={handleFilter} 
-                handlePeriod={handlePeriod}
-                filteredStuds={filteredStuds}
-                period={period}/>} 
+            <Route path='/students'
+                render={() => <ShowStudents
+                    students={students}
+                    handleFilter={handleFilter}
+                    handlePeriod={handlePeriod}
+                    filteredStuds={filteredStuds}
+                    period={period} />}
             />
             <Route path='/welcome' component={HomePage} />
             <Route path='/' component={LandingPage} />
