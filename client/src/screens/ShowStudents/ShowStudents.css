@@ -22,7 +22,11 @@
     background-color: white;
     height: 90%;
     width: 90%;
-    overflow: auto;
+}
+
+.students-list {
+    height: 75%;
+    overflow: scroll;
 }
 
 .student {

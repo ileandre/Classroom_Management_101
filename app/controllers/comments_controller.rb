@@ -4,15 +4,16 @@ class CommentsController < ApplicationController
 
   # GET /comments
   def index
-    @user = User.find(params[:user_id])
-     # @students = Student.find(user_id: current_user.id)
-     @students = Student.where(user_id: @user.id)
+    # @user = User.find(params[:user_id])
+    #  @students = Student.find(user_id: current_user.id)
+    #  @students = Student.where(user_id: @user.id)
 
      # @students = current_user.students
-     @student = @students.find(params[:student_id])
-     @comments = Comment.where(student_id: @student.id)
+    #  @student = @students.find(params[:student_id])
+    #  @comments = Comment.where(student_id: @student.id)
      # #OR
      # @comments = @student.comments
+     @comments = Comment.all
     render json: @comments
   end
 

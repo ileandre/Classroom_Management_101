@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Switch, Route } from 'react-router-dom'
 import { getAllStudents } from '../services/student'
+import { getAllComments } from '../services/comments'
 import LandingPage from '../screens/LandingPage/LandingPage'
 import HomePage from '../screens/HomePage/HomePage'
 import ShowStudents from '../screens/ShowStudents/ShowStudents'
@@ -85,7 +86,153 @@ function MainContainer() {
         }
     ])
     const [queryStudents, setQueryStudents] = useState(students)
-    const [comments, setComments] = useState([])
+    const [comments, setComments] = useState([
+        {
+            id: 1,
+            student_id: 1,
+            comment: "Cum velit quam. Occaecati non qui. Nobis est sit.",
+        },
+        {
+            id: 2,
+            student_id: 1,
+            comment: "Vitae impedit sunt. Nisi labore dolor. Ut distinctio placeat.",
+        },
+        {
+            id: 3,
+            student_id: 3,
+            comment: "Eum aut temporibus. Reiciendis ut et. Maxime aut voluptatem.",
+        },
+        {
+            id: 4,
+            student_id: 3,
+            comment: "Pariatur et laborum. Alias reprehenderit eius. Iste quae suscipit.",
+        },
+        {
+            id: 5,
+            student_id: 3,
+            comment: "Voluptas perspiciatis sequi. Et earum architecto. Assumenda neque necessitatibus.",
+        },
+        {
+            id: 6,
+            student_id: 3,
+            comment: "Illum autem incidunt. Voluptatem quasi amet. Sed sed ab.",
+        },
+        {
+            id: 7,
+            student_id: 3,
+            comment: "Aut nihil illo. Ut aut sint. Commodi velit pariatur.",
+        },
+        {
+            id: 8,
+            student_id: 3,
+            comment: "Id accusantium autem. Ut est repudiandae. Sit rerum voluptatibus.",
+        },
+        {
+            id: 9,
+            student_id: 3,
+            comment: "Iure ut veniam. Eligendi quia ut. Cum quod omnis.",
+        },
+        {
+            id: 10,
+            student_id: 4,
+            comment: "Laborum delectus nisi. Impedit quibusdam illum. Explicabo rerum temporibus.",
+        },
+        {
+            id: 13,
+            student_id: 5,
+            comment: "Quo eveniet temporibus. Sunt veritatis nisi. Sunt natus quo.",
+        },
+        {
+            id: 14,
+            student_id: 5,
+            comment: "Mollitia itaque ea. Mollitia cupiditate officia. Voluptatem porro excepturi.",
+        },
+        {
+            id: 15,
+            student_id: 5,
+            comment: "Assumenda voluptatum quidem. Amet aliquid sed. Omnis cumque nihil.",
+        },
+        {
+            id: 16,
+            student_id: 6,
+            comment: "Nostrum deserunt officiis. Saepe velit nesciunt. Cumque velit iure.",
+        },
+        {
+            id: 17,
+            student_id: 6,
+            comment: "Illo aut dignissimos. Omnis sapiente dicta. Quo ut nulla.",
+        },
+        {
+            id: 18,
+            student_id: 6,
+            comment: "Sint tempora vitae. Quod consequuntur at. Non exercitationem aliquam.",
+        },
+        {
+            id: 19,
+            student_id: 7,
+            comment: "Expedita magni nostrum. Occaecati ut iusto. Officiis magnam quis.",
+        },
+        {
+            id: 20,
+            student_id: 7,
+            comment: "Doloribus iure minima. Aut doloribus assumenda. Voluptatem cupiditate dolorem.",
+        },
+        {
+            id: 21,
+            student_id: 7,
+            comment: "Ex odio non. Iusto ut nam. Ea velit sed.",
+
+        },
+        {
+            id: 22,
+            student_id: 8,
+            comment: "Deleniti dolor occaecati. Nesciunt quia accusamus. Enim impedit facere.",
+        },
+        {
+            id: 23,
+            student_id: 8,
+            comment: "Dolores dolor voluptatem. Qui itaque corrupti. Voluptatibus doloribus perferendis.",
+        },
+        {
+            id: 24,
+            student_id: 8,
+            comment: "Vel ad quo. Consequuntur quis sapiente. Odit est sed.",
+        },
+        {
+            id: 25,
+            student_id: 9,
+            comment: "Minima numquam dicta. Sunt repudiandae culpa. Laudantium praesentium voluptates.",
+            "created_at": "2021-04-27T21:07:48.435Z",
+            "updated_at": "2021-04-27T21:07:48.435Z"
+        },
+        {
+            id: 26,
+            student_id: 9,
+            comment: "Maxime consequatur et. Beatae magnam quasi. Eos accusantium et.",
+        },
+        {
+            id: 27,
+            student_id: 9,
+            comment: "Tempora et at. Enim debitis et. Quia suscipit voluptatum.",
+        },
+        {
+            id: 28,
+            student_id: 10,
+            comment: "Ullam voluptatibus animi. Eveniet autem omnis. Nemo quia quam.",
+        },
+        {
+            id: 29,
+            student_id: 10,
+            comment: "Amet iste quo. Voluptatem qui sed. Ut nobis alias.",
+        },
+        {
+            id: 30,
+            student_id: 10,
+            comment: "Aspernatur non accusantium. Ipsa cumque sit. Facere ut architecto.",
+        }
+    ])
+    const [queryComments, setQueryComments] = useState([])
+
     // const [top5, setTop5] = useState([])
     // const [filteredStuds, setFilteredStuds] = useState([])
     // const [period, setPeriod] = useState([])
@@ -99,6 +246,16 @@ function MainContainer() {
             // setQueryStudents(studentData)
         }
         fetchStudents()
+    }, [])
+
+    useEffect(() => {
+        const fetchComments = async () => {
+            const CommentData = await getAllComments()
+            // console.log(studentData)
+            // debugger
+            // setComments(studentData)
+        }
+        fetchComments()
     }, [])
 
     const handleFilter = (filter) => {
@@ -151,6 +308,11 @@ function MainContainer() {
 
     }
 
+    const fetchComments = (id) => {
+        const comment = comments.filter(comment => comment.student_id === id)
+        setQueryComments(comment)
+    }
+
     return (
         <Switch>
             <Route path='/students/:id/update' component={UpdateStudent} />
@@ -158,7 +320,8 @@ function MainContainer() {
             <Route path='/students/:id'
                 render={() => <StudentDetails
                     students={students}
-                    queryStudents={queryStudents}
+                    queryComments={queryComments}
+                    fetchComments={fetchComments}
                 />}
             />
             <Route path='/students'
