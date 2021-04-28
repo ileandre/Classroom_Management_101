@@ -29,7 +29,7 @@ function App() {
   const handleRegister = async (formData) => {
     console.log(formData)
     const userData = await registerUser(formData)
-    debugger
+    // debugger
     console.log(userData)
     setCurrentUser(userData)
     history.push('/welcome')
