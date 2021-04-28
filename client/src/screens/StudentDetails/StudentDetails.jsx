@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import "./StudentDetails.css"
 
-function StudentDetails({ students, queryComments, fetchComments }) {
+function StudentDetails({students, queryComments, fetchComments, handleDelete}) {
     const [student, setStudent] = useState({})
     const params = useParams()
     const { id } = params
@@ -40,6 +40,10 @@ function StudentDetails({ students, queryComments, fetchComments }) {
                                 </>
                             ))
                         }
+                    </div>
+                    <div className="buttons">
+                        <button onClick={()=>{handleDelete(Number(id))}}>Remove</button>
+                        <button onClick>Edit</button>
                     </div>
                 </div>
             </div>
