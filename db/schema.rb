@@ -31,7 +31,6 @@ ActiveRecord::Schema.define(version: 2021_04_27_194644) do
     t.integer "period"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_students_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
