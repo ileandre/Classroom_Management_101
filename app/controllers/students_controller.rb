@@ -53,7 +53,7 @@ class StudentsController < ApplicationController
     def set_student
       # @user = User.find(params[:user_id])
       # @students = Student.where(user_id: @user.id)
-      @students = Student.where(user_id: current_user.id)
+      @students = Student.where(user_id: @current_user.id)
       @student = @students.find(params[:id])
     end
 

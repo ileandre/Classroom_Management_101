@@ -2,11 +2,11 @@ import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import "./StudentForm.css"
 
-function StudentForm() {
+function StudentForm({handleAdd}) {
     const [student, setStudent] = useState({})
     const params = useParams()
     const { id } = params
-    const [formData, setFormData] = useState({
+    const [studentData, setStudentData] = useState({
         firstName: '',
         lastName: '',
         grade: '',
@@ -15,7 +15,7 @@ function StudentForm() {
     const [commentData, setCommentData] = useState({
         comment: ''
     })
-    const { firstName, lastName, grade, period } = formData
+    const { firstName, lastName, grade, period } = studentData
     const { comment } = commentData
 
     // useEffect(() => {
@@ -27,7 +27,7 @@ function StudentForm() {
 
     const handleStudentChange = (e) => {
         const { name, value } = e.target
-        setFormData(prevState => ({
+        setStudentData(prevState => ({
             ...prevState,
             [name]: value
         }))
@@ -78,8 +78,7 @@ function StudentForm() {
                             />
                         </label>
                     </div>
-                    <div className="student-comments">
-                        <p>Comments</p>
+                    <div className="student-comments">Comments
                         <textarea
                             type='text'
                             name='comment'
@@ -88,7 +87,7 @@ function StudentForm() {
                         />
                     </div>
                     <div className="buttons">
-                        <button onClick>Add</button>
+                        <button onClick={()=>handleAdd(studentData, commentData)}>Add</button>
                     </div>
                 </div>
             </div>

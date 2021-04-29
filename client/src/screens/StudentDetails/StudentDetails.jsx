@@ -1,18 +1,30 @@
-import { useParams } from 'react-router-dom'
+import { useParams, useHistory } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import "./StudentDetails.css"
 
-function StudentDetails({students, queryComments, fetchComments, handleDelete}) {
+function StudentDetails({ students, queryComments, fetchComments, handleDelete }) {
     const [student, setStudent] = useState({})
     const params = useParams()
     const { id } = params
+    const history = useHistory()
 
+    
     useEffect(() => {
-        // console.log(id)
+        if (students.length === 0) {
+            history.push('/students')
+        }
         const stud = students.find(student => student.id === Number(id))
         setStudent(stud)
         fetchComments(Number(id))
+
     }, [])
+
+    const handleEdit = () => {
+        history.push(`/students/${id}/edit`)
+    }
+
+    console.log(queryComments)
+    
 
     return (
         <div className='studentDetails'>
@@ -36,14 +48,14 @@ function StudentDetails({students, queryComments, fetchComments, handleDelete}) 
                         {
                             queryComments.map((comment, index) => (
                                 <>
-                                    <p key={index}><span>{index + 1})</span> {comment.comment}</p>
+                                    <p key={comment.id}><span>{index + 1})</span> {comment.comment}</p>
                                 </>
                             ))
                         }
                     </div>
                     <div className="buttons">
-                        <button onClick={()=>{handleDelete(Number(id))}}>Remove</button>
-                        <button onClick>Edit</button>
+                        <button onClick={() => handleDelete(Number(id))}>Remove</button>
+                        <button onClick={() => handleEdit()}>Edit</button>
                     </div>
                 </div>
             </div>
