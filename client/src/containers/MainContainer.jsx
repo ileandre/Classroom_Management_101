@@ -10,15 +10,15 @@ import StudentForm from '../screens/StudentForm/StudentForm'
 import StudentEdit from '../screens/StudentEdit/StudentEdit'
 import UpdateStudent from '../screens/LandingPage/LandingPage'
 
-function MainContainer({ 
-    students, 
-    setStudents, 
-    queryStudents, 
-    setQueryStudents, 
-    fetchStudents, 
-    setComments, 
-    fetchComments, 
-    queryComments, 
+function MainContainer({
+    students,
+    setStudents,
+    queryStudents,
+    setQueryStudents,
+    fetchStudents,
+    setComments,
+    fetchComments,
+    queryComments,
     fetchAllComments }) {
     // const [students, setStudents] = useState([
     //     {
@@ -317,26 +317,52 @@ function MainContainer({
 
     const handlePutStudent = async (id, studentData) => {
         const updatedStudent = await putStudent(id, studentData)
-        setStudents(prevState => [...prevState, updatedStudent])
+        fetchStudents()
+        // setStudents(prevState => [...prevState, updatedStudent])
     }
     // console.log(students)
 
     const handlePostStudent = async (studentData) => {
         const student = await postStudent(studentData)
-        fetchStudents()
-        setStudents(prevState => [...prevState, student])
-        
+        console.log(student)
+        debugger
+        // fetchStudents()
+        setStudents(prevState => prevState.push(student))
+        console.log(students)
     }
 
-    const handlePostComment = async (commentData) => {
+    const handlePostComment = async (commentData, studentData = {}) => {
+        // fetchStudents()
+
+        if (studentData) {
+            // const newStudent = students.filter(student => student.firstName === studentData.firstName && student.lastName === studentData.lastName && student.grade === studentData.grade && student.period === studentData.period)
+            students.map(student => {
+                console.log("studentData.firstName: ",studentData.firstName)
+                console.log("student.firstName: ",student.firstName)
+                console.log("studentData.lastName: ",studentData.lastName)
+                console.log("student.lastName: ",student.lastName)
+                console.log("studentData.grade: ",studentData.grade)
+                console.log("student.grade: ",student.grade)
+                console.log("studentData.period: ",studentData.period)
+                console.log("student.period: ",student.period)
+
+                if (student.firstName === studentData.firstName && student.lastName === studentData.lastName && student.grade === Number(studentData.grade) && student.period === Number(studentData.period)) {
+                    console.log(student)
+                    commentData.student_id = student.id
+                }
+            })
+            // console.log(getId)
+            // commentData.student_id = getId
+            console.log(commentData)
+            debugger
+        }
         const comment = await postComment(commentData)
-        fetchAllComments()
-        setComments(prevState => [...prevState, comment])
+        setComments(prevState => prevState.push(comment))
+        // setComments(prevState => [...prevState, comment])
     }
 
     return (
         <Switch>
-            <Route exact path='/students/:id/update' component={UpdateStudent} />
             <Route path='/students/form'
                 render={() => <StudentForm
                     handlePostComment={handlePostComment}

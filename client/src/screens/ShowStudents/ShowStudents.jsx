@@ -10,17 +10,16 @@ function ShowStudents({ students, handleFilter, handlePeriod, queryStudents }) {
     const filterButtons = ['Top 5', 'A-Student', 'B-Student', 'C-Student', 'D-Student', 'F-Student']
     const periodButtons = ['Period 1', 'Period 2', 'Period 3', 'Period 4', 'Period 5', 'All']
 
-    if (!students) {
-        return <h1>"Loading ..."</h1>
-    }
     // console.log("students:", students)
     // console.log("queryStudents:", queryStudents)
+
 
     return (
         <div className="showStudents">
             <div className="clipboard-border">
                 <div className="clipboard">
                     <h3>Roster</h3>
+                    <Link to="students/form" className='addStudent-button'>Add Student</Link>
                     <div className='column-title student'>
                         <p>First</p>
                         <p>Last</p>

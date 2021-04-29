@@ -46,7 +46,7 @@ export const putStudent = async (id, studentData) => {
 export const deleteStudent = async (id) => {
     try {
         console.log(id)
-        debugger
+        // debugger
         const resp = await api.delete(`/students/${id}`)
         return resp
     } catch (error) {

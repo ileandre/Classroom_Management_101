@@ -1,11 +1,10 @@
-import { useParams } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import "./StudentForm.css"
 
 function StudentForm({handlePostStudent, handlePostComment}) {
     const [student, setStudent] = useState({})
-    const params = useParams()
-    const { id } = params
+    const history = useHistory()
     const [studentData, setStudentData] = useState({
         firstName: '',
         lastName: '',
@@ -13,6 +12,7 @@ function StudentForm({handlePostStudent, handlePostComment}) {
         period: '',
     })
     const [commentData, setCommentData] = useState({
+        student_id: 0,
         comment: ''
     })
     const { firstName, lastName, grade, period } = studentData
@@ -39,10 +39,24 @@ function StudentForm({handlePostStudent, handlePostComment}) {
             [name]: value
         }))
     }
+    
+const handleCreateComment = async () => {
+    await handlePostComment(commentData, studentData)
+    console.log("comment: ", commentData)
+    console.log("student: ", studentData)
+    debugger
+}
 
-    const handleAdd = () => {
-        handlePostStudent(Number(id), studentData)
-        handlePostComment(Number(id), commentData)
+    const handleCreateStudent = async () => {
+        await handlePostStudent(studentData)
+        debugger
+        
+        if (comment) {
+            await handleCreateComment()
+        }
+        
+        
+        history.push(`/students`)
     }
 
     return (
@@ -92,7 +106,7 @@ function StudentForm({handlePostStudent, handlePostComment}) {
                         />
                     </div>
                     <div className="buttons">
-                        <button onClick={()=>handleAdd()}>Add</button>
+                        <button onClick={()=>handleCreateStudent()}>Add</button>
                     </div>
                 </div>
             </div>
