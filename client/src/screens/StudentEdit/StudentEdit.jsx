@@ -11,7 +11,7 @@ function StudentEdit({handlePutStudent, students, handlePostComment}) {
         firstName: '',
         lastName: '',
         grade: '',
-        period: '',
+        period: ''
     })
     const [commentData, setCommentData] = useState({
         student_id: Number(id),
@@ -57,7 +57,7 @@ function StudentEdit({handlePutStudent, students, handlePostComment}) {
         if (comment) {
             handlePostComment(commentData)
         }
-        console.log(student_id)
+        // console.log(student_id)
         history.push(`/students/${id}`)
     }
 

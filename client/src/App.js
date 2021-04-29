@@ -52,9 +52,12 @@ function App() {
   }, [])
 
   const fetchComments = (id) => {
+    // console.log("app, 55, inside fetchcomments func, comments", comments)
     const studComments = comments.filter(comment => comment.student_id === id)
-    setQueryComments(studComments)
-    console.log(studComments)
+  //  console.log("app, 57", studComments)
+    setQueryComments([...studComments])
+    // console.log("app, 59", queryComments)
+    // console.log(studComments)
   }
 
 

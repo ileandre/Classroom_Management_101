@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom'
 function Nav({ currentUser, handleLogout }) {
     return (
         <nav className="nav">
-            <p>Classroom Management 101</p>
+            <Link to='/welcome'>
+                <p>Classroom Management 101</p>
+            </Link>
             {
                 currentUser ?
                     <div className="auth">
@@ -23,7 +25,7 @@ function Nav({ currentUser, handleLogout }) {
 
             }
         </nav>
-   )
+    )
 }
 
 export default Nav

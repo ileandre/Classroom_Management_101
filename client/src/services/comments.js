@@ -4,7 +4,7 @@ export const getAllComments = async () => {
     try {
         const resp = await api.get('/comments')
         return resp.data
-        console.log(resp)
+        // console.log(resp)
     } catch (error) {
         throw error
     }

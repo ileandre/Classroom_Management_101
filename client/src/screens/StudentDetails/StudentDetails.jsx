@@ -3,18 +3,43 @@ import { useState, useEffect } from 'react'
 import "./StudentDetails.css"
 
 function StudentDetails({ students, queryComments, fetchComments, handleDelete }) {
-    const [student, setStudent] = useState({})
+    const [student, setStudent] = useState({
+        firstName: '',
+        lastName: '',
+        grade: 0,
+        period: 0
+    })
     const params = useParams()
     const { id } = params
     const history = useHistory()
 
-    
     useEffect(() => {
         if (students.length === 0) {
             history.push('/students')
         }
-        const stud = students.find(student => student.id === id)
-        setStudent(stud)
+        // console.log(students)
+        // const stud = students.find(student => student.id === Number(id))
+        students.map(stud => {
+            if (stud.id === Number(id)){
+                student.firstName = stud.firstName
+                student.lastName = stud.lastName
+                student.grade = Number(stud.grade)
+                student.period = Number(stud.period)
+            }
+            // if (stud.id === Number(id)) {
+            //     setStudent(prevState => ({
+            //         ...prevState,
+            //         firstName: stud.firstName,
+            //         lastName: stud.lastName,
+            //         grade: Number(stud.grade),
+            //         period: Number(stud.period)
+            //     }))
+            // }
+        })
+
+        // console.log(student)
+        // console.log("details, 42, before fetch comments, student", student)
+        // debugger
         fetchComments(Number(id))
 
     }, [])
@@ -23,8 +48,8 @@ function StudentDetails({ students, queryComments, fetchComments, handleDelete }
         history.push(`/students/${id}/edit`)
     }
 
-    console.log(queryComments)
-    
+    // console.log(queryComments)
+
 
     return (
         <div className='studentDetails'>

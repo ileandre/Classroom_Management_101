@@ -8,7 +8,7 @@ export const getAllStudents = async () => {
         //     // console.log("token extracted", token)
         //     api.defaults.headers.common.authorization = `Bearer ${token}`
         const resp = await api.get('/students')
-        console.log(resp)
+        // console.log(resp)
         // debugger
         return resp.data
     } catch (error) {
@@ -45,7 +45,7 @@ export const putStudent = async (id, studentData) => {
 
 export const deleteStudent = async (id) => {
     try {
-        console.log(id)
+        // console.log(id)
         // debugger
         const resp = await api.delete(`/students/${id}`)
         return resp
