@@ -1,7 +1,12 @@
 import './HomePage.css'
 import { Link } from 'react-router-dom'
 
-function HomePage({fetchStudents}) {
+function HomePage({fetchStudents, fetchAllComments}) {
+
+    const handleRoster = async () => {
+        await fetchStudents()
+        await fetchAllComments()
+    }
     return (
         <div className="homepage">
             <div className='board-border'>
@@ -9,7 +14,7 @@ function HomePage({fetchStudents}) {
                     <p className='quote-title' id='quote-title'>Teacher Quote(s)</p>
                     <p className='quote' id="quote">quotes goes here</p>
                     <div className='studentRoster'>
-                        <Link to='/students' onClick={()=>{fetchStudents()}}>
+                        <Link to='/students' onClick={()=>{handleRoster()}}>
                             <p>Student Roster</p>
                         </Link>
                     </div>

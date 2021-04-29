@@ -2,13 +2,14 @@ import { useParams, useHistory } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import "./StudentDetails.css"
 
-function StudentDetails({ students, queryComments, fetchComments, handleDelete }) {
-    const [student, setStudent] = useState({
-        firstName: '',
-        lastName: '',
-        grade: 0,
-        period: 0
-    })
+function StudentDetails({ students, queryComments, fetchStudComments, handleDelete }) {
+    const [student, setStudent] = useState({})
+    // const [student, setStudent] = useState({
+    //     firstName: '',
+    //     lastName: '',
+    //     grade: 0,
+    //     period: 0
+    // })
     const params = useParams()
     const { id } = params
     const history = useHistory()
@@ -18,41 +19,23 @@ function StudentDetails({ students, queryComments, fetchComments, handleDelete }
             history.push('/students')
         }
         // console.log(students)
-        // const stud = students.find(student => student.id === Number(id))
-        students.map(stud => {
-            if (stud.id === Number(id)){
-                student.firstName = stud.firstName
-                student.lastName = stud.lastName
-                student.grade = Number(stud.grade)
-                student.period = Number(stud.period)
-            }
-            // if (stud.id === Number(id)) {
-            //     setStudent(prevState => ({
-            //         ...prevState,
-            //         firstName: stud.firstName,
-            //         lastName: stud.lastName,
-            //         grade: Number(stud.grade),
-            //         period: Number(stud.period)
-            //     }))
-            // }
-        })
-
-        // console.log(student)
+        const stud = students.find(student => student.id === Number(id))
+        setStudent(stud)
         // console.log("details, 42, before fetch comments, student", student)
         // debugger
-        fetchComments(Number(id))
-
+        fetchStudComments(Number(id))
     }, [])
 
     const handleEdit = () => {
         history.push(`/students/${id}/edit`)
     }
-
+    
     // console.log(queryComments)
-
-
+    
+    
     return (
         <div className='studentDetails'>
+            {console.log(student)}
             <div className="clipboard-border">
                 <div className="clipboard">
                     <div className="student-info">

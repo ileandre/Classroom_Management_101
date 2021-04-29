@@ -37,16 +37,15 @@ function App() {
     setComments(commentData)
   }
 
-  useEffect(() => {
-    if (currentUser) {
-      const login = async () => {
-        // await fetchStudents()
-        await fetchAllComments()
-      }
-      login()
-    }
-
-  }, [])
+  // useEffect(() => {
+  //   if (currentUser) {
+  //     const login = async () => {
+  //       // await fetchStudents()
+  //       // await fetchAllComments()
+  //     }
+  //     login()
+  //   }
+  // }, [])
 
   useEffect(() => {
     const handleVerify = async () => {
@@ -62,8 +61,9 @@ function App() {
 
   // }, [])
 
-  const fetchComments = (id) => {
+  const fetchStudComments = async (id) => {
     // console.log("app, 55, inside fetchcomments func, comments", comments)
+    
     const studComments = comments.filter(comment => comment.student_id === id)
     //  console.log("app, 57", studComments)
     setQueryComments([...studComments])
@@ -127,7 +127,7 @@ function App() {
                 setStudents={setStudents}
                 comments={comments}
                 setComments={setComments}
-                fetchComments={fetchComments}
+                fetchStudComments={fetchStudComments}
                 queryComments={queryComments}
                 fetchStudents={fetchStudents}
                 fetchAllComments={fetchAllComments}

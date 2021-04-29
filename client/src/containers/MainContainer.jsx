@@ -16,7 +16,7 @@ function MainContainer({
     setQueryStudents,
     fetchStudents,
     setComments,
-    fetchComments,
+    fetchStudComments,
     queryComments,
     comments,
     fetchAllComments,
@@ -397,7 +397,7 @@ function MainContainer({
                     <StudentDetails
                         students={students}
                         queryComments={queryComments}
-                        fetchComments={fetchComments}
+                        fetchStudComments={fetchStudComments}
                         handleDelete={handleDelete}
                     />
                 </Route>
@@ -410,7 +410,10 @@ function MainContainer({
                     />
                 </Route>
                 <Route exact path='/welcome'>
-                    <HomePage fetchStudents={fetchStudents} />
+                    <HomePage 
+                    fetchStudents={fetchStudents} 
+                    fetchAllComments={fetchAllComments}
+                    />
                 </Route>
             </Switch>
         </>
