@@ -38,14 +38,15 @@ function App() {
     fetchStudents()
   }, [])
 
+  const fetchAllComments = async () => {
+    const commentData = await getAllComments()
+    // console.log(studentData)
+    // debugger
+    setComments(commentData)
+  }
+
   useEffect(() => {
-    const fetchComments = async () => {
-      const commentData = await getAllComments()
-      // console.log(studentData)
-      // debugger
-      setComments(commentData)
-    }
-    fetchComments()
+    fetchAllComments()
   }, [])
 
   const fetchComments = (id) => {
@@ -94,6 +95,7 @@ function App() {
                 fetchComments={fetchComments}
                 queryComments={queryComments}
                 fetchStudents={fetchStudents}
+                fetchAllComments={fetchAllComments}
               />}
           />
         </Switch>

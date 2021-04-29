@@ -2,7 +2,7 @@ import { useParams, useHistory } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import "./StudentEdit.css"
 
-function StudentEdit({handleUpdate, students}) {
+function StudentEdit({handlePutStudent, students, handlePostComment}) {
     const [student, setStudent] = useState({})
     const params = useParams()
     const { id } = params
@@ -14,10 +14,11 @@ function StudentEdit({handleUpdate, students}) {
         period: '',
     })
     const [commentData, setCommentData] = useState({
+        student_id: Number(id),
         comment: ''
     })
     const { firstName, lastName, grade, period } = studentData
-    const { comment } = commentData
+    const { comment, student_id } = commentData
 
     // useEffect(() => {
     //     console.log(id)
@@ -49,6 +50,15 @@ function StudentEdit({handleUpdate, students}) {
             ...prevState,
             [name]: value
         }))
+    }
+    
+    const handleUpdate = () => {
+        handlePutStudent(Number(id), studentData)
+        if (comment) {
+            handlePostComment(commentData)
+        }
+        console.log(student_id)
+        history.push(`/students/${id}`)
     }
 
     return (
@@ -89,7 +99,7 @@ function StudentEdit({handleUpdate, students}) {
                             />
                         </label>
                     </div>
-                    <div className="student-comments">Comments
+                    <div className="student-comments">New comment
                         <textarea
                             type='text'
                             name='comment'
@@ -98,7 +108,7 @@ function StudentEdit({handleUpdate, students}) {
                         />
                     </div>
                     <div className="buttons">
-                        <button onClick={()=>handleUpdate(Number(id), studentData, commentData)}>Update</button>
+                        <button onClick={()=>handleUpdate()}>Update</button>
                     </div>
                 </div>
             </div>

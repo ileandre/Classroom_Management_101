@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Switch, Route, useHistory } from 'react-router-dom'
 import { deleteStudent, postStudent, putStudent } from '../services/student'
-import { postComment } from '../services/comments'
+import { postComment, putComment } from '../services/comments'
 import LandingPage from '../screens/LandingPage/LandingPage'
 import HomePage from '../screens/HomePage/HomePage'
 import ShowStudents from '../screens/ShowStudents/ShowStudents'
@@ -10,7 +10,16 @@ import StudentForm from '../screens/StudentForm/StudentForm'
 import StudentEdit from '../screens/StudentEdit/StudentEdit'
 import UpdateStudent from '../screens/LandingPage/LandingPage'
 
-function MainContainer({ students, setStudents, queryStudents, setQueryStudents, fetchStudents, setComments, fetchComments, queryComments }) {
+function MainContainer({ 
+    students, 
+    setStudents, 
+    queryStudents, 
+    setQueryStudents, 
+    fetchStudents, 
+    setComments, 
+    fetchComments, 
+    queryComments, 
+    fetchAllComments }) {
     // const [students, setStudents] = useState([
     //     {
     //         firstName: "Tina",
@@ -306,21 +315,22 @@ function MainContainer({ students, setStudents, queryStudents, setQueryStudents,
         history.push('/students')
     }
 
-    const handleUpdate = async (id, studentData, commentData) => {
+    const handlePutStudent = async (id, studentData) => {
         const updatedStudent = await putStudent(id, studentData)
         setStudents(prevState => [...prevState, updatedStudent])
-
-        const updatedStudent = await putStudent(id, studentData)
-        setStudents(prevState => [...prevState, updatedStudent])
-
     }
     // console.log(students)
 
-    const handleAdd = async (studentData, commentData) => {
+    const handlePostStudent = async (studentData) => {
         const student = await postStudent(studentData)
+        fetchStudents()
         setStudents(prevState => [...prevState, student])
+        
+    }
 
+    const handlePostComment = async (commentData) => {
         const comment = await postComment(commentData)
+        fetchAllComments()
         setComments(prevState => [...prevState, comment])
     }
 
@@ -329,14 +339,17 @@ function MainContainer({ students, setStudents, queryStudents, setQueryStudents,
             <Route exact path='/students/:id/update' component={UpdateStudent} />
             <Route path='/students/form'
                 render={() => <StudentForm
-                // handleAdd={handleAdd}
+                    handlePostComment={handlePostComment}
+                    handlePostStudent={handlePostStudent}
+
                 />}
             />
 
             <Route exact path='/students/:id/edit'
                 render={() => <StudentEdit
                     students={students}
-                    handleUpdate={handleUpdate}
+                    handlePutStudent={handlePutStudent}
+                    handlePostComment={handlePostComment}
                 />}
             />
 

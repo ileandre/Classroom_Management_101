@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import "./StudentForm.css"
 
-function StudentForm({handleAdd}) {
+function StudentForm({handlePostStudent, handlePostComment}) {
     const [student, setStudent] = useState({})
     const params = useParams()
     const { id } = params
@@ -38,6 +38,11 @@ function StudentForm({handleAdd}) {
             ...prevState,
             [name]: value
         }))
+    }
+
+    const handleAdd = () => {
+        handlePostStudent(Number(id), studentData)
+        handlePostComment(Number(id), commentData)
     }
 
     return (
@@ -87,7 +92,7 @@ function StudentForm({handleAdd}) {
                         />
                     </div>
                     <div className="buttons">
-                        <button onClick={()=>handleAdd(studentData, commentData)}>Add</button>
+                        <button onClick={()=>handleAdd()}>Add</button>
                     </div>
                 </div>
             </div>

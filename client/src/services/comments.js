@@ -19,3 +19,12 @@ export const postComment = async (commentData) => {
     }
 }
 
+export const putComment = async (commentData) => {
+    try {
+        const resp = await api.put(`/comments`, { student: commentData })
+        return resp.data
+    } catch (error) {
+        throw error
+    }
+}
+
