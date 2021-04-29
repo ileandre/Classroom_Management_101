@@ -1,18 +1,19 @@
 import Nav from '../Nav/Nav'
+import { Link } from 'react-router-dom'
 import Footer from '../Footer/Footer'
 import "./Layout.css"
 
-function Layout({currentUser, children, handleLogout}) {
+function Layout({ currentUser, children, handleLogout }) {
     // const {currentUser} = props
     return (
         <div className="layout">
-              <Nav currentUser={currentUser} handleLogout={handleLogout}/>
-              <div className="layout-children">
-                  {children}
-              </div>
-              <Footer/>
-          </div>
-      )
+            <Nav currentUser={currentUser} handleLogout={handleLogout} />
+            <div classname="layout-children">
+                {children}
+            </div>
+                <Footer />
+        </div>
+    )
 }
 
 export default Layout

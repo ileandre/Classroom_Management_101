@@ -1,10 +1,11 @@
 import './App.css';
 import React, { useState, useEffect } from 'react'
-import { Route, Switch, useHistory } from 'react-router-dom'
+import { Route, Switch, useHistory, useLocation } from 'react-router-dom'
 import LoginPage from './screens/LoginPage/LoginPage'
 import RegisterPage from './screens/RegisterPage/RegisterPage'
 import { getAllStudents } from './services/student'
 import { getAllComments } from './services/comments'
+import LandingPage from './screens/LandingPage/LandingPage'
 import { loginUser, registerUser, verifyUser, removeToken } from './services/auth'
 import Layout from './components/shared/Layout/Layout'
 import MainContainer from './containers/MainContainer';
@@ -17,6 +18,7 @@ function App() {
   const [queryStudents, setQueryStudents] = useState(students)
   const [queryComments, setQueryComments] = useState([])
   const history = useHistory()
+  const location = useLocation()
 
   useEffect(() => {
     const handleVerify = async () => {
@@ -68,7 +70,7 @@ function App() {
     // debugger
     // console.log(userData)
     setCurrentUser(userData)
-    history.push('/welcome')
+    history.push('/')
   }
 
   const handleLogout = () => {
@@ -77,27 +79,49 @@ function App() {
     removeToken()
   }
 
+  // useEffect(() => {
+  //   currentUser ?
+  //     // && (location.pathname === "/" || location.pathname === "/login" || location.pathname === "/register")) {
+  //     history.push('/')
+  //     :
+  //     history.push('/')
+
+  // }, [])
+
   return (
     <div className="App">
       <Layout currentUser={currentUser} handleLogout={handleLogout}>
         <Switch>
-          <Route path='/register' render={() => <RegisterPage handleRegister={handleRegister} />} />
-          <Route path='/login' render={() => <LoginPage handleLogin={handleLogin} />} />
-          <Route path='/'
-            render={() =>
-              <MainContainer
-                students={students}
-                queryStudents={queryStudents}
-                setQueryStudents={setQueryStudents}
-                setStudents={setStudents}
-                comments={comments}
-                setComments={setComments}
-                fetchComments={fetchComments}
-                queryComments={queryComments}
-                fetchStudents={fetchStudents}
-                fetchAllComments={fetchAllComments}
-              />}
+          <Route exact path='/register'>
+            <RegisterPage
+              handleRegister={handleRegister}
+              currentUser={currentUser}
+            />
+          </Route>
+          <Route exact path='/login'>
+            <LoginPage
+              handleLogin={handleLogin}
+              // currentUser={currentUser}
+            />
+          </Route>
+          <Route path='/'>
+            {currentUser ? 
+          <MainContainer
+          students={students}
+          queryStudents={queryStudents}
+          setQueryStudents={setQueryStudents}
+          setStudents={setStudents}
+          comments={comments}
+          setComments={setComments}
+          fetchComments={fetchComments}
+          queryComments={queryComments}
+          fetchStudents={fetchStudents}
+          fetchAllComments={fetchAllComments}
+          currentUser={currentUser}
           />
+          : <LandingPage />}
+            </Route>
+
         </Switch>
       </Layout>
     </div>

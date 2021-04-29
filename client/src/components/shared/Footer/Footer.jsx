@@ -2,9 +2,9 @@ import './Footer.css'
 
 function Footer(props) {
     return (
-        <nav className="footer">
+        <div className="footer">
             &copy; Irma Leandre
-        </nav>
+        </div>
     )
 }
 

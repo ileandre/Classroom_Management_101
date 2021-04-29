@@ -2,10 +2,11 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
+    /* justify-content: space-between; */
     align-items: center;
 }
 
-.layout-children {
-    flex: 2;
-}
+/* .layout-children {
+    flex: 1;
+} */
 

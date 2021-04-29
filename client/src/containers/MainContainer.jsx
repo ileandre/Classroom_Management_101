@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 import { Switch, Route, useHistory } from 'react-router-dom'
 import { deleteStudent, postStudent, putStudent } from '../services/student'
 import { postComment, putComment } from '../services/comments'
-import LandingPage from '../screens/LandingPage/LandingPage'
 import HomePage from '../screens/HomePage/HomePage'
 import ShowStudents from '../screens/ShowStudents/ShowStudents'
 import StudentDetails from '../screens/StudentDetails/StudentDetails'
@@ -20,7 +19,8 @@ function MainContainer({
     fetchComments,
     queryComments,
     comments,
-    fetchAllComments }) {
+    fetchAllComments,
+    currentUser }) {
     // const [students, setStudents] = useState([
     //     {
     //         firstName: "Tina",
@@ -98,7 +98,9 @@ function MainContainer({
     // ])
     const history = useHistory()
 
-    // const [comments, setComments] = useState([
+    
+        // const [comments, setComments] = useState([
+    
     //     {
     //         id: 1,
     //         student_id: 1,
@@ -342,20 +344,20 @@ function MainContainer({
         if (studentData) {
             // const newStudent = students.filter(student => student.firstName === studentData.firstName && student.lastName === studentData.lastName && student.grade === studentData.grade && student.period === studentData.period)
             students.map(student => {
-                console.log("studentData.firstName: ",typeof studentData.firstName)
-                console.log("student.firstName: ",typeof student.firstName)
-                console.log("studentData.lastName: ",typeof studentData.lastName)
-                console.log("student.lastName: ",typeof student.lastName)
-                console.log("studentData.grade: ",typeof studentData.grade)
-                console.log("student.grade: ",typeof student.grade)
-                console.log("studentData.period: ",typeof studentData.period)
-                console.log("student.period: ",typeof student.period)
+                console.log("studentData.firstName: ", typeof studentData.firstName)
+                console.log("student.firstName: ", typeof student.firstName)
+                console.log("studentData.lastName: ", typeof studentData.lastName)
+                console.log("student.lastName: ", typeof student.lastName)
+                console.log("studentData.grade: ", typeof studentData.grade)
+                console.log("student.grade: ", typeof student.grade)
+                console.log("studentData.period: ", typeof studentData.period)
+                console.log("student.period: ", typeof student.period)
                 if (student.firstName === studentData.firstName && student.lastName === studentData.lastName && student.grade === Number(studentData.grade) && student.period === Number(studentData.period)) {
                     console.log(student)
                     debugger
                     commentData.student_id = student.id
                     console.log("container, 355:", commentData.student_id, "and", student.id)
-                debugger
+                    debugger
                 }
             })
             // console.log(getId)
@@ -373,42 +375,42 @@ function MainContainer({
     }
 
     return (
-        <Switch>
-            <Route path='/students/form'
-                render={() => <StudentForm
+        <>
+            <p>here</p>
+            <Route exact path='/students/form'>
+                <StudentForm
                     handlePostComment={handlePostComment}
                     handlePostStudent={handlePostStudent}
 
-                />}
-            />
+                />
+            </Route>
 
-            <Route exact path='/students/:id/edit'
-                render={() => <StudentEdit
+            <Route exact path='/students/:id/edit'>
+                <StudentEdit
                     students={students}
                     handlePutStudent={handlePutStudent}
                     handlePostComment={handlePostComment}
-                />}
-            />
+                />
+            </Route>
 
-            <Route path='/students/:id'
-                render={() => <StudentDetails
+            <Route exact path='/students/:id'>
+                <StudentDetails
                     students={students}
                     queryComments={queryComments}
                     fetchComments={fetchComments}
                     handleDelete={handleDelete}
-                />}
-            />
-            <Route path='/students'
-                render={() => <ShowStudents
+                />
+            </Route>
+            <Route exact path='/students'>
+                <ShowStudents
                     students={students}
                     handleFilter={handleFilter}
                     handlePeriod={handlePeriod}
                     queryStudents={queryStudents}
-                />}
-            />
-            <Route path='/welcome' component={HomePage} />
-            {/* <Route path='/' component={LandingPage} /> */}
-        </Switch>
+                />
+            </Route>
+            <Route exact path='/welcome' component={HomePage} />
+        </>
     )
 }
 

@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 
-function RegisterPage({ handleRegister }) {
+function RegisterPage({ handleRegister, currentUser }) {
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
@@ -11,7 +11,11 @@ function RegisterPage({ handleRegister }) {
         password: ''
     })
     const { firstName, lastName, username, email, password} = formData
+    const history = useHistory()
 
+    if (currentUser) {
+        history.push("/")
+    }
     const handleChange = (e) => {
         const { name, value } = e.target
         setFormData(prevState => ({

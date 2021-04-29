@@ -23,7 +23,7 @@ function Nav({ currentUser, handleLogout }) {
 
             }
         </nav>
-    )
+   )
 }
 
 export default Nav
