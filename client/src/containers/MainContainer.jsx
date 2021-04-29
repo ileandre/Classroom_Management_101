@@ -409,7 +409,9 @@ function MainContainer({
                         queryStudents={queryStudents}
                     />
                 </Route>
-                <Route exact path='/welcome' component={HomePage} />
+                <Route exact path='/welcome'>
+                    <HomePage fetchStudents={fetchStudents} />
+                </Route>
             </Switch>
         </>
     )

@@ -20,25 +20,15 @@ function App() {
   const history = useHistory()
   const location = useLocation()
 
-  useEffect(() => {
-    const handleVerify = async () => {
-      const userData = await verifyUser()
-      setCurrentUser(userData)
-    }
-    handleVerify()
-  }, [])
+
 
   const fetchStudents = async () => {
     const studentData = await getAllStudents()
-    // console.log(studentData)
+    console.log(studentData)
     // debugger
     setStudents(studentData)
     setQueryStudents(studentData)
   }
-
-  useEffect(() => {
-    fetchStudents()
-  }, [])
 
   const fetchAllComments = async () => {
     const commentData = await getAllComments()
@@ -48,13 +38,34 @@ function App() {
   }
 
   useEffect(() => {
-    fetchAllComments()
+    if (currentUser) {
+      const login = async () => {
+        // await fetchStudents()
+        await fetchAllComments()
+      }
+      login()
+    }
+
   }, [])
+
+  useEffect(() => {
+    const handleVerify = async () => {
+      const userData = await verifyUser()
+      setCurrentUser(userData)
+    }
+    handleVerify()
+  }, [])
+
+  
+
+  // useEffect(() => {
+
+  // }, [])
 
   const fetchComments = (id) => {
     // console.log("app, 55, inside fetchcomments func, comments", comments)
     const studComments = comments.filter(comment => comment.student_id === id)
-  //  console.log("app, 57", studComments)
+    //  console.log("app, 57", studComments)
     setQueryComments([...studComments])
     // console.log("app, 59", queryComments)
     // console.log(studComments)
@@ -104,26 +115,26 @@ function App() {
           <Route exact path='/login'>
             <LoginPage
               handleLogin={handleLogin}
-              // currentUser={currentUser}
+            // currentUser={currentUser}
             />
           </Route>
           <Route path='/'>
-            {currentUser ? 
-          <MainContainer
-          students={students}
-          queryStudents={queryStudents}
-          setQueryStudents={setQueryStudents}
-          setStudents={setStudents}
-          comments={comments}
-          setComments={setComments}
-          fetchComments={fetchComments}
-          queryComments={queryComments}
-          fetchStudents={fetchStudents}
-          fetchAllComments={fetchAllComments}
-          currentUser={currentUser}
-          />
-          : <LandingPage />}
-            </Route>
+            {currentUser ?
+              <MainContainer
+                students={students}
+                queryStudents={queryStudents}
+                setQueryStudents={setQueryStudents}
+                setStudents={setStudents}
+                comments={comments}
+                setComments={setComments}
+                fetchComments={fetchComments}
+                queryComments={queryComments}
+                fetchStudents={fetchStudents}
+                fetchAllComments={fetchAllComments}
+                currentUser={currentUser}
+              />
+              : <LandingPage />}
+          </Route>
 
         </Switch>
       </Layout>

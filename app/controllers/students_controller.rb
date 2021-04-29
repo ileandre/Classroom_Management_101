@@ -7,6 +7,8 @@ class StudentsController < ApplicationController
     # @user = User.find(params[:user_id])
     # @students = Student.where(user_id: @user.id)
     @students = Student.where(user_id: @current_user.id)
+    print "Your kids!"
+    print @students
     render json: @students
   end
 

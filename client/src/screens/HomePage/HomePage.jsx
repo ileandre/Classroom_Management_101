@@ -1,7 +1,7 @@
 import './HomePage.css'
 import { Link } from 'react-router-dom'
 
-function HomePage(props) {
+function HomePage({fetchStudents}) {
     return (
         <div className="homepage">
             <div className='board-border'>
@@ -9,7 +9,7 @@ function HomePage(props) {
                     <p className='quote-title' id='quote-title'>Teacher Quote(s)</p>
                     <p className='quote' id="quote">quotes goes here</p>
                     <div className='studentRoster'>
-                        <Link to='/students'>
+                        <Link to='/students' onClick={()=>{fetchStudents()}}>
                             <p>Student Roster</p>
                         </Link>
                     </div>
