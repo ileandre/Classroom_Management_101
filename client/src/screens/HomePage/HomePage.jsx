@@ -6,7 +6,8 @@ function HomePage(props) {
         <div className="homepage">
             <div className='board-border'>
                 <div className='board'>
-                    <p>Teacher Quote(s)</p>
+                    <p className='quote-title' id='quote-title'>Teacher Quote(s)</p>
+                    <p className='quote' id="quote">quotes goes here</p>
                     <div className='studentRoster'>
                         <Link to='/students'>
                             <p>Student Roster</p>

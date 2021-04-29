@@ -1,5 +1,4 @@
 .homepage {
-    /* background-image: url('https://cdn.pixabay.com/photo/2014/04/02/17/03/blackboard-307799__340.png'); */
     /* background-repeat: no-repeat; */
     background-size: cover;
     height: 100vh;
@@ -13,6 +12,9 @@
     background-color: gold;
     height: 75%;
     width: 90%;
+    background-image: url('https://cdn.pixabay.com/photo/2014/04/02/17/03/blackboard-307799__340.png');
+    background-size: cover;
+    background-repeat: no-repeat;
     /* background-color: gold;
     height: 80%;
     width: 95%;
@@ -24,20 +26,41 @@
 
 .board {
     margin: auto;
-    background-color: green;
+    /* background-color: green; */
     height: 90%;
     width: 90%;
+    display: grid;
+    grid-template-rows: 1fr 6fr 2fr 1fr;
+    grid-template-columns: 1fr 3fr 1fr;
+    /* grid-template-areas:
+    ". . T T . ."
+    ". . Q Q . ."
+    ". . Q Q . ."
+    ". . . . . ."
+    ". . . . R R"; */
     /* background-color: green;
     height: 80%;
     width: 95%; */
 }
 
+#quote-title {
+    grid-column: 2 / 5;
+    grid-row: 1;
+}
+
+#quote {
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;}
+
 .studentRoster {
+    grid-column: 4 / 6;
+    grid-row: 4 / 5;
     background-color: rgb(100, 6, 6);
     color: white;
-    width: 125px;
+    /* width: 125px; */
     padding: 10px;
     justify-content: center;
+    /* margin-right: 10%; */
 }
 
 .studentRoster > a {
