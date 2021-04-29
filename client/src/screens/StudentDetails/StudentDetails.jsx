@@ -13,7 +13,7 @@ function StudentDetails({ students, queryComments, fetchComments, handleDelete }
         if (students.length === 0) {
             history.push('/students')
         }
-        const stud = students.find(student => student.id === Number(id))
+        const stud = students.find(student => student.id === id)
         setStudent(stud)
         fetchComments(Number(id))
 

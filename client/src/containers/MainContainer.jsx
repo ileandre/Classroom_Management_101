@@ -19,6 +19,7 @@ function MainContainer({
     setComments,
     fetchComments,
     queryComments,
+    comments,
     fetchAllComments }) {
     // const [students, setStudents] = useState([
     //     {
@@ -318,17 +319,21 @@ function MainContainer({
     const handlePutStudent = async (id, studentData) => {
         const updatedStudent = await putStudent(id, studentData)
         fetchStudents()
+        setStudents(prevState => prevState.push(updatedStudent))
         // setStudents(prevState => [...prevState, updatedStudent])
     }
     // console.log(students)
 
     const handlePostStudent = async (studentData) => {
+        console.log("container, 326", studentData)
+        debugger
         const student = await postStudent(studentData)
-        console.log(student)
+        console.log("container, 329", student)
         debugger
         // fetchStudents()
         setStudents(prevState => prevState.push(student))
-        console.log(students)
+        console.log("container, 333", students)
+        debugger
     }
 
     const handlePostComment = async (commentData, studentData = {}) => {
@@ -337,18 +342,20 @@ function MainContainer({
         if (studentData) {
             // const newStudent = students.filter(student => student.firstName === studentData.firstName && student.lastName === studentData.lastName && student.grade === studentData.grade && student.period === studentData.period)
             students.map(student => {
-                console.log("studentData.firstName: ",studentData.firstName)
-                console.log("student.firstName: ",student.firstName)
-                console.log("studentData.lastName: ",studentData.lastName)
-                console.log("student.lastName: ",student.lastName)
-                console.log("studentData.grade: ",studentData.grade)
-                console.log("student.grade: ",student.grade)
-                console.log("studentData.period: ",studentData.period)
-                console.log("student.period: ",student.period)
-
+                console.log("studentData.firstName: ",typeof studentData.firstName)
+                console.log("student.firstName: ",typeof student.firstName)
+                console.log("studentData.lastName: ",typeof studentData.lastName)
+                console.log("student.lastName: ",typeof student.lastName)
+                console.log("studentData.grade: ",typeof studentData.grade)
+                console.log("student.grade: ",typeof student.grade)
+                console.log("studentData.period: ",typeof studentData.period)
+                console.log("student.period: ",typeof student.period)
                 if (student.firstName === studentData.firstName && student.lastName === studentData.lastName && student.grade === Number(studentData.grade) && student.period === Number(studentData.period)) {
                     console.log(student)
+                    debugger
                     commentData.student_id = student.id
+                    console.log("container, 355:", commentData.student_id, "and", student.id)
+                debugger
                 }
             })
             // console.log(getId)
@@ -357,7 +364,11 @@ function MainContainer({
             debugger
         }
         const comment = await postComment(commentData)
+        console.log("container, 365", comment)
+        debugger
         setComments(prevState => prevState.push(comment))
+        console.log("container, 367", comments)
+        debugger
         // setComments(prevState => [...prevState, comment])
     }
 
