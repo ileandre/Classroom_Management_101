@@ -12,8 +12,10 @@
     background-color: gold;
     height: 75%;
     width: 90%;
-    background-image: url('https://cdn.pixabay.com/photo/2014/04/02/17/03/blackboard-307799__340.png');
-    background-size: cover;
+    background-image: url(../../assets/chalkboard_.png);
+    background-size: 99%;
+    /* background-image: url('https://cdn.pixabay.com/photo/2014/04/02/17/03/blackboard-307799__340.png'); */
+    /* background-size: cover; */
     background-repeat: no-repeat;
     /* background-color: gold;
     height: 80%;
