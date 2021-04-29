@@ -1,9 +1,35 @@
 .homepage {
-    background-image: url('https://cdn.pixabay.com/photo/2014/04/02/17/03/blackboard-307799__340.png');
+    /* background-image: url('https://cdn.pixabay.com/photo/2014/04/02/17/03/blackboard-307799__340.png'); */
     /* background-repeat: no-repeat; */
     background-size: cover;
     height: 100vh;
     width: 100vw;
+}
+
+.board-border {
+    margin: 0 auto;
+    margin-top: 13%;
+    display: flex;
+    background-color: gold;
+    height: 75%;
+    width: 90%;
+    /* background-color: gold;
+    height: 80%;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 10%;
+    display: flex;
+    align-content: center; */
+}
+
+.board {
+    margin: auto;
+    background-color: green;
+    height: 90%;
+    width: 90%;
+    /* background-color: green;
+    height: 80%;
+    width: 95%; */
 }
 
 .studentRoster {
