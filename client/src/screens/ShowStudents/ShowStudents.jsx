@@ -61,7 +61,7 @@ const history = useHistory()
                                 {queryStudents.map(student => (
                                     <Link to={`/students/${student.id}`} key={student.id} className='student'>
                                         <>
-                                            <p>{student.grade}</p>
+                                            <p>{student.grade}%</p>
                                         </>
                                     </Link>
                                 ))}

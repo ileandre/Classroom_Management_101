@@ -58,16 +58,16 @@ function StudentDetails({ students, queryComments, setQueryComments, fetchStudCo
             {/* {console.log(student)} */}
             <div className="clipboard-border">
                 <div className="clipboard">
-                        <div className="student-info">
-                        <div className='name-column'>
+                    <div className="student-info">
+                        <div className='name-column column'>
                             <p className="column-title">Name</p>
                             <p className='stud-info'>{student?.firstName} {student?.lastName}</p>
                         </div>
-                        <div className='grade-column'>
+                        <div className='grade-column column'>
                             <p className="column-title">Grade</p>
-                            <p className='stud-info'>{student?.grade}</p>
+                            <p className='stud-info'>{student?.grade}%</p>
                         </div>
-                        <div className='period-column'>
+                        <div className='period-column column'>
                             <p className="column-title">Period</p>
                             <p className='stud-info'>{student?.period}</p>
                         </div>
