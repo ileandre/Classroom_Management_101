@@ -23,11 +23,11 @@
     grid-area: C;
     margin: 13% 5%;
     width: 90vw;
-    height: 70vh;
+    height: 60vh;
     background-image: url(../../assets/clipboard.png);
-    background-size: 100%;
+    background-size: 90%;
     background-repeat: no-repeat;
-    
+    background-position: center;
     /* margin: 0 auto;
     margin-top: 13%;
     display: flex;
@@ -40,7 +40,7 @@
     margin: 2% auto;
     padding-top: 10%;
     height: 70%;
-    width: 90%;
+    width: 80%;
 
     /* margin: auto;
     background-color: white;
@@ -83,7 +83,13 @@
 }
 
 .buttons {
-    margin: 0 auto;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.button {
+    margin: 5% auto;
 }
 /* Media Query
 after.showStudents {

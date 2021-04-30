@@ -50,14 +50,14 @@ function ShowStudents({ students, handleFilter, handlePeriod, queryStudents, fet
             <div className='filterButtons-container buttons'>
                 {
                     filterButtons.map((filter, index) => (
-                        <button key={index} onClick={() => handleFilter(filter)}>{filter}</button>
+                        <button  className="button" key={index} onClick={() => handleFilter(filter)}>{filter}</button>
                     ))
                 }
             </div>
             <div className='periodButtons-container buttons'>
                 {
                     periodButtons.map((period, index) => (
-                        <button key={index} onClick={() => handlePeriod(period)}>{period}</button>
+                        <button className="button" key={index} onClick={() => handlePeriod(period)}>{period}</button>
                     ))
                 }
             </div>
