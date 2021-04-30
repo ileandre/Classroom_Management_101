@@ -12,7 +12,7 @@ function HomePage({fetchStudents, fetchAllComments}) {
             <div className='board-border'>
                 <div className='board'>
                     <p className='quote-title' id='quote-title'>Teacher Quote(s)</p>
-                    <p className='quote' id="quote">quotes goes here</p>
+                    <p className='quote' id="quote">Do not let others define your success.</p>
                     <div className='studentRoster'>
                         <Link to='/students' onClick={()=>{handleRoster()}}>
                             <p>Student Roster</p>

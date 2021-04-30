@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:wght@400;700&family=Schoolbell&display=swap');
 .homepage {
     /* background-repeat: no-repeat; */
     background-size: cover;
@@ -33,7 +35,7 @@
     height: 59%;
     width: 90%;
     display: grid;
-    grid-template-rows: 1fr 9fr 1fr;
+    grid-template-rows: 2fr 8fr 1fr;
     grid-template-columns: 1fr 3fr 1fr;
     /* grid-template-areas:
     ". . T T . ."
@@ -49,11 +51,22 @@
 #quote-title {
     grid-column: 1/6;
     grid-row: 1;
+    margin: auto;
+    margin-top: 10%;
+    font-family: 'Schoolbell', cursive;
+    font-size: 25px;
+    font-weight: bolder;
+    color: white;
 }
 
 #quote {
     grid-column: 1 / 6;
     grid-row: 2;
+    margin: auto;
+    font-family: 'Schoolbell', cursive;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
 } 
 
 .studentRoster {
@@ -62,8 +75,9 @@
     border-radius: 6%;
     background-color: rgb(100, 6, 6);
     color: white;
+    font-family: 'Gentium Book Basic', serif;
     /* width: 125px; */
-    padding: 2px 5px;
+    padding: 1px 7px;
     justify-content: center;
     /* margin-right: 10%; */
 }
