@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:wght@400;700&family=Schoolbell&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 /* .clipboard{
     background-image: url(../../assets/clipboard.png);
     background-repeat: no-repeat;
@@ -8,6 +8,15 @@
     height: 500px;
     width: 250px;
 } */
+p {
+    font-family: 'Indie Flower', cursive;
+    font-size: 13px;
+    margin: 5px auto;
+}
+
+a { 
+    text-decoration: none;
+}
 
 .showStudents {
     text-align: center;
@@ -52,6 +61,9 @@
 
 .column-title {
     text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 .students-list {
@@ -59,24 +71,21 @@
     flex-direction: row;
     height: 87%;
     overflow: auto;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-bottom: 5px;
 }
 
-.column-title {
+/* .column-title {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    /* bottom: 0; */
-    /* height: 50vh; */
-    /* overflow-y: auto;   */
-}
+} */
 
 
 .student {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     font-size: 10px;
     /* justify-content: space-between; */
 }
