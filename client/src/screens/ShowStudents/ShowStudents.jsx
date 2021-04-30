@@ -1,5 +1,5 @@
 import './ShowStudents.css'
-import {useEffect} from 'react'
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import FilterButton from '../../components/FilterButton/FilterButton'
 // import PeriodButton from '../../components/PeriodButton/PeriodButton'
@@ -13,7 +13,7 @@ function ShowStudents({ students, handleFilter, handlePeriod, queryStudents, fet
 
     // console.log("students:", students)
     // console.log("queryStudents:", queryStudents)
-    useEffect(() =>{
+    useEffect(() => {
         const handleRoster = async () => {
             await fetchStudents()
             await fetchAllComments()
@@ -25,8 +25,7 @@ function ShowStudents({ students, handleFilter, handlePeriod, queryStudents, fet
         <div className="showStudents">
             <div className="clipboard-border">
                 <div className="clipboard">
-                    <h3>Roster</h3>
-                    <Link to="students/form" className='addStudent-button'>Add Student</Link>
+                    <h3 className="roster-title">Student Roster</h3>
                     <div className='column-title student'>
                         <p>First</p>
                         <p>Last</p>
@@ -45,14 +44,17 @@ function ShowStudents({ students, handleFilter, handlePeriod, queryStudents, fet
                             </Link>
                         ))}
                     </div>
+                    <Link to="students/form" className='addStudent-button'>Add Student</Link>
                 </div>
             </div>
-            <div className='buttons-container'>
+            <div className='filterButtons-container buttons'>
                 {
                     filterButtons.map((filter, index) => (
                         <button key={index} onClick={() => handleFilter(filter)}>{filter}</button>
                     ))
                 }
+            </div>
+            <div className='periodButtons-container buttons'>
                 {
                     periodButtons.map((period, index) => (
                         <button key={index} onClick={() => handlePeriod(period)}>{period}</button>
