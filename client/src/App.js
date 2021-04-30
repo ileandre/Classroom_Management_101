@@ -24,7 +24,7 @@ function App() {
 
   const fetchStudents = async () => {
     const studentData = await getAllStudents()
-    console.log(studentData)
+    // console.log(studentData)
     // debugger
     setStudents(studentData)
     setQueryStudents(studentData)
@@ -129,6 +129,7 @@ function App() {
                 setComments={setComments}
                 fetchStudComments={fetchStudComments}
                 queryComments={queryComments}
+                setQueryComments={setQueryComments}
                 fetchStudents={fetchStudents}
                 fetchAllComments={fetchAllComments}
                 currentUser={currentUser}

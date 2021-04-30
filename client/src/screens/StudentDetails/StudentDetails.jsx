@@ -1,9 +1,12 @@
 import { useParams, useHistory } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import { getStudentComments } from '../../services/comments'
+import { getOneStudent } from '../../services/student'
 import "./StudentDetails.css"
 
-function StudentDetails({ students, queryComments, fetchStudComments, handleDelete }) {
+function StudentDetails({ students, queryComments, setQueryComments, fetchStudComments, handleDelete }) {
     const [student, setStudent] = useState({})
+    const [studentComments, setStudentComments] = useState([])
     // const [student, setStudent] = useState({
     //     firstName: '',
     //     lastName: '',
@@ -15,17 +18,32 @@ function StudentDetails({ students, queryComments, fetchStudComments, handleDele
     const history = useHistory()
 
     useEffect(() => {
-        console.log(students)
-        if (students.length === 0) {
-            history.push('/students')
+        const fetchOneStudent = async () => {
+          const stud = await getOneStudent(Number(id));
+          setStudent(stud)
         }
-        console.log(students)
-        debugger
-        const stud = students.find(student => student.id === Number(id))
-        setStudent(stud)
+        fetchOneStudent()
+
+        const fetchStudentComments = async () => {
+          const comments = await getStudentComments(Number(id));
+          console.log(comments)
+          setStudentComments(comments)
+
+        }
+        fetchStudentComments()
+      }, [])
+
+    useEffect(() => {
+        // console.log(students)
+        // if (students.length === 0) {
+        //     history.push('/students')
+        // }
+        // console.log(students)
+        // debugger
+        // const stud = students.find(student => student.id === Number(id))
+        // setStudent(stud)
         // console.log("details, 42, before fetch comments, student", student)
-        debugger
-        fetchStudComments(Number(id))
+        // debugger
     }, [])
 
     const handleEdit = () => {
@@ -37,28 +55,28 @@ function StudentDetails({ students, queryComments, fetchStudComments, handleDele
     
     return (
         <div className='studentDetails'>
-            {console.log(student)}
+            {/* {console.log(student)} */}
             <div className="clipboard-border">
                 <div className="clipboard">
                         <div className="student-info">
                         <div className='name-column'>
                             <p className="column-title">Name</p>
-                            <p className='stud-info'>{student.firstName} {student.lastName}</p>
+                            <p className='stud-info'>{student?.firstName} {student?.lastName}</p>
                         </div>
                         <div className='grade-column'>
                             <p className="column-title">Grade</p>
-                            <p className='stud-info'>{student.grade}</p>
+                            <p className='stud-info'>{student?.grade}</p>
                         </div>
                         <div className='period-column'>
                             <p className="column-title">Period</p>
-                            <p className='stud-info'>{student.period}</p>
+                            <p className='stud-info'>{student?.period}</p>
                         </div>
                     </div>
                     <div className="student-comments">
                         {
-                            queryComments.map((comment, index) => (
+                            studentComments.map((comment, index) => (
                                 <>
-                                    <p key={comment.id}><span>{index + 1})</span> {comment.comment}</p>
+                                    <p key={comment.id}><span>{index+1})</span> {comment.comment}</p>
                                 </>
                             ))
                         }

@@ -16,7 +16,7 @@ export const getAllStudents = async () => {
     }
 }
 
-export const getOnStudent = async (id) => {
+export const getOneStudent = async (id) => {
     try {
         const resp = await api.get(`/students/${id}`)
         return resp.data

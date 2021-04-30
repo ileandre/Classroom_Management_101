@@ -19,7 +19,8 @@ class CommentsController < ApplicationController
 
   # GET /comments/1
   def show
-    render json: @comment
+    puts "STUDENTSCOMMENTS!!!!!!!!!!!!!! #{@studentComments}"
+    render json: @studentComments
   end
 
   # POST /comments
@@ -51,16 +52,18 @@ class CommentsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_comment
-      @user = User.find(params[:user_id])
+      # @user = User.find(params[:user_id])
       # @students = Student.find(user_id: current_user.id)
-      @students = Student.where(user_id: @user.id)
+      # @students = Student.where(user_id: @user.id)
 
       # @students = current_user.students
-      @student = @students.find(params[:student_id])
-      @comments = Comment.where(student_id: @student.id)
+      # @students = Student.where(user_id: @current_user.id)
+      @student = Student.find(params[:id])
+      @studentComments = Comment.where(student_id: @student.id)
+      print "@STUDENT!!!!!!!!!! = #{@student}"
       # #OR
       # @comments = @student.comments
-      @comment = @comments.find(params[:id])
+      # @comment = @comments.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.

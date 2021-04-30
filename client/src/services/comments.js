@@ -10,6 +10,16 @@ export const getAllComments = async () => {
     }
 }
 
+export const getStudentComments = async (id) => {
+    try {
+        const resp = await api.get(`/comments/${id}`)
+        // console.log(resp.data)
+        return resp.data
+    } catch (error) {
+        throw error
+    }
+}
+
 export const postComment = async (commentData) => {
     try {
         const resp = await api.post('/comments', { comment: commentData })

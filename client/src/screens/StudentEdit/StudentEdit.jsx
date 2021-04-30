@@ -2,7 +2,7 @@ import { useParams, useHistory } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import "./StudentEdit.css"
 
-function StudentEdit({ handlePutStudent, students, handlePostComment, updateStudent }) {
+function StudentEdit({ handlePutStudent, students, handlePostComment, updateStudent, fetchStudents }) {
     // const [student, setStudent] = useState({})
     const params = useParams()
     const { id } = params
@@ -59,7 +59,8 @@ function StudentEdit({ handlePutStudent, students, handlePostComment, updateStud
 
     const handleUpdate = async (e) => {
         e.preventDefault()
-        updateStudent(students, studentData, Number(id))
+        // updateStudent(students, studentData, Number(id))
+        fetchStudents()
         await handlePutStudent(Number(id), studentData)
         if (comment) {
             handlePostComment(commentData)
@@ -91,7 +92,7 @@ function StudentEdit({ handlePutStudent, students, handlePostComment, updateStud
                         </label>
                         <label className="grade-column">Grade
                             <input
-                                type='text'
+                                type='number'
                                 name='grade'
                                 value={grade}
                                 onChange={handleStudentChange}
@@ -99,7 +100,7 @@ function StudentEdit({ handlePutStudent, students, handlePostComment, updateStud
                         </label>
                         <label className="period-column">Period
                             <input
-                                type='text'
+                                type='number'
                                 name='period'
                                 value={period}
                                 onChange={handleStudentChange}

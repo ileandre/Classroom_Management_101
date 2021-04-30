@@ -18,6 +18,7 @@ function MainContainer({
     setComments,
     fetchStudComments,
     queryComments,
+    setQueryComments,
     comments,
     fetchAllComments,
     currentUser }) {
@@ -305,14 +306,25 @@ function MainContainer({
     }
 
 const updateStudent = (students, studentData, id) => {
-    students.map(student => {
-        if (student.id === id) {
-            console.log(student)
-            student = {...student, ... studentData}
-            console.log(student)
-            debugger
-        }
-    })
+    const student = students.find(student => student.id === id)
+    // console.log(student)
+    const index = students.indexOf(student)
+    // console.log(index)
+    students[index] = studentData
+    // console.log(students[index])
+    setStudents(students)
+    // let stud = []
+    // students.forEach(student => {
+    //     if (student.id === id) {
+    //         console.log(student)
+    //         student = {...student, ... studentData}
+    //         console.log(student)
+    //         debugger
+    //     }
+    //     stud.push(student)
+    //     console.log(stud)
+    // })
+    // setStudents([...stud])
 }
 
     const handleDelete = async (id) => {
@@ -351,7 +363,14 @@ const updateStudent = (students, studentData, id) => {
 
     const handlePostComment = async (commentData, studentData = {}) => {
         // fetchStudents()
-
+        const newComment = await postComment(commentData)
+        // console.log("container, 369", comment)
+        // debugger
+        setComments(prevState => [...prevState, newComment])
+        // console.log("container, 367", comments)
+        // debugger
+        // setComments(prevState => [...prevState, comment])
+        
         if (studentData) {
             // const newStudent = students.filter(student => student.firstName === studentData.firstName && student.lastName === studentData.lastName && student.grade === studentData.grade && student.period === studentData.period)
             students.map(student => {
@@ -376,13 +395,7 @@ const updateStudent = (students, studentData, id) => {
             // console.log("container, 365", commentData)
             // debugger
         }
-        const comment = await postComment(commentData)
-        // console.log("container, 369", comment)
-        // debugger
-        setComments(prevState => prevState.push(comment))
-        // console.log("container, 367", comments)
-        // debugger
-        // setComments(prevState => [...prevState, comment])
+        
     }
 
     return (
@@ -402,6 +415,7 @@ const updateStudent = (students, studentData, id) => {
                         handlePutStudent={handlePutStudent}
                         handlePostComment={handlePostComment}
                         updateStudent={updateStudent}
+                        fetchStudents={fetchStudents}
                     />
                 </Route>
 
@@ -411,6 +425,7 @@ const updateStudent = (students, studentData, id) => {
                         queryComments={queryComments}
                         fetchStudComments={fetchStudComments}
                         handleDelete={handleDelete}
+                        setQueryComments={setQueryComments}
                     />
                 </Route>
                 <Route exact path='/students'>

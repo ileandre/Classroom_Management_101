@@ -57,6 +57,7 @@ class StudentsController < ApplicationController
       # @students = Student.where(user_id: @user.id)
       @students = Student.where(user_id: @current_user.id)
       @student = @students.find(params[:id])
+      print "@STUDENT!!!!!!!!!! = #{@student}"
     end
 
     # Only allow a list of trusted parameters through.
