@@ -29,8 +29,8 @@ function StudentEdit({ handlePutStudent, students, handlePostComment, updateStud
 
     useEffect(() => {
         if (students.length === 0) {
-            history.push('/students')
-        }
+            history.push(`/students`)
+        } else {
         const stud = students.find(student => student.id === Number(id))
         setStudentData({
             firstName: stud.firstName,
@@ -38,6 +38,7 @@ function StudentEdit({ handlePutStudent, students, handlePostComment, updateStud
             grade: stud.grade,
             period: stud.period
         })
+    }
     }, [])
 
     { }
