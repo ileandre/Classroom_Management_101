@@ -82,8 +82,8 @@ function StudentDetails({ students, queryComments, setQueryComments, fetchStudCo
                         }
                     </div>
                     <div className="buttons">
-                        <button onClick={() => handleDelete(Number(id))}>Remove</button>
-                        <button onClick={() => handleEdit()}>Edit</button>
+                        <button className=' button red-buttons remove-button' onClick={() => handleDelete(Number(id))}>Remove</button>
+                        <button className='button green-buttons edit-button' onClick={() => handleEdit()}>Edit</button>
                     </div>
                 </div>
             </div>

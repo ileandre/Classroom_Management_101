@@ -125,7 +125,7 @@ function StudentEdit({ handlePutStudent, students, handlePostComment, updateStud
                             onChange={handleCommentChange}
                         />
                     </label>
-                    <input className="button" type="submit" value='Update' />
+                    <input className="update-button button" type="submit" value='Update' />
                 </form>
             </div>
         </div>

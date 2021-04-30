@@ -13,6 +13,12 @@ margin: 0 auto;
 .student-comments {
     height: 50%;
     overflow: auto;
-    margin-top: 10%;
+    margin-top: 5  %;
     padding: 2% 5%;
+}
+
+.remove-button,
+.edit-button {
+    padding: 3%;
+    font-weight: bold;
 }

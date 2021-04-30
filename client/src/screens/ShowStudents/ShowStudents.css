@@ -31,6 +31,10 @@ a {
     margin-top: 5%;
 }
 
+.roster-title {
+    font-family: 'Schoolbell', cursive;
+}
+
 .clipboard-border {
     grid-area: C;
     margin: 13% 5%;
@@ -73,7 +77,6 @@ a {
     height: 87%;
     overflow: auto;
     justify-content: space-around;
-    margin-bottom: 5px;
 }
 
 /* .column-title {
@@ -121,7 +124,7 @@ a {
     margin: 5% auto;
     border-radius: 10px;
     font-size: 15px;
-    padding: 10px;
+    padding: 4px;
     font-family: 'Schoolbell', cursive;
     font-size: bold;
 }
@@ -129,11 +132,13 @@ a {
 .red-buttons {
     background-color: red;
     border-color: red;
+    color: white;
 }
 
 .green-buttons {
     background-color: green;
     border-color: green;
+    color: white;
 }
 
 .addStudent-button {

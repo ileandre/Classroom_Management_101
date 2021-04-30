@@ -67,33 +67,37 @@ const handleCreateComment = async () => {
         <div className='studentDetails'>
             <div className="clipboard-border">
                 <div className="clipboard">
-                    <div className="student-info">
-                        <label className="firstName-column">First name
+                    <div className="student-info-form">
+                        <label className="firstName-column column">First name:
                             <input
+                            className="input"
                                 type='text'
                                 name='firstName'
                                 value={firstName}
                                 onChange={handleStudentChange}
                             />
                         </label>
-                        <label className="lastName-column">Last name
+                        <label className="lastName-column column">Last name:
                             <input
+                                className="input"
                                 type='text'
                                 name='lastName'
                                 value={lastName}
                                 onChange={handleStudentChange}
                             />
                         </label>
-                        <label className="grade-column">Grade
+                        <label className="grade-column column">Grade:
                             <input
+                                className="input"
                                 type='text'
                                 name='grade'
                                 value={grade}
                                 onChange={handleStudentChange}
                             />
                         </label>
-                        <label className="period-column">Period
+                        <label className="period-column column">Period:
                             <input
+                                className="input"
                                 type='text'
                                 name='period'
                                 value={period}
@@ -101,16 +105,17 @@ const handleCreateComment = async () => {
                             />
                         </label>
                     </div>
-                    <div className="student-comments">Comments
+                    <label className="student-comments-edit column">Comments:
                         <textarea
+                            className="textarea"
                             type='text'
                             name='comment'
                             value={comment}
                             onChange={handleCommentChange}
                         />
-                    </div>
+                    </label>
                     <div className="buttons">
-                        <button onClick={()=>handleCreateStudent()}>Add</button>
+                        <button className="button green-buttons" onClick={()=>handleCreateStudent()}>Add</button>
                     </div>
                 </div>
             </div>

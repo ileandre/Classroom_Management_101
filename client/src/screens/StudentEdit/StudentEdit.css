@@ -15,6 +15,7 @@
 .column {
     font-size: 15px;
     font-family: 'Indie Flower', cursive;
+    font-weight: bold;
     align-content: left;
 }
 
@@ -38,6 +39,11 @@
     /* justify-content: left; */
 }
 
-.button {
+.update-button {
     align-items: center;
+    padding: 2%;
+    color: white;
+    background-color: green;
+    border-color: green;
+    font-weight: bold;
 }
