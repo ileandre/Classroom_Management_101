@@ -9,23 +9,35 @@
 } */
 
 .clipboard-border {
-    margin: 0 auto;
+    margin: 13% 5%;
+    width: 90vw;
+    height: 80vh;
+    background-image: url(../../assets/clipboard.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    
+    /* margin: 0 auto;
     margin-top: 13%;
     display: flex;
     background-color: rgb(114, 56, 9);
     height: 75vh;
-    width: 75vw;
+    width: 75vw; */
 }
 
 .clipboard {
-    margin: auto;
+    margin: 2% auto;
+    padding-top: 10%;
+    height: 70%;
+    width: 90%;
+
+    /* margin: auto;
     background-color: white;
     height: 90%;
-    width: 90%;
+    width: 90%; */
 }
 
 .students-list {
-    height: 75%;
+    height: 65%;
     overflow: auto;
 }
 

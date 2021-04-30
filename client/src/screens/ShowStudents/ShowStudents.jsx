@@ -1,9 +1,10 @@
 import './ShowStudents.css'
+import {useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import FilterButton from '../../components/FilterButton/FilterButton'
 // import PeriodButton from '../../components/PeriodButton/PeriodButton'
 
-function ShowStudents({ students, handleFilter, handlePeriod, queryStudents }) {
+function ShowStudents({ students, handleFilter, handlePeriod, queryStudents, fetchStudents, fetchAllComments }) {
     // console.log(students)
     // debugger
 
@@ -12,7 +13,13 @@ function ShowStudents({ students, handleFilter, handlePeriod, queryStudents }) {
 
     // console.log("students:", students)
     // console.log("queryStudents:", queryStudents)
-
+    useEffect(() =>{
+        const handleRoster = async () => {
+            await fetchStudents()
+            await fetchAllComments()
+        }
+        handleRoster()
+    }, [])
 
     return (
         <div className="showStudents">

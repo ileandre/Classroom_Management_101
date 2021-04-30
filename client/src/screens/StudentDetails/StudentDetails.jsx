@@ -15,14 +15,16 @@ function StudentDetails({ students, queryComments, fetchStudComments, handleDele
     const history = useHistory()
 
     useEffect(() => {
+        console.log(students)
         if (students.length === 0) {
             history.push('/students')
         }
-        // console.log(students)
+        console.log(students)
+        debugger
         const stud = students.find(student => student.id === Number(id))
         setStudent(stud)
         // console.log("details, 42, before fetch comments, student", student)
-        // debugger
+        debugger
         fetchStudComments(Number(id))
     }, [])
 
@@ -38,7 +40,7 @@ function StudentDetails({ students, queryComments, fetchStudComments, handleDele
             {console.log(student)}
             <div className="clipboard-border">
                 <div className="clipboard">
-                    <div className="student-info">
+                        <div className="student-info">
                         <div className='name-column'>
                             <p className="column-title">Name</p>
                             <p className='stud-info'>{student.firstName} {student.lastName}</p>

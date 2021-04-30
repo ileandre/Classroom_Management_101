@@ -2,8 +2,8 @@ import { useParams, useHistory } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import "./StudentEdit.css"
 
-function StudentEdit({handlePutStudent, students, handlePostComment}) {
-    const [student, setStudent] = useState({})
+function StudentEdit({ handlePutStudent, students, handlePostComment, updateStudent }) {
+    // const [student, setStudent] = useState({})
     const params = useParams()
     const { id } = params
     const history = useHistory()
@@ -32,10 +32,15 @@ function StudentEdit({handlePutStudent, students, handlePostComment}) {
             history.push('/students')
         }
         const stud = students.find(student => student.id === Number(id))
-        setStudentData(stud)
+        setStudentData({
+            firstName: stud.firstName,
+            lastName: stud.lastName,
+            grade: stud.grade,
+            period: stud.period
+        })
     }, [])
 
-    {}
+    { }
 
     const handleStudentChange = (e) => {
         const { name, value } = e.target
@@ -51,9 +56,11 @@ function StudentEdit({handlePutStudent, students, handlePostComment}) {
             [name]: value
         }))
     }
-    
-    const handleUpdate = () => {
-        handlePutStudent(Number(id), studentData)
+
+    const handleUpdate = async (e) => {
+        e.preventDefault()
+        updateStudent(students, studentData, Number(id))
+        await handlePutStudent(Number(id), studentData)
         if (comment) {
             handlePostComment(commentData)
         }
@@ -64,7 +71,7 @@ function StudentEdit({handlePutStudent, students, handlePostComment}) {
     return (
         <div className='studentDetails'>
             <div className="clipboard-border">
-                <div className="clipboard">
+                <form className="clipboard" onSubmit={handleUpdate} >
                     <div className="student-info">
                         <label className="firstName-column">First name
                             <input
@@ -107,10 +114,8 @@ function StudentEdit({handlePutStudent, students, handlePostComment}) {
                             onChange={handleCommentChange}
                         />
                     </div>
-                    <div className="buttons">
-                        <button onClick={()=>handleUpdate()}>Update</button>
-                    </div>
-                </div>
+                    <input className="button" type="submit" value='Update' />
+                </form>
             </div>
         </div>
     )

@@ -304,6 +304,17 @@ function MainContainer({
 
     }
 
+const updateStudent = (students, studentData, id) => {
+    students.map(student => {
+        if (student.id === id) {
+            console.log(student)
+            student = {...student, ... studentData}
+            console.log(student)
+            debugger
+        }
+    })
+}
+
     const handleDelete = async (id) => {
         // console.log(id)
         // debugger
@@ -321,7 +332,7 @@ function MainContainer({
     const handlePutStudent = async (id, studentData) => {
         const updatedStudent = await putStudent(id, studentData)
         fetchStudents()
-        setStudents(prevState => prevState.push(updatedStudent))
+        // setStudents(prevState => prevState.push(updatedStudent))
         // setStudents(prevState => [...prevState, updatedStudent])
     }
     // console.log(students)
@@ -390,6 +401,7 @@ function MainContainer({
                         students={students}
                         handlePutStudent={handlePutStudent}
                         handlePostComment={handlePostComment}
+                        updateStudent={updateStudent}
                     />
                 </Route>
 
@@ -407,6 +419,8 @@ function MainContainer({
                         handleFilter={handleFilter}
                         handlePeriod={handlePeriod}
                         queryStudents={queryStudents}
+                        fetchStudents={fetchStudents}
+                        fetchAllComments={fetchAllComments}
                     />
                 </Route>
                 <Route exact path='/welcome'>
