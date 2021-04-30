@@ -71,51 +71,60 @@ function StudentEdit({ handlePutStudent, students, handlePostComment, updateStud
     }
 
     return (
-        <div className='studentDetails'>
+        <div className='studentEdit'>
             <div className="clipboard-border">
                 <form className="clipboard" onSubmit={handleUpdate} >
-                    <div className="student-info">
-                        <label className="firstName-column">First name
+                    <div className="student-info-edit">
+                  <>
+                  <label className="firstName-column column">First name
                             <input
+                                className='input'
                                 type='text'
                                 name='firstName'
                                 value={firstName}
                                 onChange={handleStudentChange}
                             />
                         </label>
-                        <label className="lastName-column">Last name
+                        <label className="lastName-column column">Last name: 
                             <input
+                                className='input'
                                 type='text'
                                 name='lastName'
                                 value={lastName}
                                 onChange={handleStudentChange}
                             />
                         </label>
-                        <label className="grade-column">Grade
+                        </>
+                        <>
+                        <label className="grade-column column">Grade: 
                             <input
+                                className='input'
                                 type='number'
                                 name='grade'
                                 value={grade}
                                 onChange={handleStudentChange}
                             />
                         </label>
-                        <label className="period-column">Period
+                        <label className="period-column column">Period: 
                             <input
+                                className='input'
                                 type='number'
                                 name='period'
                                 value={period}
                                 onChange={handleStudentChange}
                             />
                         </label>
+                        </>
                     </div>
-                    <div className="student-comments">New comment
+                    <label className="student-comments-edit column">New comment: 
                         <textarea
+                            className='textarea'
                             type='text'
                             name='comment'
                             value={comment}
                             onChange={handleCommentChange}
                         />
-                    </div>
+                    </label>
                     <input className="button" type="submit" value='Update' />
                 </form>
             </div>
