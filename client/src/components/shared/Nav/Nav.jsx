@@ -10,11 +10,22 @@ function Nav({ currentUser, handleLogout }) {
             {
                 currentUser ?
                     <div className="auth">
-                        <p> Hi, {currentUser.firstName}</p>
-                        <button onClick={handleLogout}>Logout</button>
+                        <div className="user-logout">
+                            <p> Hi, {currentUser.firstName}</p>
+                            <p onClick={handleLogout}>Logout</p>
+                        <div className="navigate">
+                            <Link to='/students'>
+                                <p>Student Roster</p> 
+                            </Link>
+                            <Link to='/students/form'>
+                                <p>Add Student</p>
+                            </Link>
+                        </div>
+                        </div>
+                        
                     </div>
                     :
-                    <div className="auth">
+                    <div className="auth unauth">
                         <Link to='/login'>
                             <p>Login</p>
                         </Link>
