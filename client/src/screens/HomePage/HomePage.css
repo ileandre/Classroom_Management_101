@@ -3,7 +3,6 @@
     background-size: cover;
     height: 100vh;
     width: 100vw;
-    background-color: rgb(197, 170, 95);
 }
 
 .board-border {
@@ -13,7 +12,8 @@
     /* background-color: gold; */
     width: 90%;
     height: 90%;
-    background-image: url(../../assets/chalkboard_.png);
+    background-image: url(../../assets/_chalkboard.png);
+    /* background-image: url(../../assets/chalkboard_.png); */
     background-size: 100%;
     /* background-image: url('https://cdn.pixabay.com/photo/2014/04/02/17/03/blackboard-307799__340.png'); */
     /* background-size: cover; */
@@ -30,7 +30,7 @@
 .board {
     margin: 4% auto;
     /* background-color: green; */
-    height: 70%;
+    height: 59%;
     width: 90%;
     display: grid;
     grid-template-rows: 1fr 6fr 2fr 1fr;
@@ -58,10 +58,11 @@
 .studentRoster {
     grid-column: 4 / 6;
     grid-row: 4 / 5;
+    border-radius: 6%;
     background-color: rgb(100, 6, 6);
     color: white;
     /* width: 125px; */
-    padding: 10px;
+    padding: 2px 5px;
     justify-content: center;
     /* margin-right: 10%; */
 }
