@@ -41,25 +41,26 @@ function StudentForm({handlePostStudent, handlePostComment}) {
     }
     
 const handleCreateComment = async () => {
-    // console.log("form, 44, comment: ", commentData)
-    // console.log("form 45, student: ", studentData)
-    // debugger
+    console.log("form, 44, comment: ", commentData)
+    console.log("form 45, student: ", studentData)
+    debugger
     await handlePostComment(commentData, studentData)
-    // console.log("form, 48, comment: ", commentData)
-    // console.log("form, 49, student: ", studentData)
-    // debugger
+    console.log("form, 48, comment: ", commentData)
+    console.log("form, 49, student: ", studentData)
+    debugger
 }
 
-    const handleCreateStudent = async () => {
-        // console.log("form, 54", studentData)
+    const handleCreateStudent = async (e) => {
+        e.preventDefault()
+        console.log("form, 54", studentData)
         await handlePostStudent(studentData)
-        // debugger
+        debugger
         
         if (comment) {
             await handleCreateComment()
         }
-        // console.log('before history push')
-        // debugger
+        console.log('before history push')
+        debugger
         history.push(`/students`)
     }
 
@@ -115,7 +116,7 @@ const handleCreateComment = async () => {
                         />
                     </label>
                     <div className="buttons">
-                        <button className="button green-buttons" onClick={()=>handleCreateStudent()}>Add</button>
+                        <button className="button green-buttons" onClick={(e)=>handleCreateStudent(e)}>Add</button>
                     </div>
                 </div>
             </div>
