@@ -1,8 +1,12 @@
+import './LandingPage.css'
+
 function LandingPage(props) {
     return (
         <div className='landingPage'>
-            <h1>Classroom Management 101</h1>
-            <p>Need help managing your classroom?</p>
+            <div className="landingMessage">
+            <h1 className="title">Classroom Management 101</h1>
+            <p className="subtitle">Need help managing your classroom?</p>
+        </div>
         </div>
     )
 }

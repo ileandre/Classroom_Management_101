@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
-
+import "./LoginPage.css"
 function LoginPage({ handleLogin, currentUser }) {
     const [formData, setFormData] = useState({
         username: '',
@@ -22,7 +22,8 @@ function LoginPage({ handleLogin, currentUser }) {
     }
 
     return (
-        <form onSubmit={(e) => {
+        <div className="LoginPage">
+        <form className="form" onSubmit={(e) => {
             e.preventDefault()
             handleLogin(formData)
         }}>
@@ -48,6 +49,7 @@ function LoginPage({ handleLogin, currentUser }) {
             <Link to='/register'> Register</Link>
             <button>Login</button>
         </form>
+        </div>
     )
 }
 

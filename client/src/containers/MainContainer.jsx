@@ -133,12 +133,6 @@ const updateStudent = (students, studentData, id) => {
 
     const handlePostComment = async (commentData, studentData = {}) => {
         // fetchStudents()
-        const newComment = await postComment(commentData)
-        console.log("container, 369", newComment)
-        debugger
-        setComments(prevState => [...prevState, newComment])
-        console.log("container, 367", comments)
-        debugger
         // setComments(prevState => [...prevState, comment])
         
         if (studentData) {
@@ -160,6 +154,14 @@ const updateStudent = (students, studentData, id) => {
                     // debugger
                 }
             })
+            console.log("container, 369", commentData)
+            debugger
+            const newComment = await postComment(commentData)
+        console.log("container, 369", newComment)
+        debugger
+        setComments(prevState => [...prevState, newComment])
+        console.log("container, 367", comments)
+        debugger
             // console.log(getId)
             // commentData.student_id = getId
             // console.log("container, 365", commentData)

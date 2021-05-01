@@ -25,10 +25,12 @@ class CommentsController < ApplicationController
 
   # POST /comments
   def create
+    print "COMMENT PARAMS= #{comment_params}!!!!!!!!!!!!!!!!!!!!!!!!!!"
     @comment = Comment.new(comment_params)
+    print "COMMENT COMMENT= #{@comment}!!!!!!!!!!!!!!!!!!!!!!!!!!"
     # @comment.student_id = params[:student_id]
-
     if @comment.save
+      print "COMMENT COMMENT IN SAVE= #{@comment}!!!!!!!!!!!!!!!!!!!!!!!!!!"
       render json: @comment, status: :created
     else
       render json: @comment.errors, status: :unprocessable_entity
@@ -65,9 +67,11 @@ class CommentsController < ApplicationController
       # @comments = @student.comments
       # @comment = @comments.find(params[:id])
     end
-
     # Only allow a list of trusted parameters through.
     def comment_params 
-    params.require(:comment).permit(:student_id, :comment)
-    end
-end
+      print "BEFORE THE REQUEST IN SOMMENTS CONTROLLER !!!!!!!!!!!!!!!!!!!!!!!" 
+      params.require(:comment).permit(:student_id, :comment)
+      print "AFTER THE REQUEST IN SOMMENTS CONTROLLER !!!!!!!!!!!!!!!!!!!!!!!" 
+
+  end
+  end
