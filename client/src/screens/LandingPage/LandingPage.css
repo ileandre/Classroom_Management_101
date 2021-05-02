@@ -28,6 +28,7 @@ color: white;
     font-size: 15px;
 }
 
+/* --------------------iPAD-------------------- */
 @media only screen and (min-width: 768px) {
     .landingMessage {
         width: 65%;
@@ -40,5 +41,36 @@ color: white;
 
     .landing-subtitle {
         font-size: 25px;
+    }
+}
+
+/* --------------------LAPTOP-------------------- */
+@media only screen and (min-width: 1075px) {
+    .landingMessage {
+        width: 50%;
+    } 
+
+    .landing-title {
+        font-size: 50px;
+    }
+
+    .landing-subtitle {
+        font-size: 35px;
+    }
+}
+
+/* --------------------DESKTOP-------------------- */
+@media only screen and (min-width: 1700px) {
+    .landingMessage {
+        width: 35%;
+        padding: 2%;
+    } 
+
+    .landing-title {
+        font-size: 55px;
+    }
+
+    .landing-subtitle {
+        font-size: 35px;
     }
 }
