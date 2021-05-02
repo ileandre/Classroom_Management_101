@@ -23,24 +23,26 @@ function LoginPage({ handleLogin, currentUser }) {
 
     return (
         <div className="loginPage">
-            <form className="form" onSubmit={(e) => {
+            <form className="login-form" onSubmit={(e) => {
                 e.preventDefault()
                 handleLogin(formData)
             }}>
-                <h1 className="title">Login</h1>
+                <h1 className="login-title">Login</h1>
                 {/* <div className="inputs"> */}
-                <label className="inputs">
+                <label className="login-inputs">
                     Username: 
                     <input
+                        className="input"
                         type='text'
                         name='username'
                         value={username}
                         onChange={handleChange}
                     />
                 </label>
-                <label className="inputs">
+                <label className="login-inputs">
                     Password: 
                     <input
+                        className="input"
                         type='password'
                         name='password'
                         value={password}

@@ -19,11 +19,26 @@ background-color: rgb(0, 0, 0, 0.5);
 color: white;
 }
 
-.title {
+.landing-title {
     font-size: 30px;
     font-family: 'Schoolbell', cursive;
 }
 
-.subtitle {
+.landing-subtitle {
     font-size: 15px;
+}
+
+@media only screen and (min-width: 768px) {
+    .landingMessage {
+        width: 65%;
+        padding: 5%;
+    } 
+
+    .landing-title {
+        font-size: 40px;
+    }
+
+    .landing-subtitle {
+        font-size: 25px;
+    }
 }

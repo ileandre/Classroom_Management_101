@@ -13,7 +13,7 @@
 
 }
 
-.form {
+.register-form {
     width: 90%;
     margin: auto 0;
     text-align: center;
@@ -24,7 +24,7 @@
     justify-content: center;
 }
 
-.title {
+.register-title {
     font-size: 30px;
 }
 
@@ -68,4 +68,34 @@ color: white;
     font-family: 'Schoolbell', cursive; 
     font-size: bold;
     padding: 2%;
+}
+
+@media only screen and (min-width: 768px) {
+    .register-form {
+        width: 65%;
+        padding: 2%;    
+    }
+
+    .register-title {
+        font-size: 50px;
+    }
+
+    .form-inputs,
+    .login-link,
+    .register-button {
+        font-size: 25px;
+    }
+
+    .register-button {
+
+        padding: 2%;
+    }
+    
+    .input {
+        width: 50%;
+        padding: 1.5%;
+        background-color: rgb(255, 255, 255, 0.7);
+        font-family: 'Schoolbell', cursive;
+        font-weight: bold;
+    }
 }

@@ -26,15 +26,16 @@ function RegisterPage({ handleRegister, currentUser }) {
     }
     return (
         <div className="registerPage"  >
-            <form className="form" onSubmit={(e) => {
+            <form className="register-form" onSubmit={(e) => {
                 e.preventDefault()
                 handleRegister(formData)
             }}>
-                <h1 className="title">Register</h1>
+                <h1 className="register-title">Register</h1>
                 <div className="form-inputs">
                     <label className="input-labels">
                         First name:
-                    <input
+                        <input
+                            className="input"
                             type='text'
                             name='firstName'
                             value={firstName}
@@ -43,7 +44,8 @@ function RegisterPage({ handleRegister, currentUser }) {
                     </label>
                     <label className="input-labels">
                         Last name:
-                    <input
+                        <input
+                            className="input"
                             type='text'
                             name='lastName'
                             value={lastName}
@@ -52,7 +54,8 @@ function RegisterPage({ handleRegister, currentUser }) {
                     </label>
                     <label className="input-labels">
                         Username:
-                    <input
+                        <input
+                            className="input"
                             type='text'
                             name='username'
                             value={username}
@@ -61,7 +64,8 @@ function RegisterPage({ handleRegister, currentUser }) {
                     </label>
                     <label className="input-labels">
                         Email:
-                    <input
+                        <input
+                            className="input"
                             type='text'
                             name='email'
                             value={email}
@@ -70,7 +74,8 @@ function RegisterPage({ handleRegister, currentUser }) {
                     </label>
                     <label className="input-labels">
                         Password:
-                    <input
+                        <input
+                            className="input"
                             type='password'
                             name='password'
                             value={password}
