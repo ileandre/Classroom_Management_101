@@ -10,7 +10,7 @@ function RegisterPage({ handleRegister, currentUser }) {
         email: '',
         password: ''
     })
-    const { firstName, lastName, username, email, password} = formData
+    const { firstName, lastName, username, email, password } = formData
     const history = useHistory()
 
     if (currentUser) {
@@ -24,59 +24,63 @@ function RegisterPage({ handleRegister, currentUser }) {
         }))
     }
     return (
-        <form onSubmit={(e) => {
-            e.preventDefault()
-            handleRegister(formData)
-        }}>
-            <h1>Register</h1>
-            <label>
-                First name:
+        <div className="registerPage"  >
+            <form className="form" onSubmit={(e) => {
+                e.preventDefault()
+                handleRegister(formData)
+            }}>
+                <h1 className="title">Register</h1>
+                <div className="form-inputs">
+                    <label className="inputs">
+                        First name:
                     <input
-                    type='text'
-                    name='firstName'
-                    value={firstName}
-                    onChange={handleChange}
-                />
-            </label>
-            <label>
-                Last name:
+                            type='text'
+                            name='firstName'
+                            value={firstName}
+                            onChange={handleChange}
+                        />
+                    </label>
+                    <label className="inputs">
+                        Last name:
                     <input
-                    type='text'
-                    name='lastName'
-                    value={lastName}
-                    onChange={handleChange}
-                />
-            </label>
-            <label>
-                Username:
+                            type='text'
+                            name='lastName'
+                            value={lastName}
+                            onChange={handleChange}
+                        />
+                    </label>
+                    <label className="inputs">
+                        Username:
                     <input
-                    type='text'
-                    name='username'
-                    value={username}
-                    onChange={handleChange}
-                />
-            </label>
-            <label>
-                Email:
+                            type='text'
+                            name='username'
+                            value={username}
+                            onChange={handleChange}
+                        />
+                    </label>
+                    <label className="inputs">
+                        Email:
                     <input
-                    type='text'
-                    name='email'
-                    value={email}
-                    onChange={handleChange}
-                />
-            </label>
-            <label>
-                Password:
+                            type='text'
+                            name='email'
+                            value={email}
+                            onChange={handleChange}
+                        />
+                    </label>
+                    <label className="inputs">
+                        Password:
                     <input
-                    type='password'
-                    name='password'
-                    value={password}
-                    onChange={handleChange}
-                />
-            </label>
-            <Link to='/login'> Login</Link>
-            <button>Register</button>
-        </form>
+                            type='password'
+                            name='password'
+                            value={password}
+                            onChange={handleChange}
+                        />
+                    </label>
+                </div>
+                <Link to='/login' className="login-link"> Already have an account? Login</Link>
+                <button className="register-button"> Register</button>
+            </form>
+        </div>
     )
 }
 
