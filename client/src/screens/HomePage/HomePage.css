@@ -14,12 +14,13 @@
     display: flex;
     /* background-color: gold; */
     width: 90%;
-    height: 90%;
-    background-image: url(../../assets/_chalkboard.png);
-    /* background-image: url(../../assets/chalkboard_.png); */
+    height: 60%;
+    /* background-color: rgb(215, 114, 30); */
+    /* background-image: url(../../assets/__chalkboard.png); */
+    background-image: url(../../assets/wood.jpeg);
     background-size: 100%;
     /* background-image: url('https://cdn.pixabay.com/photo/2014/04/02/17/03/blackboard-307799__340.png'); */
-    /* background-size: cover; */
+    background-size: cover;
     background-repeat: no-repeat;
     /* background-color: gold;
     height: 80%;
@@ -31,27 +32,24 @@
 }
 
 .board {
-    margin: 4% auto;
-    /* background-color: green; */
-    height: 59%;
+    margin: 5.25% auto;
+    height: 90%;
     width: 90%;
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    /* margin-bottom: 10%; */
+    background-color: rgb(0, 143, 70);
+    box-shadow: 5px 10px 5px inset rgb(3, 73, 37);
+
+    /* display: grid;
     grid-template-rows: 2fr 8fr 1fr;
-    grid-template-columns: 1fr 3fr 1fr;
-    /* grid-template-areas:
-    ". . T T . ."
-    ". . Q Q . ."
-    ". . Q Q . ."
-    ". . . . . ."
-    ". . . . R R"; */
-    /* background-color: green;
-    height: 80%;
-    width: 95%; */
+    grid-template-columns: 1fr 3fr 1fr; */
+   
 }
 
 #quote-title {
-    grid-column: 1/6;
-    grid-row: 1;
+    /* grid-column: 1/6;
+    grid-row: 1; */
     margin: auto;
     margin-top: 10%;
     font-family: 'Schoolbell', cursive;
@@ -61,9 +59,9 @@
 }
 
 #quote {
-    grid-column: 1 / 6;
-    grid-row: 2;
-    margin: auto;
+    /* grid-column: 1 / 6;
+    grid-row: 2; */
+    margin-bottom: 50%;
     font-family: 'Schoolbell', cursive;
     font-size: 20px;
     font-weight: bold;
@@ -72,8 +70,8 @@
 } 
 
 .studentRoster {
-    grid-column: 4 / 6;
-    grid-row: 4 / 5;
+    /* grid-column: 4 / 6;
+    grid-row: 4 / 5; */
     border-radius: 6%;
     background-color: rgb(100, 6, 6);
     color: white;
@@ -82,9 +80,28 @@
     padding: 1px 7px;
     justify-content: center;
     /* margin-right: 10%; */
+    width: 30%;
+    justify-content: right;
+    box-shadow: 10px 1px 5px rgb(0, 0, 0);
+
 }
 
 .studentRoster > a {
     color: white;
     text-decoration: none;
+}
+
+/* --------------------iPAD-------------------- */
+@media only screen and (min-width: 768px) {
+    .board {
+        margin: 4% auto;
+        height: 59%;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        /* display: grid;
+        grid-template-rows: 2fr 8fr 1fr;
+        grid-template-columns: 1fr 3fr 1fr; */
+       
+    }
 }
