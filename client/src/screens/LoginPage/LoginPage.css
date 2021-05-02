@@ -1,4 +1,40 @@
-.LoginPage {
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:wght@400;700&family=Schoolbell&display=swap');
+
+.loginPage {
+    height: 100vh;
+    width: 100vw;
     /* background-color: white; */
     background-image: url("https://media.gettyimages.com/photos/red-brick-high-school-building-exterior-picture-id171306436?k=6&m=171306436&s=612x612&w=0&h=alQojJnb4yqK7b8dKXcgiYu_jwCoqjSa17-tn7z_5rY=");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+}
+
+.form {
+    width: 95%;
+    margin: auto 0;
+    text-align: center;
+    background-color: rgb(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    font-size: 30px;
+    font-family: 'Schoolbell', cursive;
+}
+
+.login {
+    display: flex;
+    /* flex-direction: column; */
+    text-align: left;
+    /* margin-left: 0px; */
+}
+
+.login-button {
+    margin: 0 auto;
+    width: 15%;
 }
