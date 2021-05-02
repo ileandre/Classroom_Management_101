@@ -29,7 +29,7 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
     # print "STUDENT ID ????????????????????? #{params[:student_id]}"
     @comment.student = Student.find(params[:student_id])
-    PRINT "LOOK HERE!!!!!!! git add#{params[:notes]"
+    PRINT "LOOK HERE!!!!!!! git add#{params[:notes]}"
     @comment.notes = params[:notes]
     print "COMMENT COMMENT= #{@comment}!!!!!!!!!!!!!!!!!!!!!!!!!!"
     # @comment.student_id = params[:student_id]

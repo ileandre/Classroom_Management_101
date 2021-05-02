@@ -76,7 +76,7 @@ function StudentDetails({ students, queryComments, setQueryComments, fetchStudCo
                         {
                             studentComments.map((comment, index) => (
                                 <>
-                                    <p key={comment.id}><span>{index+1})</span> {comment.comment}</p> <p className='trash' onClick={()=> handleTrashComment(Number(id))}>🗑️</p>
+                                    <p key={comment.id}><span>{index+1})</span> {comment.notes}</p> <p className='trash' onClick={()=> handleTrashComment(Number(id))}>🗑️</p>
                                 </>
                             ))
                         }
