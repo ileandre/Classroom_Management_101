@@ -31,7 +31,7 @@ function RegisterPage({ handleRegister, currentUser }) {
                 handleRegister(formData)
             }}>
                 <h1 className="register-title">Register</h1>
-                <div className="form-inputs">
+                {/* <div className="register-inputs"> */}
                     <label className="input-labels">
                         First name:
                         <input
@@ -82,7 +82,7 @@ function RegisterPage({ handleRegister, currentUser }) {
                             onChange={handleChange}
                         />
                     </label>
-                </div>
+                {/* </div> */}
                 <Link to='/login' className="login-link"> Already have an account? Login</Link>
                 <button className="register-button"> Register</button>
             </form>

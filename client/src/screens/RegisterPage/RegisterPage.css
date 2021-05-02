@@ -28,11 +28,11 @@
     font-size: 30px;
 }
 
-.form-inputs {
+/* .register-inputs {
     display: flex;
     flex-direction: column;
     justify-content: start;
-}
+} */
 
 .login {
     display: flex;
@@ -70,6 +70,7 @@ color: white;
     padding: 2%;
 }
 
+/* --------------------iPAD-------------------- */
 @media only screen and (min-width: 768px) {
     .register-form {
         width: 65%;
@@ -77,25 +78,54 @@ color: white;
     }
 
     .register-title {
-        font-size: 50px;
+        font-size: 40px;
     }
 
-    .form-inputs,
+    /* .register-inputs, */
+    .input-labels,
     .login-link,
     .register-button {
         font-size: 25px;
     }
 
     .register-button {
-
         padding: 2%;
     }
     
     .input {
         width: 50%;
-        padding: 1.5%;
+        padding: 1.25%;
         background-color: rgb(255, 255, 255, 0.7);
         font-family: 'Schoolbell', cursive;
         font-weight: bold;
+    }
+}
+
+/* --------------------LAPTOP-------------------- */
+@media only screen and (min-width: 1075px) {
+    .register-form {
+        width: 40%;
+    }
+    .register-title {
+        font-size: 50px;
+    }
+
+    .register-button {
+        padding: 0.5%;
+    }
+    
+    .input {
+        padding: 1%;
+    }
+}
+
+/* --------------------DESKTOP-------------------- */
+@media only screen and (min-width: 1700px) {
+    .register-form {
+        width: 35%;
+    }
+
+    .register-button {
+        padding: 0.25%;
     }
 }

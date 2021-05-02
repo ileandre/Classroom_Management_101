@@ -56,6 +56,7 @@ color: white;
     padding: 2%;
 }
 
+/* --------------------iPAD-------------------- */
 @media only screen and (min-width: 768px) {
     .login-form {
         width: 65%;
@@ -63,7 +64,7 @@ color: white;
     }
 
     .login-title {
-        font-size: 50px;
+        font-size: 40px;
     }
 
     .login-inputs,
@@ -73,7 +74,6 @@ color: white;
     }
 
     .login-button {
-
         padding: 2%;
     }
     
@@ -84,4 +84,31 @@ color: white;
         font-family: 'Schoolbell', cursive;
         font-weight: bold;
     }
+}
+
+/* --------------------LAPTOP-------------------- */
+@media only screen and (min-width: 1075px) {
+    .login-form {
+        width: 50%;
+    }
+
+    .login-title {
+        font-size: 50px;
+    }
+
+    .login-button {
+        padding: 0.5%;
+    }
+    
+    .input {
+        padding: 1%;
+    }
+}
+
+/* --------------------DESKTOP-------------------- */
+@media only screen and (min-width: 1700px) {
+    .login-form {
+        width: 35%;
+    }
+
 }
