@@ -4,6 +4,14 @@
     flex-direction: column;
     justify-content: space-between; 
     align-items: center;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background: url(../../../assets/rosterbook-background.jpg) no-repeat center center fixed; 
+    background-size: cover;
+    height:100%;
+    width:100%
 }
 
 /* .layout-children {
