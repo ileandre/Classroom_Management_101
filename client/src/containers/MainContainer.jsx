@@ -111,6 +111,12 @@ const updateStudent = (students, studentData, id) => {
         history.push('/students')
     }
 
+    // const handleTrashComment = async(id) => {
+    //     await deleteComment(id)
+    //     fetchAllComments()
+    //     history.push(`/students/${id}`)
+    // }
+
     const handlePutStudent = async (id, studentData) => {
         const updatedStudent = await putStudent(id, studentData)
         fetchStudents()
@@ -198,6 +204,7 @@ const updateStudent = (students, studentData, id) => {
                         fetchStudComments={fetchStudComments}
                         handleDelete={handleDelete}
                         setQueryComments={setQueryComments}
+                        // handleTrashComment={handleTrashComment}
                     />
                 </Route>
                 <Route exact path='/students'>

@@ -39,3 +39,13 @@ export const putComment = async (commentData) => {
     }
 }
 
+// export const deleteComment = async (id) => {
+//     try {
+//         // console.log(id)
+//         // debugger
+//         const resp = await api.delete(`/comments/${id}`)
+//         return resp
+//     } catch (error) {
+//         throw error
+//     }
+// }

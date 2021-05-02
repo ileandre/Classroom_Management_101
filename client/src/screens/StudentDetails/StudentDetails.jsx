@@ -4,7 +4,7 @@ import { getStudentComments } from '../../services/comments'
 import { getOneStudent } from '../../services/student'
 import "./StudentDetails.css"
 
-function StudentDetails({ students, queryComments, setQueryComments, fetchStudComments, handleDelete }) {
+function StudentDetails({ students, queryComments, setQueryComments, fetchStudComments, handleDelete, handleTrashComment }) {
     const [student, setStudent] = useState({})
     const [studentComments, setStudentComments] = useState([])
     // const [student, setStudent] = useState({
@@ -76,7 +76,7 @@ function StudentDetails({ students, queryComments, setQueryComments, fetchStudCo
                         {
                             studentComments.map((comment, index) => (
                                 <>
-                                    <p key={comment.id}><span>{index+1})</span> {comment.comment}</p>
+                                    <p key={comment.id}><span>{index+1})</span> {comment.comment}</p> <p className='trash' onClick={()=> handleTrashComment(Number(id))}>🗑️</p>
                                 </>
                             ))
                         }

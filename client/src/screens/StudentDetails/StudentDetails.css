@@ -17,6 +17,14 @@ margin: 0 auto;
     padding: 2% 5%;
 }
 
+.trash {
+    display: none;
+}
+
+.student-comments:hover + .trash {
+    display: block;
+}
+
 .remove-button,
 .edit-button {
     padding: 3%;
