@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
+import "./RegisterPage.css"
 
 function RegisterPage({ handleRegister, currentUser }) {
     const [formData, setFormData] = useState({
@@ -31,7 +32,7 @@ function RegisterPage({ handleRegister, currentUser }) {
             }}>
                 <h1 className="title">Register</h1>
                 <div className="form-inputs">
-                    <label className="inputs">
+                    <label className="input-labels">
                         First name:
                     <input
                             type='text'
@@ -40,7 +41,7 @@ function RegisterPage({ handleRegister, currentUser }) {
                             onChange={handleChange}
                         />
                     </label>
-                    <label className="inputs">
+                    <label className="input-labels">
                         Last name:
                     <input
                             type='text'
@@ -49,7 +50,7 @@ function RegisterPage({ handleRegister, currentUser }) {
                             onChange={handleChange}
                         />
                     </label>
-                    <label className="inputs">
+                    <label className="input-labels">
                         Username:
                     <input
                             type='text'
@@ -58,7 +59,7 @@ function RegisterPage({ handleRegister, currentUser }) {
                             onChange={handleChange}
                         />
                     </label>
-                    <label className="inputs">
+                    <label className="input-labels">
                         Email:
                     <input
                             type='text'
@@ -67,7 +68,7 @@ function RegisterPage({ handleRegister, currentUser }) {
                             onChange={handleChange}
                         />
                     </label>
-                    <label className="inputs">
+                    <label className="input-labels">
                         Password:
                     <input
                             type='password'

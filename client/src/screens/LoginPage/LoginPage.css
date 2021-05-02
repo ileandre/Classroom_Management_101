@@ -21,22 +21,21 @@
     color: white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 .title {
     font-size: 30px;
 }
 
-.login {
+.form-inputs {
     display: flex;
-    /* flex-direction: column; */
-    text-align: left;
-    /* margin-left: 0px; */
+    justify-content: left;
 }
 
-.inputs {
+.input-labels {
     margin-bottom: 3%;
+    justify-content: start;
 }
 
 .register-link {
