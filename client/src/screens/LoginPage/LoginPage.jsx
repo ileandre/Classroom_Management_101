@@ -48,7 +48,7 @@ function LoginPage({ handleLogin, currentUser }) {
                     />
                 </label>
             {/* </div> */}
-            <Link to='/register'> Register</Link>
+            <Link to='/register' className="register-link"> No Account? Register</Link>
             <button className="login-button">Login</button>
         </form>
         </div >

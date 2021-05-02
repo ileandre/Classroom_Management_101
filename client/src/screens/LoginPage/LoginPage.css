@@ -9,6 +9,8 @@
     background-position: center;
     display: flex;
     justify-content: center;
+    font-family: 'Schoolbell', cursive;
+
 }
 
 .form {
@@ -24,7 +26,6 @@
 
 .title {
     font-size: 30px;
-    font-family: 'Schoolbell', cursive;
 }
 
 .login {
@@ -34,7 +35,23 @@
     /* margin-left: 0px; */
 }
 
+.inputs {
+    margin-bottom: 3%;
+}
+
+.register-link {
+color: white;
+}
+
 .login-button {
     margin: 0 auto;
+    margin-bottom: 3%;
     width: 15%;
+    background-color: rgb(100, 6, 6);
+    background-color: rgb(100, 6, 6);
+    border-radius: 8px;
+    color: white;
+    font-family: 'Schoolbell', cursive; 
+    font-size: bold;
+    padding: 2%;
 }
