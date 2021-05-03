@@ -1,22 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:wght@400;700&family=Schoolbell&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
-/* .clipboard{
-    background-image: url(../../assets/clipboard.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    height: 500px;
-    width: 250px;
-} */
-
-
+.showStudents {
+    display: grid;
+    grid-template-areas:
+    "C C C C"
+    "C C C C"
+    "C C C C"
+    ". F P ."
+    ". F P .";
+    width: 100vh;
+    margin: 5% auto;
+}
 
 .show-clipboard {
     display: flex;
     flex-direction: column;
-    /* margin: 0 auto; */
-    /* justify-content: center; */
     margin: 10% auto;
 
 }
@@ -31,26 +30,6 @@ a {
     text-decoration: none;
 }
 
-.showStudents {
-    /* -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background: url(../../assets/rosterbook-background.jpg) no-repeat center center fixed; 
-    background-size: cover;
-    background-attachment: fixed;
-    height:100%;
-    width:100%;
-    text-align: center; */
-    display: grid;
-    grid-template-areas:
-    "C C C C"
-    "C C C C"
-    "C C C C"
-    ". F P ."
-    ". F P .";
-    width: 100vh;
-    /* margin-top: 5%; */
-}
 
 .roster-title {
     font-family: 'Schoolbell', cursive;
@@ -66,30 +45,13 @@ a {
     display: flex;
     border-radius: 5%;
     margin: 0 auto;
-    
-    /* background-image: url(../../assets/clipboard.png);
-    background-size: 90%;
-    background-repeat: no-repeat;
-    background-position: center; */
-    /* margin: 0 auto;
-    margin-top: 13%;
-    display: flex;
-    background-color: rgb(114, 56, 9);
-    height: 75vh;
-    width: 75vw; */
 }
 
 .clipboard {
     margin: 0 auto;
-    /* margin-top: auto; */
-    /* padding-top: 2%; */
     height: 85%;
     width: 80%;
     background-color: white;
-    /* margin: auto;
-    background-color: white;
-    height: 90%;
-    width: 90%; */
 }
 
 .column-title {
@@ -107,25 +69,13 @@ a {
     justify-content: space-around;
 }
 
-/* .column-title {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-} */
-
-
 .student {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     font-size: 10px;
-    /* justify-content: space-between; */
 }
 
 .student-comments-form {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: flex-start; */
     padding-left: 5%;
 }
 
@@ -179,7 +129,6 @@ a {
     font-size: bold;
     width: 30%;
     margin: 2% auto;
-    /* transition: all .2s ease-in;  */
 }
 
 /* --------------------mini iPAD--------------------*/
@@ -188,10 +137,6 @@ a {
     .clipboard-border {
         width: 60vw;
     }
-
-    /* .button {
-        font-size: 15px;
-    } */
 
     p {
         font-size: 15px;
@@ -244,7 +189,4 @@ a {
         width: 25vw;
     }
 
-    /* .button {
-        padding: 1%;
-    } */
 }

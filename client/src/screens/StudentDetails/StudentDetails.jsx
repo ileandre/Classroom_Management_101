@@ -32,7 +32,7 @@ function StudentDetails({ handleDelete }) {
     } 
 
     return (
-        <div className='studentDetails'>
+        <div className='student-details'>
             <div className="clipboard-border">
                 <div className="clipboard details-clipboard">
                     <div className="student-info">

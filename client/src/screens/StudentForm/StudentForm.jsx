@@ -57,7 +57,7 @@ const handleCreateComment = async () => {
     }
 
     return (
-        <div className='studentDetails'>
+        <div className='student-form'>
             <div className="clipboard-border">
                 <div className="clipboard form-clipboard">
                     <div className="student-info-form">

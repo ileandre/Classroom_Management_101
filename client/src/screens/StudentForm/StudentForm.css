@@ -1,22 +1,8 @@
-
-/* .student-info {
-    margin-top: 5%;
-    display: flex;
-    flex-direction: rows;
-    justify-content: space-around;
-}
-
-.student-comments {
-    height: 50%;
-    overflow: auto;
-}
-
-.student-info > input {
-    margin-top: 5%;
-    width: 20px;
-} */
-
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+.student-form {
+    margin: 5% auto;
+}
 
 .clipboard {
     text-align: center;

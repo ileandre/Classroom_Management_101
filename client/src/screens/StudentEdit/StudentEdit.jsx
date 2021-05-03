@@ -61,7 +61,7 @@ function StudentEdit({ handlePutStudent, students, handlePostComment, fetchStude
     }
 
     return (
-        <div className='studentEdit'>
+        <div className='edit-student'>
             <div className="clipboard-border">
                 <form className="clipboard edit-clipboard" onSubmit={(e) => handleUpdate(e)} >
                     <div className="student-info-edit">
