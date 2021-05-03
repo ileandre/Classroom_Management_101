@@ -24,7 +24,7 @@ function StudentDetails({ handleDelete }) {
 
         }
         fetchStudentComments()
-      }, [])
+      }, [id])
 
     const handleEdit = () => {
         history.push(`/students/${id}/edit`)

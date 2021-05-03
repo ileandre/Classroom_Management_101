@@ -17,7 +17,7 @@ function StudentEdit({ handlePutStudent, students, handlePostComment, fetchStude
         comment: ''
     })
     const { firstName, lastName, grade, period } = studentData
-    const { comment, student_id } = commentData
+    const { comment } = commentData
 
     useEffect(() => {
         if (students.length === 0) {

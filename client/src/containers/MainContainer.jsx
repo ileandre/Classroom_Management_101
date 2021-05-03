@@ -72,14 +72,6 @@ function MainContainer({
 
     }
 
-const updateStudent = (students, studentData, id) => {
-    const student = students.find(student => student.id === id)
-    const index = students.indexOf(student)
-    students[index] = studentData
-    setStudents(students)
-
-}
-
     const handleDelete = async (id) => {
         await deleteStudent(id)
         fetchStudents()
@@ -87,7 +79,7 @@ const updateStudent = (students, studentData, id) => {
     }
 
     const handlePutStudent = async (id, studentData) => {
-        const updatedStudent = await putStudent(id, studentData)
+        await putStudent(id, studentData)
         fetchStudents()
     }
 
@@ -101,21 +93,18 @@ const updateStudent = (students, studentData, id) => {
     }
 
     const handlePostComment = async (commentData, studentData = {}) => {
-        
         if (studentData) {
             students.map(student => {
                 if (student.firstName === studentData.firstName && student.lastName === studentData.lastName && student.grade === Number(studentData.grade) && student.period === Number(studentData.period)) {
-                    
                     commentData.student_id = student.id
-        
+                    return student
                 }
+                return null
             })
         }
             const newComment = await postComment(commentData)
             
             setComments(prevState => [...prevState, newComment])
-            
-      
         
     }
 
