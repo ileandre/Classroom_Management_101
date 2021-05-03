@@ -163,17 +163,17 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Get full backend CRUD |    H     |     5 hrs      |          |        |
-| Get full frontend CRUD |    H     |     3 hrs      |          |        |
-| Teacher and student services files |    H     |     2 hrs      |          |        |
-| Homepage funtionality |    H     |     2 hrs      |          |        |
-| Landing page functionality    |    H     |     3 hrs      |          |        |
-| Show students page |    H     |     6 hrs      |          |        |
-| Show student details |    H     |     2 hrs      |          |        |
-| New student page functionality |    H     |     2 hrs      |          |        |
-| Full CSS styling |    H     |     12 hrs      |          |        |
-| Carousel for teacher quotes (Post MVP) |    L     |     2.5 hrs      |          |        |
-| TOTAL               |          |     39.5hrs      |          |        |
+| Get full backend CRUD |    H     |     5 hrs      |     6 hrs     |    6 hrs    |
+| Get full frontend CRUD |    H     |     3 hrs      |      2.5 hrs    |    2.5 hrs    |
+| Teacher and student services files |    H     |     2 hrs      |    1.5 hrs      |    1.5 hrs    |
+| Homepage funtionality |    H     |     2 hrs      |     1.5 hrs     |    1.5 hrs    |
+| Landing page functionality    |    H     |     3 hrs      |     1.5 hrs     |    1.5 hrs    |
+| Show students page |    H     |     6 hrs      |     7 hrs     |    7 hrs    |
+| Show student details |    H     |     2 hrs      |     10 hrs     |    10 hrs    |
+| New student page functionality |    H     |     2 hrs      |     11 hrs     |    11 hrs    |
+| Full CSS styling |    H     |     12 hrs      |     10 hrs     |    10 hrs    |
+| Carousel for teacher quotes (Post MVP) |    L     |     2.5 hrs      |     0 hr     |    0 hr    |
+| TOTAL               |          |     39.5hrs      |     51 hrs     |    51 hrs    |
 
 <br>
 
