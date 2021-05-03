@@ -24,7 +24,6 @@
     font-family: 'Schoolbell', cursive;
 }
 
-
 .roster {
     font-size: 25px;
 } 
@@ -35,6 +34,10 @@
     .homepage {
         width: 60vw;
     }
+
+    .roster {
+        font-size: 30px;
+    } 
 
 } 
 
@@ -53,4 +56,8 @@
     .homepage {
         width: 35vw;
     }
+
+    .roster {
+        font-size: 35px;
+    } 
 }
