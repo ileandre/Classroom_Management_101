@@ -8,9 +8,9 @@ function Nav({ currentUser, handleLogout }) {
                 currentUser ?
                     <div className="auth">
                         <div className='left-nav'>
-                        <Link  to='/welcome'>
-                            <p className="appName">Classroom Management 101</p>
-                        </Link>
+                            <Link to='/welcome'>
+                                <p className="appName">Classroom Management 101</p>
+                            </Link>
                             <div className="navigate">
 
                                 <Link to='/students'>
@@ -29,14 +29,18 @@ function Nav({ currentUser, handleLogout }) {
                     </div>
                     :
                     <div className="auth unauth">
-                        <div/>
+                        <div className="landing-appName">
+                            <Link to='/'>
+                                <p className="appName" >Classroom Management 101</p>
+                            </Link>
+                        </div>
                         <div className="login-register">
-                        <Link to='/login'>
-                            <p>Login</p>
-                        </Link>
-                        <Link to='/register'>
-                            <p>Register</p>
-                        </Link>
+                            <Link to='/login'>
+                                <p>Login</p>
+                            </Link>
+                            <Link to='/register'>
+                                <p>Register</p>
+                            </Link>
                         </div>
                     </div>
 

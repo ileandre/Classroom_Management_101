@@ -15,6 +15,10 @@
     font-size: 20px;
 }
 
+.landing-appName {
+    margin-left: 1%;
+}
+
 .left-nav {
     margin-left: 2%;
     width: 75%;
@@ -69,7 +73,8 @@
         font-size: 20px;
     }
 
-    .appName {
+    .appName,
+    .landing-appName {
         font-size: 35px;
     }
 
@@ -86,7 +91,8 @@
         font-size: 25px;
     }
 
-    .appName {
+    .appName,
+    .landing-appName {
         font-size: 55px;
     }
 
