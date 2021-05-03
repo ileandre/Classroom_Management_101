@@ -71,11 +71,11 @@
     color: white;
 } */
 
-/* .roster {
+.roster {
     font-size: 25px;
-}
+} 
 
-#quote {
+/*#quote {
     /* grid-column: 1 / 6;
     grid-row: 2; 
     margin-bottom: 50%;

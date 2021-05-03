@@ -67,7 +67,7 @@ const handleCreateComment = async () => {
     return (
         <div className='studentDetails'>
             <div className="clipboard-border">
-                <div className="clipboard">
+                <div className="clipboard form-clipboard">
                     <div className="student-info-form">
                         <label className="firstName-column column">First name:
                             <input
@@ -106,7 +106,7 @@ const handleCreateComment = async () => {
                             />
                         </label>
                     </div>
-                    <label className="student-comments-edit column">Comments:
+                    <label className="student-comments-form column">Comments
                         <textarea
                             className="textarea"
                             type='text'

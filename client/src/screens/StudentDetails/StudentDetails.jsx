@@ -57,7 +57,7 @@ function StudentDetails({ students, queryComments, setQueryComments, fetchStudCo
         <div className='studentDetails'>
             {/* {console.log(student)} */}
             <div className="clipboard-border">
-                <div className="clipboard">
+                <div className="clipboard show-clipboard">
                     <div className="student-info">
                         <div className='name-column column'>
                             <p className="column-title">Name</p>

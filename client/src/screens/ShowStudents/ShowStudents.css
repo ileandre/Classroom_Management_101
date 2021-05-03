@@ -20,6 +20,14 @@ a {
 }
 
 .showStudents {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background: url(../../assets/rosterbook-background.jpg) no-repeat center center fixed; 
+    background-size: cover;
+    background-attachment: fixed;
+    height:100%;
+    width:100%;
     text-align: center;
     display: grid;
     grid-template-areas:
@@ -29,7 +37,7 @@ a {
     ". F P ."
     ". F P .";
     width: 100vh;
-    margin-top: 5%;
+    /* margin-top: 5%; */
 }
 
 .roster-title {
@@ -40,11 +48,15 @@ a {
     grid-area: C;
     margin: 13% 5%;
     width: 90vw;
-    height: 60vh;
-    background-image: url(../../assets/clipboard.png);
+    height: 75vh;
+    background-color:rgb(105, 61, 11);
+    margin-top: 5%;
+    display: flex;
+
+    /* background-image: url(../../assets/clipboard.png);
     background-size: 90%;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center; */
     /* margin: 0 auto;
     margin-top: 13%;
     display: flex;
@@ -54,11 +66,12 @@ a {
 }
 
 .clipboard {
-    margin: 2% auto;
-    padding-top: 10%;
-    height: 70%;
+    margin: auto;
+    /* margin-top: auto; */
+    padding-top: 2%;
+    height: 75%;
     width: 80%;
-
+    background-color: white;
     /* margin: auto;
     background-color: white;
     height: 90%;
@@ -75,7 +88,7 @@ a {
 .students-list {
     display: flex;
     flex-direction: row;
-    height: 87%;
+    height: 80%;
     overflow: auto;
     justify-content: space-around;
 }
@@ -95,11 +108,11 @@ a {
     /* justify-content: space-between; */
 }
 
-.student-comments {
-    display: flex;
+.student-comments-form {
+    /* display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-
+    justify-content: flex-start; */
+    padding-left: 5%;
 }
 
 .filterButtons-container {
