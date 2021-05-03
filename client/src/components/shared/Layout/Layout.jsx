@@ -4,7 +4,6 @@ import Footer from '../Footer/Footer'
 import "./Layout.css"
 
 function Layout({ currentUser, children, handleLogout }) {
-    // const {currentUser} = props
     return (
         <div className="layout">
             <Nav currentUser={currentUser} handleLogout={handleLogout} />

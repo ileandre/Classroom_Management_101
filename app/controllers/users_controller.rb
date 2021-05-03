@@ -7,7 +7,6 @@ class UsersController < ApplicationController
 
   # POST /users
   def create
-    print "hello"
     @user = User.new(user_params)
 
     if @user.save

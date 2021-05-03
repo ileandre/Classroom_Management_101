@@ -22,99 +22,12 @@
     flex-direction: column;
     justify-content: center;
     font-family: 'Schoolbell', cursive;
-    /* justify-content: center; */
-    /* margin: 13% 5%; */
-    /* margin-top: 13%; */
-    /* display: flex; */
-    /* background-color: gold; */
-
-    /* background-color: rgb(215, 114, 30); */
-    /* background-image: url(../../assets/__chalkboard.png); */
-    /* background-image: url(../../assets/rosterbook-background.jpg); */
-    /* background-image: url(../../assets/wood.jpeg); */
-    /* background-image: url('https://cdn.pixabay.com/photo/2014/04/02/17/03/blackboard-307799__340.png'); */
-    /* background-size: cover; */
-    /* background-repeat: no-repeat; */
-    /* background-color: gold;
-    height: 80%;
-    width: 95%;
-    margin: 0 auto;
-    margin-top: 10%;
-    display: flex;
-    align-content: center; */
 }
-/* 
-.board {
-    margin: 5.25% auto;
-    height: 90%;
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-content: center; */
-    /* margin-bottom: 10%; */
-    /* background-color: rgb(0, 143, 70); */
-    /* box-shadow: 5px 10px 5px inset rgb(3, 73, 37); */
 
-    /* display: grid;
-    grid-template-rows: 2fr 8fr 1fr;
-    grid-template-columns: 1fr 3fr 1fr; */
-   
-/* } */
-
-/* #quote-title {
-    grid-column: 1/6;
-    grid-row: 1; 
-    margin: auto;
-    margin-top: 10%;
-    font-family: 'Schoolbell', cursive;
-    font-size: 25px;
-    font-weight: bolder;
-    color: white;
-} */
 
 .roster {
     font-size: 25px;
 } 
-
-/*#quote {
-    /* grid-column: 1 / 6;
-    grid-row: 2; 
-    margin-bottom: 50%;
-    font-family: 'Schoolbell', cursive;
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    text-align: center;
-} 
-
-.studentRoster {
-    width: 35%;
-    height: 20%;
-    text-align: center;
-    border-radius: 7%;
-    background-color: rgb(100, 6, 6);
-    color: white;
-    font-family: 'Gentium Book Basic', serif;
-    justify-content: center;
-    margin:0 auto; */
-    /* width: 125px; */
-    /* padding: 1px 7px; */
-    /* grid-column: 4 / 6;
-    grid-row: 4 / 5; */
-    /* margin-right: 10%; */
-    /* box-shadow: 10px 1px 5px rgb(0, 0, 0); */
-
-/* }
-
-.studentRoster > a {
-    color: white;
-    text-decoration: none;
-} */
-
-/* .roster {
-    font-size: 15px;
-    font-weight: bold;
-} */
 
 /* --------------------iPAD--------------------*/
 @media only screen and (min-width: 700px) {
@@ -131,47 +44,6 @@
     .homepage {
         width: 40vw;
     }
-
-    /* .homepage { 
-        background-image: url(../../assets/classroom_.jpeg);
-        background-size: 100vw;
-        background-repeat: no-repeat;
-        background-position: center;
-    }  */
-
-    /* .board-border {
-        background-image: none;
-        align-items: center;
-    } */
-
-    /* .board-border {
-        /* background-image: url(../../assets/classroom_.jpeg); 
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-
-    .board {
-        width: 65%;
-        height: 50%;
-        background-color: rgba(255, 255, 255, 0);
-        box-shadow: 10px 1px 5px rgb(0, 0, 0, 0);
-        display: flex;
-        margin: 0 auto;
-    }
-
-    #quote-title {
-        margin-bottom: 5%;
-    }
-
-    #quote {
-        margin-bottom: 13%;
-        height: auto;
-    }
-
-    .studentRoster {
-        margin-left: 5%; 
-    } */
 
 }
  

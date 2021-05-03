@@ -4,29 +4,18 @@ class CommentsController < ApplicationController
 
   # GET /comments
   def index
-    # @user = User.find(params[:user_id])
-    #  @students = Student.find(user_id: current_user.id)
-    #  @students = Student.where(user_id: @user.id)
-
-     # @students = current_user.students
-    #  @student = @students.find(params[:student_id])
-    #  @comments = Comment.where(student_id: @student.id)
-     # #OR
-     # @comments = @student.comments
      @comments = Comment.all
     render json: @comments
   end
 
   # GET /comments/1
   def show
-    puts "STUDENTSCOMMENTS!!!!!!!!!!!!!! #{@studentComments}"
     render json: @studentComments
   end
 
   # POST /comments
   def create
     @comment = Comment.new(comment_params)
-    # @comment.student_id = params[:student_id]
 
     if @comment.save
       render json: @comment, status: :created
@@ -50,23 +39,11 @@ class CommentsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_comment
-      # @user = User.find(params[:user_id])
-      # @students = Student.find(user_id: current_user.id)
-      # @students = Student.where(user_id: @user.id)
-
-      # @students = current_user.students
-      # @students = Student.where(user_id: @current_user.id)
       @student = Student.find(params[:id])
       @studentComments = Comment.where(student_id: @student.id)
-      print "@STUDENT!!!!!!!!!! = #{@student}"
-      # #OR
-      # @comments = @student.comments
-      # @comment = @comments.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
     def comment_params 
     params.require(:comment).permit(:student_id, :comment)
     end

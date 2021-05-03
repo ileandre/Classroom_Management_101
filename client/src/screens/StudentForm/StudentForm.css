@@ -11,7 +11,6 @@
 .form-clipboard {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
 }
 
 .student-info-form {
@@ -38,15 +37,12 @@
 
 .textarea {
     width: 83%;
-    /* margin-left: 5%; */
     border-color: rgb(0, 0, 0, 0);
     box-shadow:  inset 1px 1px 2px rgb(105,105,105);
 }
 
 .student-comments {
-    /* margin-left: 5%; */
     text-align: left;
-    /* justify-content: left; */
 }
 
 .update-button {

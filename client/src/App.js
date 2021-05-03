@@ -77,7 +77,6 @@ function App() {
           <Route exact path='/login'>
             <LoginPage
               handleLogin={handleLogin}
-            // currentUser={currentUser}
             />
           </Route>
           <Route path='/'>

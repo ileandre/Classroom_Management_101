@@ -33,26 +33,20 @@ function StudentForm({handlePostStudent, handlePostComment}) {
     }
     
 const handleCreateComment = async () => {
-    console.log("form, 44, comment: ", commentData)
-    console.log("form 45, student: ", studentData)
-    debugger
+    
     await handlePostComment(commentData, studentData)
-    console.log("form, 48, comment: ", commentData)
-    console.log("form, 49, student: ", studentData)
-    debugger
+    
 }
 
     const handleCreateStudent = async (e) => {
         e.preventDefault()
-        console.log("form, 54", studentData)
         await handlePostStudent(studentData)
-        debugger
+        
         
         if (comment) {
             await handleCreateComment()
         }
-        console.log('before history push')
-        debugger
+        
         history.push(`/students`)
     }
 
@@ -82,7 +76,7 @@ const handleCreateComment = async () => {
                         <label className="grade-column column">Grade:
                             <input
                                 className="input"
-                                type='text'
+                                type='number'
                                 name='grade'
                                 value={grade}
                                 onChange={handleStudentChange}
@@ -91,7 +85,7 @@ const handleCreateComment = async () => {
                         <label className="period-column column">Period:
                             <input
                                 className="input"
-                                type='text'
+                                type='number'
                                 name='period'
                                 value={period}
                                 onChange={handleStudentChange}

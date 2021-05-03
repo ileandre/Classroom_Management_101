@@ -26,7 +26,6 @@ a {
 .show-clipboard {
     display: flex;
     flex-direction: column;
-    /* margin: 10% auto; */
 }
 
 .roster-title {

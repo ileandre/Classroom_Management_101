@@ -16,8 +16,6 @@ const history = useHistory()
         handleRoster()
     }, [])
 
-
-    //BACK TO NORMAL!!!!!!!!!!!!!!!!
     return (
         <div className="showStudents">
             <div className="clipboard-border">

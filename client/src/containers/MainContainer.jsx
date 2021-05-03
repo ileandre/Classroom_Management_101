@@ -25,7 +25,6 @@ function MainContainer({
 
     const handleFilter = (filter) => {
         students.sort((a, b) => { return b.grade - a.grade })
-        // console.log('inside filter')
         let studs = []
         if (filter === 'Top 5') {
             const five = students.slice(0, 5)
@@ -93,36 +92,29 @@ const updateStudent = (students, studentData, id) => {
     }
 
     const handlePostStudent = async (studentData) => {
-        console.log("container, 330", studentData)
-        debugger
+        
         const student = await postStudent(studentData)
-        console.log("container, 333", student)
-        debugger
+        
         fetchStudents()
         setStudents(prevState => prevState.push(student))
-        console.log("container, 337", students)
-        debugger
+        
     }
 
     const handlePostComment = async (commentData, studentData = {}) => {
         
         if (studentData) {
-            console.log (students)
             students.map(student => {
                 if (student.firstName === studentData.firstName && student.lastName === studentData.lastName && student.grade === Number(studentData.grade) && student.period === Number(studentData.period)) {
-                    console.log(student)
-                    debugger
+                    
                     commentData.student_id = student.id
         
                 }
             })
         }
             const newComment = await postComment(commentData)
-            console.log("container, 369", newComment)
-            debugger
+            
             setComments(prevState => [...prevState, newComment])
-            console.log("container, 367", comments)
-            debugger
+            
       
         
     }

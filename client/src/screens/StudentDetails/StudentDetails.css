@@ -9,7 +9,6 @@ margin: 0 auto;
 .details-clipboard {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     margin: 10% auto;
 }
 

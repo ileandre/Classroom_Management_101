@@ -20,7 +20,6 @@ function StudentDetails({ handleDelete }) {
 
         const fetchStudentComments = async () => {
           const comments = await getStudentComments(Number(id));
-          console.log(comments)
           setStudentComments(comments)
 
         }
