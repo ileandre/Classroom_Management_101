@@ -29,8 +29,8 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
     # print "STUDENT ID ????????????????????? #{params[:student_id]}"
     @comment.student = Student.find(params[:student_id])
-    PRINT "LOOK HERE!!!!!!! git add#{params[:notes]}"
-    @comment.notes = params[:notes]
+    PRINT "LOOK HERE!!!!!!! git add#{params[:comment]}"
+    @comment.comment = params[:comment]
     print "COMMENT COMMENT= #{@comment}!!!!!!!!!!!!!!!!!!!!!!!!!!"
     # @comment.student_id = params[:student_id]
     if @comment.save
@@ -74,7 +74,7 @@ class CommentsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def comment_params 
       print "BEFORE THE REQUEST IN SOMMENTS CONTROLLER !!!!!!!!!!!!!!!!!!!!!!!" 
-      params.require(:comment).permit(:student_id, :notes)
+      params.require(:comment).permit(:student_id, :comment)
       print "AFTER THE REQUEST IN SOMMENTS CONTROLLER !!!!!!!!!!!!!!!!!!!!!!!" 
 
   end

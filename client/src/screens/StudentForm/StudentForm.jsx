@@ -13,7 +13,7 @@ function StudentForm({handlePostStudent, handlePostComment}) {
     })
     const [commentData, setCommentData] = useState({
         student_id: 0,
-        notes: ''
+        comment: ''
     })
     const { firstName, lastName, grade, period } = studentData
     const { comment } = commentData

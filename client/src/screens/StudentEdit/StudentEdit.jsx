@@ -15,7 +15,7 @@ function StudentEdit({ handlePutStudent, students, handlePostComment, updateStud
     })
     const [commentData, setCommentData] = useState({
         student_id: Number(id),
-        notes: ''
+        comment: ''
     })
     const { firstName, lastName, grade, period } = studentData
     const { comment, student_id } = commentData

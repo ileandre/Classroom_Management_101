@@ -13,7 +13,7 @@ Comment.destroy_all
 Student.destroy_all
 User.destroy_all
 
-@leandre = User.create(firstName: 'Irma', lastName: 'Leandre', username: 'MasterLea', email: 'irmz@gmail.com', password: 'masterlea123', quote: 'Do not let others define your success.')
+@leandre = User.create(firstName: 'Irma', lastName: 'Leandre', username: 'MasterLea', email: 'irmz@gmail.com', password: 'masterlea123')
 
 puts "#{User.count} users created!"
 
