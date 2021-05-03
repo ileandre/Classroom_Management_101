@@ -21,9 +21,9 @@
 }
 
 .landingMessage {
-width: 95%;
-margin: auto;
-text-align: center;
+    width: 95%;
+    margin: auto;
+    text-align: center;
 background-color: rgb(0, 0, 0, 0.5);
 color: white;
 }
@@ -31,10 +31,12 @@ color: white;
 .landing-title {
     font-size: 30px;
     font-family: 'Schoolbell', cursive;
+    font-weight: bold;
 }
 
 .landing-subtitle {
     font-size: 15px;
+    font-weight: bold;
 }
 
 /* --------------------iPAD-------------------- */

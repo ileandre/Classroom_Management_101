@@ -46,6 +46,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-right: 1%;
 }
 
 /* --------------------mini iPAD--------------------*/
@@ -89,6 +90,24 @@
         font-size: 55px;
     }
 
+    .login-register {
+        width: 10%;
+        width: 20%;
+    }
+
+}
+
+/* --------------------DESKTOP-------------------- */
+@media only screen and (min-width: 1200px) {
+    
+    .login-register {
+        width: 15%;
+    }
+}
+
+/* --------------------MEDIUM DESKTOP-------------------- */
+@media only screen and (min-width: 1500px) {
+    
     .login-register {
         width: 10%;
     }
