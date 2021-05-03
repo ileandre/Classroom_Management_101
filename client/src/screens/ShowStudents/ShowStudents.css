@@ -1,6 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:wght@400;700&family=Schoolbell&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
+p {
+    font-family: 'Indie Flower', cursive;
+    font-size: 13px;
+    margin: 5px auto;
+}
+
+a { 
+    text-decoration: none;
+}
+
 .showStudents {
     display: grid;
     grid-template-areas:
@@ -16,20 +26,8 @@
 .show-clipboard {
     display: flex;
     flex-direction: column;
-    margin: 10% auto;
-
+    /* margin: 10% auto; */
 }
-
-p {
-    font-family: 'Indie Flower', cursive;
-    font-size: 13px;
-    margin: 5px auto;
-}
-
-a { 
-    text-decoration: none;
-}
-
 
 .roster-title {
     font-family: 'Schoolbell', cursive;
@@ -48,7 +46,7 @@ a {
 }
 
 .clipboard {
-    margin: 0 auto;
+    margin: 10% auto;
     height: 85%;
     width: 80%;
     background-color: white;
