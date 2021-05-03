@@ -57,7 +57,7 @@ function StudentDetails({ students, queryComments, setQueryComments, fetchStudCo
         <div className='studentDetails'>
             {/* {console.log(student)} */}
             <div className="clipboard-border">
-                <div className="clipboard show-clipboard">
+                <div className="clipboard details-clipboard">
                     <div className="student-info">
                         <div className='name-column column'>
                             <p className="column-title">Name</p>
@@ -81,7 +81,7 @@ function StudentDetails({ students, queryComments, setQueryComments, fetchStudCo
                             ))
                         }
                     </div>
-                    <div className="buttons">
+                    <div className="details-button">
                         <button className=' button red-buttons remove-button' onClick={() => handleDelete(Number(id))}>Remove</button>
                         <button className='button green-buttons edit-button' onClick={() => handleEdit()}>Edit</button>
                     </div>

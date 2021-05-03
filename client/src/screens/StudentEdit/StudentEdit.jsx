@@ -76,7 +76,7 @@ function StudentEdit({ handlePutStudent, students, handlePostComment, updateStud
                 <form className="clipboard edit-clipboard" onSubmit={handleUpdate} >
                     <div className="student-info-edit">
                   <>
-                  <label className="firstName-column column">First name
+                  <label className="firstName-column column">First name:
                             <input
                                 className='input'
                                 type='text'
@@ -116,7 +116,7 @@ function StudentEdit({ handlePutStudent, students, handlePostComment, updateStud
                         </label>
                         </>
                     </div>
-                    <label className="student-comments-edit column">New comment: 
+                    <label className="student-comments-edit column">New comment 
                         <textarea
                             className='textarea'
                             type='text'

@@ -24,6 +24,8 @@
     margin: 1% auto;
     margin-left: 5%;
     border-color: white;
+    font-family: 'Indie Flower', cursive;
+    font-size: bold;
 }
 
 .textarea {

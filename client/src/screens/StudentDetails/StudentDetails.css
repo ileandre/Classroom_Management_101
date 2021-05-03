@@ -2,16 +2,27 @@
 margin: 0 auto;
 }
 
+.details-clipboard {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+
+.details-button {
+    display: flex;
+    justify-content: space-around;
+}
+
 .student-info {
     margin-top: 15%;
     display: flex;
-    flex-direction: rows;
+    flex-direction: row;
     justify-content: space-around;
     text-align: center;
 }
 
 .student-comments {
-    height: 50%;
+    height: 35%;
     overflow: auto;
     margin-top: 5%;
     padding: 2% 5%;
