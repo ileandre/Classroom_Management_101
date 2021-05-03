@@ -45,11 +45,38 @@
     text-align: left;
 }
 
-.update-button {
+.green-buttons {
     align-items: center;
     padding: 2%;
     color: white;
-    background-color: green;
-    border-color: green;
     font-weight: bold;
+}
+
+.student-button-div {
+    width: 30%;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+/* --------------------mini iPAD--------------------*/
+@media only screen and (min-width: 600px) {
+    .student-button-div {
+        width: 30%
+    }
+}
+
+/* --------------------iPAD--------------------*/
+@media only screen and (min-width: 813px) {
+    .student-button-div {
+        width: 20%;
+    }
+}
+
+/* --------------------MEDIUM DESKTOP-------------------- */
+@media only screen and (min-width: 1500px) {
+    
+    .student-button-div {
+        width: 30%;
+    }
+
 }

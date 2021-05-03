@@ -101,8 +101,8 @@ const handleCreateComment = async () => {
                             onChange={handleCommentChange}
                         />
                     </label>
-                    <div className="buttons">
-                        <button className="button green-buttons" onClick={(e)=>handleCreateStudent(e)}>Add</button>
+                    <div className="buttons student-button-div">
+                        <button className="button green-buttons student-button" onClick={(e)=>handleCreateStudent(e)}>Add</button>
                     </div>
                 </div>
             </div>

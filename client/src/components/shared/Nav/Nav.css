@@ -4,7 +4,6 @@
     justify-content: space-between;
     font-size: 10px;
     background-color: rgb(0, 0, 0, 0.7);
-
 }
 
 .nav a {
@@ -13,7 +12,7 @@
 }
 
 .appName {
-    font-size: 17px;
+    font-size: 20px;
 }
 
 .left-nav {
@@ -49,5 +48,22 @@
     justify-content: space-between;
 }
 
+/* --------------------mini iPAD--------------------*/
+@media only screen and (min-width: 600px) {
+    
+    .nav {
+        font-size: 55px;
+    }
 
+    .nav a {
+        color: white;
+        font-weight: bold;
+        font-size: 55px;
+    }
+
+    .appName {
+        font-size: 35px;
+    }
+
+}
 
