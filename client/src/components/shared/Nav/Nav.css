@@ -23,7 +23,7 @@
 .user-logout {
     display: flex;
     flex-direction: column;
-    justify-content: right;
+    justify-content: flex-end;
     margin-right: 2%;
     color: white;
     font-weight: bold;
