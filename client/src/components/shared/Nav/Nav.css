@@ -51,18 +51,83 @@
 /* --------------------mini iPAD--------------------*/
 @media only screen and (min-width: 600px) {
     
-    .nav {
-        font-size: 55px;
-    }
-
-    .nav a {
-        color: white;
-        font-weight: bold;
-        font-size: 55px;
+    .nav p {
+        font-size: 15px;
     }
 
     .appName {
         font-size: 35px;
+    }
+
+    .login-register {
+        width: 25%;
+    }
+
+}
+
+/* --------------------mini iPAD--------------------*/
+@media only screen and (min-width: 600px) {
+
+    .nav p {
+        font-size: 20px;
+    }
+
+    .appName {
+        font-size: 35px;
+    }
+
+    .login-register {
+        width: 20%;
+    }
+    
+}
+
+/* --------------------iPAD--------------------*/
+@media only screen and (min-width: 813px) {
+
+    .nav p {
+        font-size: 20px;
+    }
+
+    .appName {
+        font-size: 35px;
+    }
+
+    .login-register {
+        width: 15%;
+    }
+
+} 
+
+/* --------------------LAPTOP-------------------- */
+@media only screen and (min-width: 1000px) {
+    
+    .nav p {
+        font-size: 25px;
+    }
+
+    .appName {
+        font-size: 35px;
+    }
+
+    .login-register {
+        width: 10%;
+    }
+}
+
+/* --------------------DESKTOP-------------------- */
+@media only screen and (min-width: 1200px) {
+    
+    .clipboard-border {
+        width: 35vw;
+    }
+}
+
+/* --------------------MEDIUM DESKTOP-------------------- */
+@media only screen and (min-width: 1500px) {
+    
+    .clipboard-border {
+        width: 30vw;
     }
 
 }
