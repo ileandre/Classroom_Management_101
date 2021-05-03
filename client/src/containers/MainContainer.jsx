@@ -1,13 +1,11 @@
-import { useState, useEffect } from 'react'
 import { Switch, Route, useHistory } from 'react-router-dom'
 import { deleteStudent, postStudent, putStudent } from '../services/student'
-import { postComment, putComment } from '../services/comments'
+import { postComment } from '../services/comments'
 import HomePage from '../screens/HomePage/HomePage'
 import ShowStudents from '../screens/ShowStudents/ShowStudents'
 import StudentDetails from '../screens/StudentDetails/StudentDetails'
 import StudentForm from '../screens/StudentForm/StudentForm'
 import StudentEdit from '../screens/StudentEdit/StudentEdit'
-import UpdateStudent from '../screens/LandingPage/LandingPage'
 
 function MainContainer({
     students,
@@ -21,7 +19,7 @@ function MainContainer({
     setQueryComments,
     comments,
     fetchAllComments,
-    currentUser }) {
+    }) {
 
     const history = useHistory()
 
@@ -77,53 +75,22 @@ function MainContainer({
 
 const updateStudent = (students, studentData, id) => {
     const student = students.find(student => student.id === id)
-    // console.log(student)
     const index = students.indexOf(student)
-    // console.log(index)
     students[index] = studentData
-    // console.log(students[index])
     setStudents(students)
-    // let stud = []
-    // students.forEach(student => {
-    //     if (student.id === id) {
-    //         console.log(student)
-    //         student = {...student, ... studentData}
-    //         console.log(student)
-    //         debugger
-    //     }
-    //     stud.push(student)
-    //     console.log(stud)
-    // })
-    // setStudents([...stud])
+
 }
 
     const handleDelete = async (id) => {
-        // console.log(id)
-        // debugger
         await deleteStudent(id)
-        // debugger
         fetchStudents()
-        // const studs = students.filter(student => student.id !== id)
-        // setStudents(studs)
-        // setStudents(prevState => prevState.filter(student => student.id !== id))
-        // console.log(students)
-        // debugger
         history.push('/students')
     }
-
-    // const handleTrashComment = async(id) => {
-    //     await deleteComment(id)
-    //     fetchAllComments()
-    //     history.push(`/students/${id}`)
-    // }
 
     const handlePutStudent = async (id, studentData) => {
         const updatedStudent = await putStudent(id, studentData)
         fetchStudents()
-        // setStudents(prevState => prevState.push(updatedStudent))
-        // setStudents(prevState => [...prevState, updatedStudent])
     }
-    // console.log(students)
 
     const handlePostStudent = async (studentData) => {
         console.log("container, 330", studentData)
@@ -138,41 +105,25 @@ const updateStudent = (students, studentData, id) => {
     }
 
     const handlePostComment = async (commentData, studentData = {}) => {
-        // fetchStudents()
-        // setComments(prevState => [...prevState, comment])
         
         if (studentData) {
-            // const newStudent = students.filter(student => student.firstName === studentData.firstName && student.lastName === studentData.lastName && student.grade === studentData.grade && student.period === studentData.period)
+            console.log (students)
             students.map(student => {
-                // console.log("studentData.firstName: ", typeof studentData.firstName)
-                // console.log("student.firstName: ", typeof student.firstName)
-                // console.log("studentData.lastName: ", typeof studentData.lastName)
-                // console.log("student.lastName: ", typeof student.lastName)
-                // console.log("studentData.grade: ", typeof studentData.grade)
-                // console.log("student.grade: ", typeof student.grade)
-                // console.log("studentData.period: ", typeof studentData.period)
-                // console.log("student.period: ", typeof student.period)
                 if (student.firstName === studentData.firstName && student.lastName === studentData.lastName && student.grade === Number(studentData.grade) && student.period === Number(studentData.period)) {
-                    // console.log(student)
-                    // debugger
+                    console.log(student)
+                    debugger
                     commentData.student_id = student.id
-                    // console.log("container, 355:", commentData.student_id, "and", student.id)
-                    // debugger
+        
                 }
             })
-            console.log("container, 369", commentData)
-            debugger
-            const newComment = await postComment(commentData)
-        console.log("container, 369", newComment)
-        debugger
-        setComments(prevState => [...prevState, newComment])
-        console.log("container, 367", comments)
-        debugger
-            // console.log(getId)
-            // commentData.student_id = getId
-            // console.log("container, 365", commentData)
-            // debugger
         }
+            const newComment = await postComment(commentData)
+            console.log("container, 369", newComment)
+            debugger
+            setComments(prevState => [...prevState, newComment])
+            console.log("container, 367", comments)
+            debugger
+      
         
     }
 
@@ -189,10 +140,9 @@ const updateStudent = (students, studentData, id) => {
 
                 <Route exact path='/students/:id/edit'>
                     <StudentEdit
-                        students={students}
                         handlePutStudent={handlePutStudent}
+                        students={students}
                         handlePostComment={handlePostComment}
-                        updateStudent={updateStudent}
                         fetchStudents={fetchStudents}
                     />
                 </Route>
@@ -204,7 +154,6 @@ const updateStudent = (students, studentData, id) => {
                         fetchStudComments={fetchStudComments}
                         handleDelete={handleDelete}
                         setQueryComments={setQueryComments}
-                        // handleTrashComment={handleTrashComment}
                     />
                 </Route>
                 <Route exact path='/students'>
@@ -218,9 +167,9 @@ const updateStudent = (students, studentData, id) => {
                     />
                 </Route>
                 <Route exact path='/welcome'>
-                    <HomePage 
-                    fetchStudents={fetchStudents} 
-                    fetchAllComments={fetchAllComments}
+                    <HomePage
+                        fetchStudents={fetchStudents}
+                        fetchAllComments={fetchAllComments}
                     />
                 </Route>
             </Switch>

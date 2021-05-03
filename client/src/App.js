@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useState, useEffect } from 'react'
-import { Route, Switch, useHistory, useLocation } from 'react-router-dom'
+import { Route, Switch, useHistory } from 'react-router-dom'
 import LoginPage from './screens/LoginPage/LoginPage'
 import RegisterPage from './screens/RegisterPage/RegisterPage'
 import { getAllStudents } from './services/student'
@@ -11,41 +11,25 @@ import Layout from './components/shared/Layout/Layout'
 import MainContainer from './containers/MainContainer';
 
 function App() {
-  // console.log(React.version)
   const [currentUser, setCurrentUser] = useState(null)
   const [students, setStudents] = useState([])
   const [comments, setComments] = useState([])
   const [queryStudents, setQueryStudents] = useState(students)
   const [queryComments, setQueryComments] = useState([])
   const history = useHistory()
-  const location = useLocation()
-
-
 
   const fetchStudents = async () => {
     const studentData = await getAllStudents()
-    // console.log(studentData)
-    // debugger
+
     setStudents(studentData)
     setQueryStudents(studentData)
   }
 
   const fetchAllComments = async () => {
     const commentData = await getAllComments()
-    // console.log(studentData)
-    // debugger
+
     setComments(commentData)
   }
-
-  // useEffect(() => {
-  //   if (currentUser) {
-  //     const login = async () => {
-  //       // await fetchStudents()
-  //       // await fetchAllComments()
-  //     }
-  //     login()
-  //   }
-  // }, [])
 
   useEffect(() => {
     const handleVerify = async () => {
@@ -55,20 +39,10 @@ function App() {
     handleVerify()
   }, [])
 
-  
 
-  // useEffect(() => {
-
-  // }, [])
-
-  const fetchStudComments = async (id) => {
-    // console.log("app, 55, inside fetchcomments func, comments", comments)
-    
+  const fetchStudComments = async (id) => {    
     const studComments = comments.filter(comment => comment.student_id === id)
-    //  console.log("app, 57", studComments)
     setQueryComments([...studComments])
-    // console.log("app, 59", queryComments)
-    // console.log(studComments)
   }
 
 
@@ -79,10 +53,7 @@ function App() {
   }
 
   const handleRegister = async (formData) => {
-    // console.log(formData)
     const userData = await registerUser(formData)
-    // debugger
-    // console.log(userData)
     setCurrentUser(userData)
     history.push('/')
   }
@@ -92,15 +63,6 @@ function App() {
     localStorage.removeItem('authToken')
     removeToken()
   }
-
-  // useEffect(() => {
-  //   currentUser ?
-  //     // && (location.pathname === "/" || location.pathname === "/login" || location.pathname === "/register")) {
-  //     history.push('/')
-  //     :
-  //     history.push('/')
-
-  // }, [])
 
   return (
     <div className="App">
@@ -121,18 +83,17 @@ function App() {
           <Route path='/'>
             {currentUser ?
               <MainContainer
-                students={students}
-                queryStudents={queryStudents}
-                setQueryStudents={setQueryStudents}
-                setStudents={setStudents}
-                comments={comments}
-                setComments={setComments}
-                fetchStudComments={fetchStudComments}
-                queryComments={queryComments}
-                setQueryComments={setQueryComments}
-                fetchStudents={fetchStudents}
-                fetchAllComments={fetchAllComments}
-                currentUser={currentUser}
+              students={students}
+              setStudents={setStudents}
+              queryStudents={queryStudents}
+              setQueryStudents={setQueryStudents}
+              fetchStudents={fetchStudents}
+              setComments={setComments}
+              fetchStudComments={fetchStudComments}
+              queryComments={queryComments}
+              setQueryComments={setQueryComments}
+              fetchAllComments={fetchAllComments}
+              comments={comments}
               />
               : <LandingPage />}
           </Route>

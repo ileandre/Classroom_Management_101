@@ -4,15 +4,9 @@ import { getStudentComments } from '../../services/comments'
 import { getOneStudent } from '../../services/student'
 import "./StudentDetails.css"
 
-function StudentDetails({ students, queryComments, setQueryComments, fetchStudComments, handleDelete, handleTrashComment }) {
+function StudentDetails({ handleDelete }) {
     const [student, setStudent] = useState({})
     const [studentComments, setStudentComments] = useState([])
-    // const [student, setStudent] = useState({
-    //     firstName: '',
-    //     lastName: '',
-    //     grade: 0,
-    //     period: 0
-    // })
     const params = useParams()
     const { id } = params
     const history = useHistory()
@@ -33,29 +27,12 @@ function StudentDetails({ students, queryComments, setQueryComments, fetchStudCo
         fetchStudentComments()
       }, [])
 
-    useEffect(() => {
-        // console.log(students)
-        // if (students.length === 0) {
-        //     history.push('/students')
-        // }
-        // console.log(students)
-        // debugger
-        // const stud = students.find(student => student.id === Number(id))
-        // setStudent(stud)
-        // console.log("details, 42, before fetch comments, student", student)
-        // debugger
-    }, [])
-
     const handleEdit = () => {
         history.push(`/students/${id}/edit`)
-    }
-    
-    // console.log(queryComments)
-    
-    
+    } 
+
     return (
         <div className='studentDetails'>
-            {/* {console.log(student)} */}
             <div className="clipboard-border">
                 <div className="clipboard details-clipboard">
                     <div className="student-info">
@@ -76,7 +53,7 @@ function StudentDetails({ students, queryComments, setQueryComments, fetchStudCo
                         {
                             studentComments.map((comment, index) => (
                                 <>
-                                    <p key={comment.id}><span>{index+1})</span> {comment.comment}</p> <p className='trash' onClick={()=> handleTrashComment(Number(id))}>🗑️</p>
+                                    <p key={comment.id}>{index+1}) {comment.comment}</p>
                                 </>
                             ))
                         }

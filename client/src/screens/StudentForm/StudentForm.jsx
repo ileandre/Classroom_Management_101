@@ -1,9 +1,8 @@
 import { useHistory } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import "./StudentForm.css"
 
 function StudentForm({handlePostStudent, handlePostComment}) {
-    const [student, setStudent] = useState({})
     const history = useHistory()
     const [studentData, setStudentData] = useState({
         firstName: '',
@@ -17,13 +16,6 @@ function StudentForm({handlePostStudent, handlePostComment}) {
     })
     const { firstName, lastName, grade, period } = studentData
     const { comment } = commentData
-
-    // useEffect(() => {
-    //     console.log(id)
-    //     const stud = students.find(student => student.id === Number(id))
-    //     setStudent(stud)
-    //     fetchComments(Number(id))
-    // }, [])
 
     const handleStudentChange = (e) => {
         const { name, value } = e.target

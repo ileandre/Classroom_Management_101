@@ -1,19 +1,13 @@
 import './ShowStudents.css'
 import { useEffect } from 'react'
 import { Link, useHistory } from 'react-router-dom'
-import FilterButton from '../../components/FilterButton/FilterButton'
-// import PeriodButton from '../../components/PeriodButton/PeriodButton'
 
 function ShowStudents({ students, handleFilter, handlePeriod, queryStudents, fetchStudents, fetchAllComments }) {
-    // console.log(students)
-    // debugger
 const history = useHistory()
 
     const filterButtons = ['Top 5', 'A-Student', 'B-Student', 'C-Student', 'D-Student', 'F-Student']
     const periodButtons = ['Period 1', 'Period 2', 'Period 3', 'Period 4', 'Period 5', 'All']
 
-    // console.log("students:", students)
-    // console.log("queryStudents:", queryStudents)
     useEffect(() => {
         const handleRoster = async () => {
             await fetchStudents()
@@ -81,7 +75,6 @@ const history = useHistory()
                         </div>
                     </div>
                     <button className='addStudent-button' onClick={() => {history.push('/students/form')}}>Add Student</button>
-                    {/* <Link to="/students/form" className='addStudent-button'>Add Student</Link> */}
                 </div>
             </div>
             <div className='filterButtons-container buttons'>

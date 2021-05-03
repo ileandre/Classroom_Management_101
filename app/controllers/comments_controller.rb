@@ -25,16 +25,10 @@ class CommentsController < ApplicationController
 
   # POST /comments
   def create
-    print "COMMENT PARAMS= #{comment_params}!!!!!!!!!!!!!!!!!!!!!!!!!!"
     @comment = Comment.new(comment_params)
-    # print "STUDENT ID ????????????????????? #{params[:student_id]}"
-    @comment.student = Student.find(params[:student_id])
-    PRINT "LOOK HERE!!!!!!! git add#{params[:comment]}"
-    @comment.comment = params[:comment]
-    print "COMMENT COMMENT= #{@comment}!!!!!!!!!!!!!!!!!!!!!!!!!!"
     # @comment.student_id = params[:student_id]
+
     if @comment.save
-      print "COMMENT COMMENT IN SAVE= #{@comment}!!!!!!!!!!!!!!!!!!!!!!!!!!"
       render json: @comment, status: :created
     else
       render json: @comment.errors, status: :unprocessable_entity
