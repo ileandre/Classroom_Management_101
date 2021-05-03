@@ -31,58 +31,56 @@ function RegisterPage({ handleRegister, currentUser }) {
                 handleRegister(formData)
             }}>
                 <h1 className="register-title">Register</h1>
-                {/* <div className="register-inputs"> */}
-                    <label className="input-labels">
-                        First name:
+                <label className="input-labels">
+                    First name:
                         <input
-                            className="input"
-                            type='text'
-                            name='firstName'
-                            value={firstName}
-                            onChange={handleChange}
-                        />
-                    </label>
-                    <label className="input-labels">
-                        Last name:
+                        className="input"
+                        type='text'
+                        name='firstName'
+                        value={firstName}
+                        onChange={handleChange}
+                    />
+                </label>
+                <label className="input-labels">
+                    Last name:
                         <input
-                            className="input"
-                            type='text'
-                            name='lastName'
-                            value={lastName}
-                            onChange={handleChange}
-                        />
-                    </label>
-                    <label className="input-labels">
-                        Username:
+                        className="input"
+                        type='text'
+                        name='lastName'
+                        value={lastName}
+                        onChange={handleChange}
+                    />
+                </label>
+                <label className="input-labels">
+                    Username:
                         <input
-                            className="input"
-                            type='text'
-                            name='username'
-                            value={username}
-                            onChange={handleChange}
-                        />
-                    </label>
-                    <label className="input-labels">
-                        Email:
+                        className="input"
+                        type='text'
+                        name='username'
+                        value={username}
+                        onChange={handleChange}
+                    />
+                </label>
+                <label className="input-labels">
+                    Email:
                         <input
-                            className="input"
-                            type='text'
-                            name='email'
-                            value={email}
-                            onChange={handleChange}
-                        />
-                    </label>
-                    <label className="input-labels">
-                        Password:
+                        className="input"
+                        type='text'
+                        name='email'
+                        value={email}
+                        onChange={handleChange}
+                    />
+                </label>
+                <label className="input-labels">
+                    Password:
                         <input
-                            className="input"
-                            type='password'
-                            name='password'
-                            value={password}
-                            onChange={handleChange}
-                        />
-                    </label>
-                {/* </div> */}
+                        className="input"
+                        type='password'
+                        name='password'
+                        value={password}
+                        onChange={handleChange}
+                    />
+                </label>
                 <Link to='/login' className="login-link"> Already have an account? Login</Link>
                 <button className="register-button"> Register</button>
             </form>

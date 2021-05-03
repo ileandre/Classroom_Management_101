@@ -65,11 +65,9 @@ class CommentsController < ApplicationController
       # @comments = @student.comments
       # @comment = @comments.find(params[:id])
     end
+
     # Only allow a list of trusted parameters through.
     def comment_params 
-      print "BEFORE THE REQUEST IN SOMMENTS CONTROLLER !!!!!!!!!!!!!!!!!!!!!!!" 
-      params.require(:comment).permit(:student_id, :comment)
-      print "AFTER THE REQUEST IN SOMMENTS CONTROLLER !!!!!!!!!!!!!!!!!!!!!!!" 
-
-  end
-  end
+    params.require(:comment).permit(:student_id, :comment)
+    end
+end

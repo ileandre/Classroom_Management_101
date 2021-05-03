@@ -28,7 +28,6 @@ function LoginPage({ handleLogin, currentUser }) {
                 handleLogin(formData)
             }}>
                 <h1 className="login-title">Login</h1>
-                {/* <div className="inputs"> */}
                 <label className="login-inputs">
                     Username: 
                     <input
@@ -49,7 +48,6 @@ function LoginPage({ handleLogin, currentUser }) {
                         onChange={handleChange}
                     />
                 </label>
-            {/* </div> */}
             <Link to='/register' className="register-link"> No Account? Register</Link>
             <button className="login-button">Login</button>
         </form>

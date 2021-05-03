@@ -2,7 +2,7 @@ import './ShowStudents.css'
 import { useEffect } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 
-function ShowStudents({ students, handleFilter, handlePeriod, queryStudents, fetchStudents, fetchAllComments }) {
+function ShowStudents({ handleFilter, handlePeriod, queryStudents, fetchStudents, fetchAllComments }) {
 const history = useHistory()
 
     const filterButtons = ['Top 5', 'A-Student', 'B-Student', 'C-Student', 'D-Student', 'F-Student']

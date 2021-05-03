@@ -158,7 +158,6 @@ const updateStudent = (students, studentData, id) => {
                 </Route>
                 <Route exact path='/students'>
                     <ShowStudents
-                        students={students}
                         handleFilter={handleFilter}
                         handlePeriod={handlePeriod}
                         queryStudents={queryStudents}
