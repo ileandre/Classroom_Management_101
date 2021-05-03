@@ -27,7 +27,7 @@ const history = useHistory()
     return (
         <div className="showStudents">
             <div className="clipboard-border">
-                <div className="clipboard">
+                <div className="clipboard show-clipboard">
                     <h3 className="roster-title">Student Roster</h3>
                     <div className="students-list">
                         <div className='column student'>

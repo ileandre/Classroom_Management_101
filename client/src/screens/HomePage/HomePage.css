@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:wght@400;700&family=Schoolbell&display=swap');
 
+
 .homepage {
     background-color: rgb(150, 14, 14);
     border: 2px solid rgb(94, 6, 6);
@@ -115,35 +116,22 @@
     font-weight: bold;
 } */
 
-/* --------------------iPAD--------------------
-@media only screen and (min-width: 655px) {
+/* --------------------iPAD--------------------*/
+@media only screen and (min-width: 700px) {
 
-    .board-border {
-        height: 60%;
+    .homepage {
+        width: 60vw;
     }
 
-    #quote-title {
-        font-size: 35px;
-    }
-
-    #quote {
-        font-size: 30px
-    }
-
-    .studentRoster {
-        padding: 1px 7px;
-        justify-content: center;
-        width: 25%;    
-    }
-
-    .roster {
-        font-size: 20px;
-    }
-
-} */
+} 
 
 /* --------------------LAPTOP-------------------- */
-@media only screen and (min-width: 660px) {
+@media only screen and (min-width: 1000px) {
+    
+    .homepage {
+        width: 40vw;
+    }
+
     /* .homepage { 
         background-image: url(../../assets/classroom_.jpeg);
         background-size: 100vw;
@@ -156,8 +144,8 @@
         align-items: center;
     } */
 
-    .board-border {
-        /* background-image: url(../../assets/classroom_.jpeg); */
+    /* .board-border {
+        /* background-image: url(../../assets/classroom_.jpeg); 
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -182,7 +170,15 @@
     }
 
     .studentRoster {
-        margin-left: 5%;
-    }
+        margin-left: 5%; 
+    } */
 
-} 
+}
+ 
+/* --------------------DESKTOP-------------------- */
+@media only screen and (min-width: 1200px) {
+    
+    .homepage {
+        width: 25vw;
+    }
+}
