@@ -44,5 +44,24 @@ margin: 0 auto;
 .edit-button {
     padding: 3%;
     font-weight: bold;
+    width: 30%
+}
+
+/* --------------------mini iPAD--------------------*/
+@media only screen and (min-width: 600px) {
+    .remove-button,
+    .edit-button {
+        padding: 1%;
+        width: 25%
+    }
+}
+
+/* --------------------iPAD--------------------*/
+@media only screen and (min-width: 813px) {
+    .remove-button,
+    .edit-button {
+        width: 25%;
+        font-size: 15px;
+    }
 }
 
