@@ -55,10 +55,6 @@
         font-size: 15px;
     }
 
-    .appName {
-        font-size: 35px;
-    }
-
     .login-register {
         width: 25%;
     }
@@ -67,14 +63,6 @@
 
 /* --------------------mini iPAD--------------------*/
 @media only screen and (min-width: 600px) {
-
-    .nav p {
-        font-size: 20px;
-    }
-
-    .appName {
-        font-size: 35px;
-    }
 
     .login-register {
         width: 20%;
@@ -107,7 +95,7 @@
     }
 
     .appName {
-        font-size: 35px;
+        font-size: 55px;
     }
 
     .login-register {
@@ -115,20 +103,4 @@
     }
 }
 
-/* --------------------DESKTOP-------------------- */
-@media only screen and (min-width: 1200px) {
-    
-    .clipboard-border {
-        width: 35vw;
-    }
-}
-
-/* --------------------MEDIUM DESKTOP-------------------- */
-@media only screen and (min-width: 1500px) {
-    
-    .clipboard-border {
-        width: 30vw;
-    }
-
-}
 
