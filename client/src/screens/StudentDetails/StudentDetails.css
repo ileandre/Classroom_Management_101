@@ -11,6 +11,11 @@ margin: 0 auto;
     flex-direction: column;
     margin: 10% auto;
 }
+.student-name {
+    margin-top: 5%;
+    font-weight: bold;
+    font-size: 25px;
+}
 
 .details-button {
     display: flex;
@@ -18,7 +23,7 @@ margin: 0 auto;
 }
 
 .student-info {
-    margin-top: 15%;
+    margin-top: 5%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -26,9 +31,9 @@ margin: 0 auto;
 }
 
 .student-comments {
-    height: 35%;
+    height: 40%;
     overflow: auto;
-    margin-top: 5%;
+    margin-top: 2%;
     padding: 2% 5%;
 }
 

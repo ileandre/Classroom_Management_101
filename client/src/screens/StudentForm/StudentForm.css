@@ -13,8 +13,13 @@
     flex-direction: column;
 }
 
+.new-title {
+    margin-top: 5%;
+    font-weight: bold;
+}
+
 .student-info-form {
-    margin: 10% 0px;
+    margin: 8% 0px;
     padding: 0px 5%;
     display: flex;
     flex-direction: column;
@@ -36,14 +41,16 @@
 }
 
 .textarea {
-    width: 83%;
+    width: 90%;
+    /* height: 50%; */
     border-color: rgb(0, 0, 0, 0);
     box-shadow:  inset 1px 1px 2px rgb(105,105,105);
 }
 
-.student-comments {
-    text-align: left;
-}
+/* .student-comments-form {
+    text-align: center;
+    display: block;
+} */
 
 .green-buttons {
     align-items: center;

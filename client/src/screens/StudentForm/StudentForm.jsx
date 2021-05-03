@@ -2,7 +2,7 @@ import { useHistory } from 'react-router-dom'
 import { useState } from 'react'
 import "./StudentForm.css"
 
-function StudentForm({handlePostStudent, handlePostComment}) {
+function StudentForm({ handlePostStudent, handlePostComment }) {
     const history = useHistory()
     const [studentData, setStudentData] = useState({
         firstName: '',
@@ -31,22 +31,22 @@ function StudentForm({handlePostStudent, handlePostComment}) {
             [name]: value
         }))
     }
-    
-const handleCreateComment = async () => {
-    
-    await handlePostComment(commentData, studentData)
-    
-}
+
+    const handleCreateComment = async () => {
+
+        await handlePostComment(commentData, studentData)
+
+    }
 
     const handleCreateStudent = async (e) => {
         e.preventDefault()
         await handlePostStudent(studentData)
-        
-        
+
+
         if (comment) {
             await handleCreateComment()
         }
-        
+
         history.push(`/students`)
     }
 
@@ -54,10 +54,11 @@ const handleCreateComment = async () => {
         <div className='student-form'>
             <div className="clipboard-border">
                 <div className="clipboard form-clipboard">
+                    <p className="roster-title new-title"> New Student</p>
                     <div className="student-info-form">
                         <label className="firstName-column column">First name:
                             <input
-                            className="input"
+                                className="input"
                                 type='text'
                                 name='firstName'
                                 value={firstName}
@@ -92,17 +93,19 @@ const handleCreateComment = async () => {
                             />
                         </label>
                     </div>
-                    <label className="student-comments-form column">Comments
+                    <div className="textarea-div">
+                        <label className="student-comments-form column">Comments
                         <textarea
-                            className="textarea"
-                            type='text'
-                            name='comment'
-                            value={comment}
-                            onChange={handleCommentChange}
-                        />
-                    </label>
+                                className="textarea"
+                                type='text'
+                                name='comment'
+                                value={comment}
+                                onChange={handleCommentChange}
+                            />
+                        </label>
+                    </div>
                     <div className="buttons student-button-div">
-                        <button className="button green-buttons student-button" onClick={(e)=>handleCreateStudent(e)}>Add</button>
+                        <button className="button green-buttons student-button" onClick={(e) => handleCreateStudent(e)}>Add</button>
                     </div>
                 </div>
             </div>

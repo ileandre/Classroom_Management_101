@@ -34,11 +34,12 @@ function StudentDetails({ handleDelete }) {
         <div className='student-details'>
             <div className="clipboard-border">
                 <div className="clipboard details-clipboard">
+                    <p className="student-name">{student?.firstName} {student.lastName}</p>
                     <div className="student-info">
-                        <div className='name-column column'>
+                        {/* <div className='name-column column'>
                             <p className="column-title">Name</p>
                             <p className='stud-info'>{student?.firstName} {student?.lastName}</p>
-                        </div>
+                        </div> */}
                         <div className='grade-column column'>
                             <p className="column-title">Grade</p>
                             <p className='stud-info'>{student?.grade}%</p>
