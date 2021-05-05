@@ -107,25 +107,25 @@ The **Classroom Management 101** MVPs are as follows ...
 ##### DESKTOP
 
 **Landing Page**
-![Desktop Landing Page](https://user-images.githubusercontent.com/65198477/116019138-891d8480-a611-11eb-9526-48d0eddd5e2b.png)
+![Desktop Landing Page](https://user-images.githubusercontent.com/65198477/117213665-e95ab600-adc9-11eb-88a1-801724c129aa.png)
 
 **Login Page**
-![Desktop Login Page](https://user-images.githubusercontent.com/65198477/116018127-5a9eaa00-a60f-11eb-917f-866d6cb4cd68.png)
+![Desktop Login Page](https://user-images.githubusercontent.com/65198477/117213733-ff687680-adc9-11eb-9092-df70e16f3af4.png)
 
 **Register Page**
-![Desktop Register Page]((https://user-images.githubusercontent.com/65198477/116018143-6be7b680-a60f-11eb-9f6b-7d33dc957c63.png)
+![Desktop Register Page](https://user-images.githubusercontent.com/65198477/117213851-24f58000-adca-11eb-8aad-6f1eb48ff1ec.png)
 
 **Home Page**
-![Desktop Home Page](https://user-images.githubusercontent.com/65198477/116018174-7efa8680-a60f-11eb-9bcf-0c447ec6cd2c.png)
+![Desktop Home Page](https://user-images.githubusercontent.com/65198477/117213910-3b9bd700-adca-11eb-89ef-bcab346df9f2.png)
 
 **Index Page**
-![Desktop Index Page](https://user-images.githubusercontent.com/65198477/116018199-8d48a280-a60f-11eb-8204-8b0dfc8f4e23.png)
+![Desktop Index Page](https://user-images.githubusercontent.com/65198477/117213998-58380f00-adca-11eb-9fdb-cbe7ee65e841.png)
 
 **Show Page**
-![Desktop Show Page](https://user-images.githubusercontent.com/65198477/116018230-99346480-a60f-11eb-861d-31c39e87e8b9.png)
+![Desktop Show Page](https://user-images.githubusercontent.com/65198477/117214159-6b4adf00-adca-11eb-9750-c7cb89dd9b4a.png)
 
 **Create/Update Page**
-![Desktop Creaste and Update Page](https://user-images.githubusercontent.com/65198477/116018250-a5202680-a60f-11eb-8532-d9de37c4ccc1.png)
+![Desktop Creaste and Update Page](https://user-images.githubusercontent.com/65198477/117214234-874e8080-adca-11eb-8aad-71a20da92cd7.png)
 
 #### Component Tree
 
