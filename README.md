@@ -232,4 +232,4 @@ I am proud of this code snippet because I worked on it though I had errors, and 
 
 ## Code Issues & Resolutions
 
-> Use this section to list of all major issues encountered and their resolution.
+I ran into some updating and rerendering issues, but I was able to fix it by changing around my axios calls, adding 'await' to my async functions, and fixing some syntax errors I had in the backend.
