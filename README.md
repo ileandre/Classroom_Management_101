@@ -130,7 +130,7 @@ The **Classroom Management 101** MVPs are as follows ...
 #### Component Tree
 
 https://whimsical.com/classroom-management-101-QDVfdAbYAmq29cSqq7HvX3
-![Component Tree](https://user-images.githubusercontent.com/65198477/116107756-4bf0db00-a681-11eb-9909-b7b116f679e2.png)
+![Component Tree](https://user-images.githubusercontent.com/65198477/117214641-2d01ef80-adcb-11eb-8348-bbca218b6c1e.png)
 
 #### Component Architecture
 
