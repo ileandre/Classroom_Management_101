@@ -200,7 +200,35 @@ https://lucid.app/lucidchart/b1522c2b-e8c3-48b2-b784-e145d96d252e/view?page=0_0#
 
 ## Code Showcase
 
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+I am proud of this code snippet because I worked on it though I had errors, and when I finally fixed the errors everything worked on the first try. This code snippet filters students by grade.
+
+```
+    const handleFilter = (filter) => {
+        students.sort((a, b) => { return b.grade - a.grade })
+        let studs = []
+        if (filter === 'Top 5') {
+            const five = students.slice(0, 5)
+            setQueryStudents(five)
+        } else if (filter === 'A-Student') {
+            studs = students.filter(student => student.grade >= 90)
+            setQueryStudents(studs)
+        } else if (filter === 'B-Student') {
+            studs = students.filter(student => student.grade < 90 && student.grade >= 80)
+            setQueryStudents(studs)
+        } else if (filter === 'C-Student') {
+            studs = students.filter(student => student.grade < 80 && student.grade >= 70)
+            setQueryStudents(studs)
+        } else if (filter === 'D-Student') {
+            studs = students.filter(student => student.grade < 70 && student.grade >= 60)
+            setQueryStudents(studs)
+        } else if (filter === 'F-Student') {
+            studs = students.filter(student => student.grade < 60)
+            setQueryStudents(studs)
+        } else {
+            setQueryStudents(students)
+        }
+    }
+```
 
 ## Code Issues & Resolutions
 
