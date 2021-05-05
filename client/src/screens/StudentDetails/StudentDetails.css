@@ -37,6 +37,10 @@ margin: 0 auto;
     padding: 2% 5%;
 }
 
+.student-comments p {
+    text-align: left;
+}
+
 .trash {
     display: none;
 }

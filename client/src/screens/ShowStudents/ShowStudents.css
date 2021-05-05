@@ -71,6 +71,12 @@ a {
     justify-content: space-around;
 }
 
+/* .students-list a {
+    color: black;
+} */
+
+
+
 .student {
     display: flex;
     flex-direction: column;
