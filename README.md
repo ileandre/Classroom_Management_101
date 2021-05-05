@@ -84,25 +84,25 @@ The **Classroom Management 101** MVPs are as follows ...
 ##### Mobile/Tablet
 
 **Landing Page**
-![Mobile and Tablet Landing Page](https://user-images.githubusercontent.com/65198477/116018685-9c7c2000-a610-11eb-8bc5-2ce77130f776.png)
+![Mobile and Tablet Landing Page](https://user-images.githubusercontent.com/65198477/117212882-e90deb00-adc8-11eb-8298-8666fefa1852.png)
 
 **Login Page**
-![Mobile and Tablet Login Page](https://user-images.githubusercontent.com/65198477/116018771-c3d2ed00-a610-11eb-8957-4b9b42839719.png)
+![Mobile and Tablet Login Page](https://user-images.githubusercontent.com/65198477/117212978-0642b980-adc9-11eb-9ee6-8fae5a8a1180.png)
 
 **Register Page**
-![Mobile and Tablet Register Page](https://user-images.githubusercontent.com/65198477/116018794-cd5c5500-a610-11eb-966e-891fd580d322.png)
+![Mobile and Tablet Register Page](https://user-images.githubusercontent.com/65198477/117213095-2a05ff80-adc9-11eb-8ff3-a272ea03c106.png)
 
 **Home Page**
-![Mobile and Tablet Home Page](https://user-images.githubusercontent.com/65198477/116019074-64291180-a611-11eb-8e9b-6be6b8b38594.png)
+![Mobile and Tablet Home Page](https://user-images.githubusercontent.com/65198477/117213145-3a1ddf00-adc9-11eb-9deb-9d0c10d35d47.png)
 
 **Index Page**
-![Mobile and Tablet Index Page](https://user-images.githubusercontent.com/65198477/116018520-32637b00-a610-11eb-8a3c-e75c86e5d8fe.png)
+![Mobile and Tablet Index Page](https://user-images.githubusercontent.com/65198477/117213220-53269000-adc9-11eb-8330-b0b01cfa84de.png)
 
 **Show Page**
-![Mobile and Tablet Show Page](https://user-images.githubusercontent.com/65198477/116018551-40b19700-a610-11eb-9141-55aaef0e0f98.png)
+![Mobile and Tablet Show Page](https://user-images.githubusercontent.com/65198477/117213287-6b96aa80-adc9-11eb-9813-6554b479ae1b.png)
 
 **Create/Update Page**
-![Mobile and Tablet Creaste and Update Page](https://user-images.githubusercontent.com/65198477/116018560-4a3aff00-a610-11eb-899b-4ae83c541bd7.png)
+![Mobile and Tablet Creaste and Update Page](https://user-images.githubusercontent.com/65198477/117213337-7c472080-adc9-11eb-87c8-a482a7d621dd.png)
 
 ##### DESKTOP
 
