@@ -1,5 +1,5 @@
 # PROJECT 4 README <!-- omit in toc -->
-**Deployed Site:** https://condescending-tesla-6be857.netlify.app
+**Deployed Site:** N/A
 
 - [Overview](#overview)
 - [MVP](#mvp)
@@ -20,7 +20,7 @@
 
 ## Overview
 
-_**Classroom Management 101** is a tool for teachers to manage their classrooms. Teachers are able to filter their students by grades and classes, leave individual comments, well as add, remove and edit students as they join and leave their classroom. If your an educator in need of a persional place to keep track of your students, Classroom management 101 is site to visit._
+_**Classroom Management 101** is a tool for teachers to manage their classrooms. Teachers are able to filter their students by grades and classes, leave individual comments, well as add, remove and edit students as they join and leave their classroom. If you're an educator in need of a personal place to keep track of your students, Classroom management 101 is site to visit._
 
 <br>
 
